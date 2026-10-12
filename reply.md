@@ -1,0 +1,15 @@
+Hi Jabari,
+
+I read your paper and your update switching to direct `2^(p+m)-1` candidates. I would be interested in a joint, reproducible experiment. I work with Crystal and maintain [cogni-ml](https://github.com/skuznetsov/cogni-ml), whose Metal infrastructure and CUDA Driver API layer we could reuse.
+
+I built a [small-factor screening prototype](https://github.com/skuznetsov/mersenne-crystal-lab) specifically for your current odd-exponent stream. For each trial prime d, it computes `r=ord_d(2)` once and marks exponents satisfying `r|q`, without constructing the Mersenne integers. Keeping only progressions that can change the first-factor result reduces 6,541 trial primes through 65,521 to 479 retained progressions. CPU and Metal preserve factor precedence and proper-divisor semantics, with checked integer bounds and batches up to 16,777,216 candidates.
+
+On an Apple M2 Max, I ran the bounded small-factor sieve over a billion odd exponents three times. Every CPU/Metal factor entry matched. Median filtering times were 3.33 seconds on the CPU and 2.83 seconds on Metal, including allocation, transfers, synchronization and output copying. These exclude final primality tests; 241,337,372 candidates remained unresolved after small-factor screening. The repository includes 45 passing CPU tests, 611 direct-exponent Metal comparisons against independent arithmetic, and an independently generated minimal-order oracle for all 6,541 primes.
+
+I also compared finite windows using one common GMP probable-prime tester throughout. For 1,024 exponents from 17 through 2063, generator + GMP took 391 ms, direct CPU + GMP 262 ms, and direct Metal + GMP 267 ms. This improves our earlier rebased Metal adapter, which took 932 ms on the same inputs. Final classifications matched. Your exact Crystal `primes-utils` implementation was unavailable, so these are normalized generator comparisons rather than timings of your original backend. Raw samples, commands, hashes and exclusions are in [the comparison report](https://github.com/skuznetsov/mersenne-crystal-lab/blob/main/EXPONENT_COMPARISON.md); host load was uncontrolled.
+
+There is an important limit to this experiment: with these bounded trial factors, the order table cannot screen large prime exponents. A useful next step would be to compare against selecting prime exponents first, reproduce the finite results with your actual tester, and choose a suitable final Mersenne test. That would tell us whether the modular-group formulation offers an additional sound filter or another measurable contribution beyond standard screening.
+
+I can contribute Crystal implementation, Metal/CUDA work, validation and benchmark tooling. The NVIDIA prototype still needs assembly and runtime validation. Your input on the modular-group structure and the most informative mathematical questions would help define the study. I would be happy to explore a jointly authored paper if the results support a substantive contribution, without assuming an advantage over GIMPS.
+
+Would you be interested in sharing the exact Crystal `primes-utils` source/version and choosing a first common benchmark interval?

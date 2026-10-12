@@ -1,0 +1,10 @@
+.DS_Store
+.crystal/
+.cache/
+__pycache__/
+*.pyc
+*.o
+*.dSYM/
+*.zip
+results/*.regenerated.json
+mpgs-*

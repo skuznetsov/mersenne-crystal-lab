@@ -1,0 +1,1610 @@
+{
+  "recorded_at_utc": "2026-10-12T21:50:55.387210+00:00",
+  "hardware": "Apple M2 Max, 64 GiB unified memory, one host",
+  "os": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+  "compiler": "Crystal 1.21.0 (2026-07-16)\n\nLLVM: 22.1.8\nDefault target: aarch64-apple-darwin25.6.0",
+  "gmp_version": "6.3.0",
+  "host_load_average_before_run": [
+    10.13671875,
+    9.67041015625,
+    9.1708984375
+  ],
+  "build_command": "env CRYSTAL_CACHE_DIR=/private/tmp/mpgs-exponent-cache crystal build exponent_benchmark.cr --release --mcpu=native --link-flags='/Users/sergey/Projects/Crystal/cogni-ml/build/bridge.o -lc++ -fuse-ld=/usr/bin/ld' -o /private/tmp/mpgs-exponent-benchmark",
+  "billion_build_command": "env CRYSTAL_CACHE_DIR=/private/tmp/mpgs-exponent-cache crystal build exponent_billion_probe.cr --release --mcpu=native --link-flags='/Users/sergey/Projects/Crystal/cogni-ml/build/bridge.o -lc++ -fuse-ld=/usr/bin/ld' -o /private/tmp/mpgs-exponent-billion-probe",
+  "binary_sha256": "3c4e5a8fc07033865a54ed1528124c473694156274f57b80630384f11e93cb85",
+  "billion_binary_sha256": "52a30c60fad91828b6bb28d4f0f412953eb92809ccf3ddc88f8c7df1451c3848",
+  "source_sha256": {
+    "benchmark.cr": "bcc3830a7fddcd71b1f7a41d931efb302a7a1d0139be0e1add2dcf3e4384f0f4",
+    "billion_probe.cr": "f6a7e215fb67f19a7f51bf492782eda6fb4b7359e0d2777f79add36b757f2e9f",
+    "core.cr": "a6a5f9cc408449fc02fa3586bd4ce186e15a91c186343943f97fd8faecc8ae84",
+    "cpu_demo.cr": "dd4dc6a8b3b088ae552f9eeb35147def463f68024ffe17773cbfaae92ac4dc29",
+    "cuda_backend.cr": "d54f9b18058b883e3bc7ba5ec59feb96822dc89b4881723436c3a038a21a9028",
+    "exponent_benchmark.cr": "9bfbf26e816ed12ef91764f17be8bfc575f0a0c0e9fe47083b01b3ecce61d023",
+    "exponent_billion_probe.cr": "41749455ad2b0d73ce4922a23dc0fcf69edc4faa46a036e65fb5e50605929633",
+    "exponent_sieve.cr": "888af63916c756357da078cd73d3d719d194d70d460389143574a7a110f04716",
+    "gpu_demo.cr": "fc88dec79fab6c19536113a5495c4083298eb5a9e1827bb51c460e547e29a175",
+    "gpu_exponent_checks.cr": "59f608d0baa009fb3154d1a997c61fc96f52fe7a20baf085e12dd812265d84e9",
+    "gpu_window_checks.cr": "f1c90ddaf247f9faf4eb311e7c5687c5239a067eef26c5506fb5b709b0e8cc35",
+    "jabari_adapters.cr": "38749a601ba15729788469fcb42b94806ac8a84260ba0adf3df1a04addeca1b7",
+    "jabari_benchmark.cr": "c8952edd94e552ec7333daf385d0fd940f873dc277abe3868ff63ae254a73da6",
+    "kernels/mpgs_sieve.metal": "0ed479017e06aaea85e1007cc3adfb715746a77690503d6bbafe835786de8fab",
+    "kernels/mpgs_sieve.ptx": "d77d1323eb1dbc026f8f5141411993ca677cc37c314dc0b8eeda7795f34a8875",
+    "kernels/mpgs_window.metal": "b6d9e7783f89e05754522ee3a4c109ddeef8a30878bb92cd4ecbbdfa9f1fbf99",
+    "metal_backend.cr": "bbad0fa6138f525719df30060c83b6d926bbb442ecd073fbb7fdcdc8d2b6f1f2",
+    "prepared_sieve.cr": "199ac392f745a374de9b1dd49f16a79e171fe76fad0ec1dfcc09637101de0750",
+    "scale_probe.cr": "a84f8415cb8977f732d2bb661c7725b0dc959768bc034397ab5258d3d4f0f6e1",
+    "schedule_demo.cr": "6a2810d1efd8dff2cae42b70aed7c6e6000e8657597b8e83b5bdb003a0d5ddc9",
+    "schedules.cr": "88314f53a71540b796139b9dc8e6f486c8750aaa0c003626a688e216c79a3b74",
+    "scripts/check_metal_compile_isolation.py": "1db85082505687173be5a1b3ec9ae401c22892268054b07958e407fdc01739bc",
+    "scripts/run_benchmarks.py": "50d7e4f95568f75fe939d09f474bd271e56befbcc0970abe80d5b95671b173b0",
+    "scripts/run_exponent_comparison.py": "48659c862b04f46da5463e38a5cdb42441aee6bd26fa6235b3bae00a5381ecc6",
+    "scripts/run_jabari_comparison.py": "5ab470f3a3d68150500df415309da5b81a41d69ac792e84a2ac2898e7d6697e2",
+    "spec/core_spec.cr": "0ce94ae183cd6b14e67274edaaa47fb853f2b62dc7b140d8cf166f2bd1fba6e9",
+    "spec/exponent_sieve_spec.cr": "25200c5c62267a8ae037df0f11fe6cca768003d8a5b76645ac24bdf9b4c75b5f",
+    "spec/jabari_adapters_spec.cr": "39e40f83c752bb7f747609e632788eac626d59c0139f8b88cc05caa9d5edfb18",
+    "spec/prepared_sieve_spec.cr": "0f0a1eada75a99c2426540b9dec15bfccd8d719cb509c033dcaa5ba53ff63df8",
+    "spec/schedules_spec.cr": "feb0d8c7019ff6603a667e9a7fc7c48b9acea5dbadd32514baa3a431bf6efcb0"
+  },
+  "dependency_head": "7cccdd8bfb02ac388001ab7a61832087d8d1b450",
+  "dependency_source_sha256": {
+    "build/bridge.o": "465ee1dd3bc0788b73dbf25e9ba66a4119ee6b0008afd0a8157986247c813773",
+    "src/ml/core/buffer.cr": "a28570a5b7163eef67aef7ad96af66d2168da68f104afbacc9714bbefb55334d",
+    "src/ml/core/shape.cr": "2de7b353c6464aaf8079333d9dde7575c40c72506965e671bd07975e8a03656f",
+    "src/ml/core/tensor.cr": "bc6cce4fd3101dd21f84efaf6a6601dae1b7e9f444bca32e3156fe2fe1b1369f",
+    "src/ml/metal/compute_graph.cr": "8d5d308fac91629a502de1ed085786047c5b6f0f530253ae265c7f95098cb970",
+    "src/ml/metal/device.cr": "ecc5d96332833a8a94d9a55914d515b5e34efe001f762d65aaa7c919b907c934",
+    "src/ml/metal/dispatch.cr": "40eeadaf1ccb56da52d8c3f5fa108ba1923048b641ed81e5f514010806a0ed3b",
+    "src/ml/metal/pipeline_selection_trace.cr": "b487a3c1e51a9cd62bf58e8801d850820a4942e541103d89cdbf282d4f2ced30",
+    "src/ml/metal/process_lease.cr": "3af0ee2d3435f46d5d0c35fc5b7c8b980645e310eeeb55f6c75634c5ffcbb048"
+  },
+  "order_oracle": {
+    "file_sha256": "46bfb55cfad669846296eb1d6dd88edad942131f93e87338aed4a4b036b2ec5f",
+    "counts": {
+      "distinct_odd_composite_order_count": 1442,
+      "distinct_odd_order_count": 1824,
+      "distinct_order_count": 6089,
+      "even_order_prime_count_omitted_for_odd_q": 4627,
+      "law_check_cases": 98115,
+      "law_check_exponents": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15,
+        17,
+        21,
+        33,
+        35,
+        65,
+        91,
+        127
+      ],
+      "maximum_prime": 65521,
+      "odd_order_prime_count": 1914,
+      "odd_primes": 6541,
+      "total_modular_doublings": 116098142
+    },
+    "provenance": {
+      "algorithm_id": "python-repeated-modular-doubling-first-return-v1",
+      "canonical_json_sha256": "38f15f40d9e0604117103be3ce08ed4ad5ba7e5569177ad33fbc1450749d0f8a",
+      "hash_scope": "UTF-8 canonical compact JSON with sorted keys over scope, prime_limit, primes, orders_by_prime, iterations_by_prime.",
+      "python_version": "3.12.2"
+    }
+  },
+  "author_generator": {
+    "forum_url": "https://forum.crystal-lang.org/t/optimal-mersenne-primes-search-using-modular-groups/9207/5",
+    "schedule": "Consecutive odd q, M_q=(1<<q)-1, preserved including composite q.",
+    "normalization": "Exact author Crystal primes-utils unavailable; all finite final paths share GMP probable-prime(25). Floating-log reporting and console output excluded.",
+    "source_record": "results/jabari_comparison.json author_sources identifies the inspected forum snapshot and PDF.",
+    "source_record_sha256": "f48b2a42ddaf4b51a9ef0459821803063d0cefeb1f1a6d69ada6bb231aa9bb43"
+  },
+  "limitations": [
+    "Small-factor screening and shared GMP probable-prime classification, not primality certification or a GIMPS comparison.",
+    "Full variants time plan preparation; prepared variants reuse one plan. All GPU calls include allocation, transfer, dispatch, synchronization, readback and result mapping.",
+    "GPU initialization/kernel compilation, equality checks and output excluded; first-call costs separately recorded.",
+    "One M2 Max with uncontrolled background load and temperature; medians and raw repeats are exploratory measurements.",
+    "Tile selection is a measured tuning probe, not an automatic CPU/GPU policy or a universal optimum.",
+    "Billion-exponent stream executes filtering only; growing M_q BigInts and GMP tests make a full-search linear extrapolation invalid."
+  ],
+  "final_cases": [
+    {
+      "mode": "final",
+      "count": 32,
+      "start_q": 17,
+      "last_q": 79,
+      "prime_cap": 65521,
+      "prime_count": 6541,
+      "active_order_count": 479,
+      "tile_size": 4096,
+      "repeats": 5,
+      "warmups_per_method": 2,
+      "plan_preparation_ms": 2.119208,
+      "backend_initialization_ms": 53.873999999999995,
+      "first_gpu_call_including_kernel_compile_ms": 0.905792,
+      "metal_device": "Apple M2 Max",
+      "witnesses": 25,
+      "unresolved": 7,
+      "probable_mersenne_exponents": [
+        17,
+        19,
+        31,
+        61
+      ],
+      "gmp_repetitions": 25,
+      "methods": {
+        "jabari_post5_normalized_gmp": {
+          "median_ms": 0.0365,
+          "min_ms": 0.035583000000000004,
+          "max_ms": 0.038542,
+          "samples_ms": [
+            0.038542,
+            0.0365,
+            0.0365,
+            0.035583000000000004,
+            0.036583
+          ],
+          "gmp_screen_calls": 32
+        },
+        "cpu_rebased_full": {
+          "median_ms": 0.8817919999999999,
+          "min_ms": 0.86325,
+          "max_ms": 1.473292,
+          "samples_ms": [
+            0.915625,
+            0.876584,
+            0.86325,
+            0.8817919999999999,
+            1.473292
+          ],
+          "gmp_screen_calls": 7
+        },
+        "metal_rebased_full": {
+          "median_ms": 18.770667,
+          "min_ms": 18.356416,
+          "max_ms": 19.393542,
+          "samples_ms": [
+            18.675542,
+            18.356416,
+            18.782583,
+            18.770667,
+            19.393542
+          ],
+          "gmp_screen_calls": 7
+        },
+        "cpu_direct_full": {
+          "median_ms": 2.145917,
+          "min_ms": 2.116625,
+          "max_ms": 2.153333,
+          "samples_ms": [
+            2.1515000000000004,
+            2.1402919999999996,
+            2.116625,
+            2.153333,
+            2.145917
+          ],
+          "gmp_screen_calls": 7
+        },
+        "cpu_direct_prepared": {
+          "median_ms": 0.01525,
+          "min_ms": 0.015125,
+          "max_ms": 0.015875,
+          "samples_ms": [
+            0.01525,
+            0.015167,
+            0.015583999999999999,
+            0.015875,
+            0.015125
+          ],
+          "gmp_screen_calls": 7
+        },
+        "metal_direct_full": {
+          "median_ms": 3.391458,
+          "min_ms": 2.825084,
+          "max_ms": 4.950666,
+          "samples_ms": [
+            4.0457089999999996,
+            3.391458,
+            4.950666,
+            3.241333,
+            2.825084
+          ],
+          "gmp_screen_calls": 7
+        },
+        "metal_direct_prepared": {
+          "median_ms": 0.6505000000000001,
+          "min_ms": 0.256459,
+          "max_ms": 2.541375,
+          "samples_ms": [
+            0.6505000000000001,
+            0.256459,
+            0.613875,
+            0.6914170000000001,
+            2.541375
+          ],
+          "gmp_screen_calls": 7
+        }
+      },
+      "scope": "Identical finite M_q inputs and shared GMP(25); author's unpublished primes-utils unavailable. Full variants include plan preparation; prepared variants reuse one plan. Both include allocation, transfer, dispatch, readback and survivor GMP tests. GPU initialization/compilation, equality checks and output excluded. Legacy methods include 32-entry compatible-k rebasing.",
+      "run_command": [
+        "/private/tmp/mpgs-exponent-benchmark",
+        "final",
+        "32",
+        "17",
+        "5",
+        "4096"
+      ],
+      "host_load_average_before_case": [
+        10.13671875,
+        9.67041015625,
+        9.1708984375
+      ],
+      "host_load_average_after_case": [
+        10.13671875,
+        9.67041015625,
+        9.1708984375
+      ],
+      "all_final_states_equal": true
+    },
+    {
+      "mode": "final",
+      "count": 512,
+      "start_q": 33,
+      "last_q": 1055,
+      "prime_cap": 65521,
+      "prime_count": 6541,
+      "active_order_count": 479,
+      "tile_size": 4096,
+      "repeats": 5,
+      "warmups_per_method": 2,
+      "plan_preparation_ms": 2.211916,
+      "backend_initialization_ms": 52.063708,
+      "first_gpu_call_including_kernel_compile_ms": 0.806125,
+      "metal_device": "Apple M2 Max",
+      "witnesses": 402,
+      "unresolved": 110,
+      "probable_mersenne_exponents": [
+        61,
+        89,
+        107,
+        127,
+        521,
+        607
+      ],
+      "gmp_repetitions": 25,
+      "methods": {
+        "jabari_post5_normalized_gmp": {
+          "median_ms": 40.33975,
+          "min_ms": 39.550833,
+          "max_ms": 66.615875,
+          "samples_ms": [
+            39.550833,
+            66.615875,
+            40.778083,
+            40.321708,
+            40.33975
+          ],
+          "gmp_screen_calls": 512
+        },
+        "cpu_rebased_full": {
+          "median_ms": 39.542874999999995,
+          "min_ms": 38.108625,
+          "max_ms": 41.028833,
+          "samples_ms": [
+            38.457917,
+            41.028833,
+            39.854542,
+            39.542874999999995,
+            38.108625
+          ],
+          "gmp_screen_calls": 110
+        },
+        "metal_rebased_full": {
+          "median_ms": 363.253417,
+          "min_ms": 348.273416,
+          "max_ms": 373.015542,
+          "samples_ms": [
+            348.273416,
+            364.61508399999997,
+            373.015542,
+            363.253417,
+            360.366541
+          ],
+          "gmp_screen_calls": 110
+        },
+        "cpu_direct_full": {
+          "median_ms": 26.801709,
+          "min_ms": 26.329417,
+          "max_ms": 33.909,
+          "samples_ms": [
+            26.801709,
+            33.909,
+            28.8935,
+            26.561416,
+            26.329417
+          ],
+          "gmp_screen_calls": 110
+        },
+        "cpu_direct_prepared": {
+          "median_ms": 24.88975,
+          "min_ms": 24.237958,
+          "max_ms": 42.137458,
+          "samples_ms": [
+            24.88975,
+            42.137458,
+            25.999499999999998,
+            24.516709000000002,
+            24.237958
+          ],
+          "gmp_screen_calls": 110
+        },
+        "metal_direct_full": {
+          "median_ms": 29.358249999999998,
+          "min_ms": 27.402625,
+          "max_ms": 51.631375,
+          "samples_ms": [
+            51.631375,
+            45.995875,
+            29.358249999999998,
+            27.402625,
+            28.271375000000003
+          ],
+          "gmp_screen_calls": 110
+        },
+        "metal_direct_prepared": {
+          "median_ms": 46.000959,
+          "min_ms": 24.507917,
+          "max_ms": 50.122333,
+          "samples_ms": [
+            49.446208999999996,
+            46.000959,
+            50.122333,
+            24.507917,
+            25.116083
+          ],
+          "gmp_screen_calls": 110
+        }
+      },
+      "scope": "Identical finite M_q inputs and shared GMP(25); author's unpublished primes-utils unavailable. Full variants include plan preparation; prepared variants reuse one plan. Both include allocation, transfer, dispatch, readback and survivor GMP tests. GPU initialization/compilation, equality checks and output excluded. Legacy methods include 32-entry compatible-k rebasing.",
+      "run_command": [
+        "/private/tmp/mpgs-exponent-benchmark",
+        "final",
+        "512",
+        "33",
+        "5",
+        "4096"
+      ],
+      "host_load_average_before_case": [
+        10.13671875,
+        9.67041015625,
+        9.1708984375
+      ],
+      "host_load_average_after_case": [
+        9.64501953125,
+        9.576171875,
+        9.14013671875
+      ],
+      "all_final_states_equal": true
+    },
+    {
+      "mode": "final",
+      "count": 1024,
+      "start_q": 17,
+      "last_q": 2063,
+      "prime_cap": 65521,
+      "prime_count": 6541,
+      "active_order_count": 479,
+      "tile_size": 4096,
+      "repeats": 5,
+      "warmups_per_method": 2,
+      "plan_preparation_ms": 2.120167,
+      "backend_initialization_ms": 61.6185,
+      "first_gpu_call_including_kernel_compile_ms": 0.999917,
+      "metal_device": "Apple M2 Max",
+      "witnesses": 804,
+      "unresolved": 220,
+      "probable_mersenne_exponents": [
+        17,
+        19,
+        31,
+        61,
+        89,
+        107,
+        127,
+        521,
+        607,
+        1279
+      ],
+      "gmp_repetitions": 25,
+      "methods": {
+        "jabari_post5_normalized_gmp": {
+          "median_ms": 390.568958,
+          "min_ms": 388.020041,
+          "max_ms": 391.70291699999996,
+          "samples_ms": [
+            388.020041,
+            390.568958,
+            389.519917,
+            391.395375,
+            391.70291699999996
+          ],
+          "gmp_screen_calls": 1024
+        },
+        "cpu_rebased_full": {
+          "median_ms": 290.01225000000005,
+          "min_ms": 283.772417,
+          "max_ms": 302.82925,
+          "samples_ms": [
+            283.772417,
+            289.3305,
+            302.82925,
+            290.01225000000005,
+            292.49762499999997
+          ],
+          "gmp_screen_calls": 220
+        },
+        "metal_rebased_full": {
+          "median_ms": 932.385917,
+          "min_ms": 905.908916,
+          "max_ms": 976.422625,
+          "samples_ms": [
+            905.908916,
+            943.988917,
+            932.385917,
+            976.422625,
+            911.828333
+          ],
+          "gmp_screen_calls": 220
+        },
+        "cpu_direct_full": {
+          "median_ms": 262.24125,
+          "min_ms": 258.058458,
+          "max_ms": 266.017,
+          "samples_ms": [
+            258.058458,
+            266.017,
+            261.822375,
+            265.537167,
+            262.24125
+          ],
+          "gmp_screen_calls": 220
+        },
+        "cpu_direct_prepared": {
+          "median_ms": 261.2585,
+          "min_ms": 257.693625,
+          "max_ms": 265.166709,
+          "samples_ms": [
+            259.0725,
+            265.166709,
+            257.693625,
+            264.356834,
+            261.2585
+          ],
+          "gmp_screen_calls": 220
+        },
+        "metal_direct_full": {
+          "median_ms": 267.28745799999996,
+          "min_ms": 261.79104199999995,
+          "max_ms": 307.851667,
+          "samples_ms": [
+            307.851667,
+            271.474875,
+            261.79104199999995,
+            267.28745799999996,
+            264.128625
+          ],
+          "gmp_screen_calls": 220
+        },
+        "metal_direct_prepared": {
+          "median_ms": 262.91229100000004,
+          "min_ms": 259.262709,
+          "max_ms": 271.74949999999995,
+          "samples_ms": [
+            259.262709,
+            271.74949999999995,
+            260.049333,
+            262.91229100000004,
+            263.159833
+          ],
+          "gmp_screen_calls": 220
+        }
+      },
+      "scope": "Identical finite M_q inputs and shared GMP(25); author's unpublished primes-utils unavailable. Full variants include plan preparation; prepared variants reuse one plan. Both include allocation, transfer, dispatch, readback and survivor GMP tests. GPU initialization/compilation, equality checks and output excluded. Legacy methods include 32-entry compatible-k rebasing.",
+      "run_command": [
+        "/private/tmp/mpgs-exponent-benchmark",
+        "final",
+        "1024",
+        "17",
+        "5",
+        "4096"
+      ],
+      "host_load_average_before_case": [
+        9.64501953125,
+        9.576171875,
+        9.14013671875
+      ],
+      "host_load_average_after_case": [
+        8.486328125,
+        9.3125,
+        9.0546875
+      ],
+      "all_final_states_equal": true
+    },
+    {
+      "mode": "final",
+      "count": 2040,
+      "start_q": 17,
+      "last_q": 4095,
+      "prime_cap": 65521,
+      "prime_count": 6541,
+      "active_order_count": 479,
+      "tile_size": 4096,
+      "repeats": 5,
+      "warmups_per_method": 2,
+      "plan_preparation_ms": 2.243875,
+      "backend_initialization_ms": 50.25475,
+      "first_gpu_call_including_kernel_compile_ms": 0.9332919999999999,
+      "metal_device": "Apple M2 Max",
+      "witnesses": 1591,
+      "unresolved": 449,
+      "probable_mersenne_exponents": [
+        17,
+        19,
+        31,
+        61,
+        89,
+        107,
+        127,
+        521,
+        607,
+        1279,
+        2203,
+        2281,
+        3217
+      ],
+      "gmp_repetitions": 25,
+      "methods": {
+        "jabari_post5_normalized_gmp": {
+          "median_ms": 4694.295625,
+          "min_ms": 4634.877333,
+          "max_ms": 5719.315625,
+          "samples_ms": [
+            4634.877333,
+            4694.295625,
+            4976.702125,
+            5719.315625,
+            4658.304208
+          ],
+          "gmp_screen_calls": 2040
+        },
+        "cpu_rebased_full": {
+          "median_ms": 3561.317333,
+          "min_ms": 3545.093708,
+          "max_ms": 4582.506166,
+          "samples_ms": [
+            3689.526375,
+            3550.7960829999997,
+            3561.317333,
+            4582.506166,
+            3545.093708
+          ],
+          "gmp_screen_calls": 449
+        },
+        "metal_rebased_full": {
+          "median_ms": 4791.222167,
+          "min_ms": 4725.9244579999995,
+          "max_ms": 5185.444709,
+          "samples_ms": [
+            4725.9244579999995,
+            5011.935624999999,
+            4737.653666,
+            5185.444709,
+            4791.222167
+          ],
+          "gmp_screen_calls": 449
+        },
+        "cpu_direct_full": {
+          "median_ms": 3448.3670420000003,
+          "min_ms": 3427.1781250000004,
+          "max_ms": 3981.116375,
+          "samples_ms": [
+            3515.652958,
+            3436.481,
+            3427.1781250000004,
+            3981.116375,
+            3448.3670420000003
+          ],
+          "gmp_screen_calls": 449
+        },
+        "cpu_direct_prepared": {
+          "median_ms": 3540.04525,
+          "min_ms": 3431.340292,
+          "max_ms": 3588.161667,
+          "samples_ms": [
+            3544.591917,
+            3431.340292,
+            3483.381417,
+            3588.161667,
+            3540.04525
+          ],
+          "gmp_screen_calls": 449
+        },
+        "metal_direct_full": {
+          "median_ms": 3517.423833,
+          "min_ms": 3482.584125,
+          "max_ms": 3642.775042,
+          "samples_ms": [
+            3580.44125,
+            3642.775042,
+            3517.423833,
+            3509.4972909999997,
+            3482.584125
+          ],
+          "gmp_screen_calls": 449
+        },
+        "metal_direct_prepared": {
+          "median_ms": 3580.0354580000003,
+          "min_ms": 3444.415459,
+          "max_ms": 4861.5205829999995,
+          "samples_ms": [
+            3602.818125,
+            3444.415459,
+            3580.0354580000003,
+            4861.5205829999995,
+            3475.4575
+          ],
+          "gmp_screen_calls": 449
+        }
+      },
+      "scope": "Identical finite M_q inputs and shared GMP(25); author's unpublished primes-utils unavailable. Full variants include plan preparation; prepared variants reuse one plan. Both include allocation, transfer, dispatch, readback and survivor GMP tests. GPU initialization/compilation, equality checks and output excluded. Legacy methods include 32-entry compatible-k rebasing.",
+      "run_command": [
+        "/private/tmp/mpgs-exponent-benchmark",
+        "final",
+        "2040",
+        "17",
+        "5",
+        "4096"
+      ],
+      "host_load_average_before_case": [
+        8.486328125,
+        9.3125,
+        9.0546875
+      ],
+      "host_load_average_after_case": [
+        8.62255859375,
+        8.79296875,
+        8.85693359375
+      ],
+      "all_final_states_equal": true
+    }
+  ],
+  "tile_cases": [
+    {
+      "mode": "filter",
+      "count": 1048576,
+      "start_q": 17,
+      "last_q": 2097167,
+      "prime_cap": 65521,
+      "prime_count": 6541,
+      "active_order_count": 479,
+      "tile_size": 256,
+      "repeats": 5,
+      "warmups_per_method": 2,
+      "plan_preparation_ms": 2.1618340000000003,
+      "backend_initialization_ms": 56.258583,
+      "first_gpu_call_including_kernel_compile_ms": 5.321125,
+      "metal_device": "Apple M2 Max",
+      "all_outputs_equal": true,
+      "witnesses": 793881,
+      "unresolved": 254695,
+      "probable_mersenne_exponents": [],
+      "gmp_repetitions": null,
+      "methods": {
+        "cpu_direct_full": {
+          "median_ms": 4.513708,
+          "min_ms": 4.256209,
+          "max_ms": 4.6,
+          "samples_ms": [
+            4.52875,
+            4.6,
+            4.513708,
+            4.38875,
+            4.256209
+          ],
+          "gmp_screen_calls": 0
+        },
+        "cpu_direct_prepared": {
+          "median_ms": 2.1099170000000003,
+          "min_ms": 2.0192080000000003,
+          "max_ms": 2.23575,
+          "samples_ms": [
+            2.105833,
+            2.23575,
+            2.1099170000000003,
+            2.221,
+            2.0192080000000003
+          ],
+          "gmp_screen_calls": 0
+        },
+        "metal_direct_full": {
+          "median_ms": 6.156292,
+          "min_ms": 5.897375,
+          "max_ms": 8.798584,
+          "samples_ms": [
+            5.897375,
+            6.156292,
+            6.257083,
+            5.979292,
+            8.798584
+          ],
+          "gmp_screen_calls": 0
+        },
+        "metal_direct_prepared": {
+          "median_ms": 3.7712499999999998,
+          "min_ms": 3.582667,
+          "max_ms": 4.259667,
+          "samples_ms": [
+            3.746833,
+            3.582667,
+            3.7712499999999998,
+            4.259667,
+            3.888042
+          ],
+          "gmp_screen_calls": 0
+        }
+      },
+      "scope": "Filter only, no BigInt candidate construction or primality test. Complete factor arrays compared on every run. Full variants include plan preparation; prepared variants reuse one plan. Allocation, transfer, dispatch, synchronization and readback included. GPU initialization/compilation, equality checks and output excluded.",
+      "run_command": [
+        "/private/tmp/mpgs-exponent-benchmark",
+        "filter",
+        "1048576",
+        "17",
+        "5",
+        "256"
+      ],
+      "host_load_average_before_case": [
+        8.62255859375,
+        8.79296875,
+        8.85693359375
+      ],
+      "host_load_average_after_case": [
+        8.62255859375,
+        8.79296875,
+        8.85693359375
+      ]
+    },
+    {
+      "mode": "filter",
+      "count": 1048576,
+      "start_q": 17,
+      "last_q": 2097167,
+      "prime_cap": 65521,
+      "prime_count": 6541,
+      "active_order_count": 479,
+      "tile_size": 1024,
+      "repeats": 5,
+      "warmups_per_method": 2,
+      "plan_preparation_ms": 2.13775,
+      "backend_initialization_ms": 49.877833,
+      "first_gpu_call_including_kernel_compile_ms": 5.242458,
+      "metal_device": "Apple M2 Max",
+      "all_outputs_equal": true,
+      "witnesses": 793881,
+      "unresolved": 254695,
+      "probable_mersenne_exponents": [],
+      "gmp_repetitions": null,
+      "methods": {
+        "cpu_direct_full": {
+          "median_ms": 4.284750000000001,
+          "min_ms": 4.1964999999999995,
+          "max_ms": 4.5065,
+          "samples_ms": [
+            4.5065,
+            4.221500000000001,
+            4.1964999999999995,
+            4.284750000000001,
+            4.415125
+          ],
+          "gmp_screen_calls": 0
+        },
+        "cpu_direct_prepared": {
+          "median_ms": 2.236875,
+          "min_ms": 2.16775,
+          "max_ms": 2.528625,
+          "samples_ms": [
+            2.2363750000000002,
+            2.367208,
+            2.528625,
+            2.16775,
+            2.236875
+          ],
+          "gmp_screen_calls": 0
+        },
+        "metal_direct_full": {
+          "median_ms": 6.052875,
+          "min_ms": 5.864583,
+          "max_ms": 6.3528329999999995,
+          "samples_ms": [
+            5.914833000000001,
+            5.864583,
+            6.3528329999999995,
+            6.07975,
+            6.052875
+          ],
+          "gmp_screen_calls": 0
+        },
+        "metal_direct_prepared": {
+          "median_ms": 3.783083,
+          "min_ms": 3.535958,
+          "max_ms": 6.748125,
+          "samples_ms": [
+            3.771458,
+            3.783083,
+            3.535958,
+            3.91575,
+            6.748125
+          ],
+          "gmp_screen_calls": 0
+        }
+      },
+      "scope": "Filter only, no BigInt candidate construction or primality test. Complete factor arrays compared on every run. Full variants include plan preparation; prepared variants reuse one plan. Allocation, transfer, dispatch, synchronization and readback included. GPU initialization/compilation, equality checks and output excluded.",
+      "run_command": [
+        "/private/tmp/mpgs-exponent-benchmark",
+        "filter",
+        "1048576",
+        "17",
+        "5",
+        "1024"
+      ],
+      "host_load_average_before_case": [
+        8.62255859375,
+        8.79296875,
+        8.85693359375
+      ],
+      "host_load_average_after_case": [
+        8.62255859375,
+        8.79296875,
+        8.85693359375
+      ]
+    },
+    {
+      "mode": "filter",
+      "count": 1048576,
+      "start_q": 17,
+      "last_q": 2097167,
+      "prime_cap": 65521,
+      "prime_count": 6541,
+      "active_order_count": 479,
+      "tile_size": 4096,
+      "repeats": 5,
+      "warmups_per_method": 2,
+      "plan_preparation_ms": 2.15375,
+      "backend_initialization_ms": 48.63633299999999,
+      "first_gpu_call_including_kernel_compile_ms": 5.498167,
+      "metal_device": "Apple M2 Max",
+      "all_outputs_equal": true,
+      "witnesses": 793881,
+      "unresolved": 254695,
+      "probable_mersenne_exponents": [],
+      "gmp_repetitions": null,
+      "methods": {
+        "cpu_direct_full": {
+          "median_ms": 4.2700000000000005,
+          "min_ms": 4.15975,
+          "max_ms": 4.399792,
+          "samples_ms": [
+            4.3629999999999995,
+            4.399792,
+            4.2700000000000005,
+            4.15975,
+            4.193541000000001
+          ],
+          "gmp_screen_calls": 0
+        },
+        "cpu_direct_prepared": {
+          "median_ms": 2.1400419999999998,
+          "min_ms": 1.972667,
+          "max_ms": 2.5040829999999996,
+          "samples_ms": [
+            1.972667,
+            2.5040829999999996,
+            2.306875,
+            2.096167,
+            2.1400419999999998
+          ],
+          "gmp_screen_calls": 0
+        },
+        "metal_direct_full": {
+          "median_ms": 6.252084,
+          "min_ms": 6.196791,
+          "max_ms": 7.579125,
+          "samples_ms": [
+            6.360625,
+            6.196791,
+            6.242542,
+            6.252084,
+            7.579125
+          ],
+          "gmp_screen_calls": 0
+        },
+        "metal_direct_prepared": {
+          "median_ms": 4.0294170000000005,
+          "min_ms": 3.8899160000000004,
+          "max_ms": 4.236791,
+          "samples_ms": [
+            4.025291999999999,
+            4.099667,
+            4.236791,
+            4.0294170000000005,
+            3.8899160000000004
+          ],
+          "gmp_screen_calls": 0
+        }
+      },
+      "scope": "Filter only, no BigInt candidate construction or primality test. Complete factor arrays compared on every run. Full variants include plan preparation; prepared variants reuse one plan. Allocation, transfer, dispatch, synchronization and readback included. GPU initialization/compilation, equality checks and output excluded.",
+      "run_command": [
+        "/private/tmp/mpgs-exponent-benchmark",
+        "filter",
+        "1048576",
+        "17",
+        "5",
+        "4096"
+      ],
+      "host_load_average_before_case": [
+        8.62255859375,
+        8.79296875,
+        8.85693359375
+      ],
+      "host_load_average_after_case": [
+        8.62255859375,
+        8.79296875,
+        8.85693359375
+      ]
+    },
+    {
+      "mode": "filter",
+      "count": 1048576,
+      "start_q": 17,
+      "last_q": 2097167,
+      "prime_cap": 65521,
+      "prime_count": 6541,
+      "active_order_count": 479,
+      "tile_size": 16384,
+      "repeats": 5,
+      "warmups_per_method": 2,
+      "plan_preparation_ms": 2.1085409999999998,
+      "backend_initialization_ms": 47.960833,
+      "first_gpu_call_including_kernel_compile_ms": 6.654166,
+      "metal_device": "Apple M2 Max",
+      "all_outputs_equal": true,
+      "witnesses": 793881,
+      "unresolved": 254695,
+      "probable_mersenne_exponents": [],
+      "gmp_repetitions": null,
+      "methods": {
+        "cpu_direct_full": {
+          "median_ms": 4.575958,
+          "min_ms": 4.3916249999999994,
+          "max_ms": 4.859833,
+          "samples_ms": [
+            4.3916249999999994,
+            4.813458,
+            4.575792000000001,
+            4.859833,
+            4.575958
+          ],
+          "gmp_screen_calls": 0
+        },
+        "cpu_direct_prepared": {
+          "median_ms": 2.324125,
+          "min_ms": 2.046333,
+          "max_ms": 2.804417,
+          "samples_ms": [
+            2.804417,
+            2.3423749999999997,
+            2.1294999999999997,
+            2.324125,
+            2.046333
+          ],
+          "gmp_screen_calls": 0
+        },
+        "metal_direct_full": {
+          "median_ms": 7.275334,
+          "min_ms": 6.348167,
+          "max_ms": 7.3957500000000005,
+          "samples_ms": [
+            7.275334,
+            7.304541,
+            7.3957500000000005,
+            7.034041,
+            6.348167
+          ],
+          "gmp_screen_calls": 0
+        },
+        "metal_direct_prepared": {
+          "median_ms": 5.228041999999999,
+          "min_ms": 4.176958,
+          "max_ms": 5.9515,
+          "samples_ms": [
+            5.228041999999999,
+            5.9515,
+            5.055792,
+            5.3066249999999995,
+            4.176958
+          ],
+          "gmp_screen_calls": 0
+        }
+      },
+      "scope": "Filter only, no BigInt candidate construction or primality test. Complete factor arrays compared on every run. Full variants include plan preparation; prepared variants reuse one plan. Allocation, transfer, dispatch, synchronization and readback included. GPU initialization/compilation, equality checks and output excluded.",
+      "run_command": [
+        "/private/tmp/mpgs-exponent-benchmark",
+        "filter",
+        "1048576",
+        "17",
+        "5",
+        "16384"
+      ],
+      "host_load_average_before_case": [
+        8.62255859375,
+        8.79296875,
+        8.85693359375
+      ],
+      "host_load_average_after_case": [
+        8.62255859375,
+        8.79296875,
+        8.85693359375
+      ]
+    },
+    {
+      "mode": "filter",
+      "count": 1048576,
+      "start_q": 17,
+      "last_q": 2097167,
+      "prime_cap": 65521,
+      "prime_count": 6541,
+      "active_order_count": 479,
+      "tile_size": 65536,
+      "repeats": 5,
+      "warmups_per_method": 2,
+      "plan_preparation_ms": 2.176,
+      "backend_initialization_ms": 56.747625000000006,
+      "first_gpu_call_including_kernel_compile_ms": 8.756917,
+      "metal_device": "Apple M2 Max",
+      "all_outputs_equal": true,
+      "witnesses": 793881,
+      "unresolved": 254695,
+      "probable_mersenne_exponents": [],
+      "gmp_repetitions": null,
+      "methods": {
+        "cpu_direct_full": {
+          "median_ms": 4.3553749999999996,
+          "min_ms": 4.208333,
+          "max_ms": 4.9361250000000005,
+          "samples_ms": [
+            4.9361250000000005,
+            4.574792,
+            4.208333,
+            4.3553749999999996,
+            4.219833
+          ],
+          "gmp_screen_calls": 0
+        },
+        "cpu_direct_prepared": {
+          "median_ms": 2.254125,
+          "min_ms": 2.095875,
+          "max_ms": 2.686583,
+          "samples_ms": [
+            2.530916,
+            2.135792,
+            2.686583,
+            2.254125,
+            2.095875
+          ],
+          "gmp_screen_calls": 0
+        },
+        "metal_direct_full": {
+          "median_ms": 8.562458,
+          "min_ms": 7.582375,
+          "max_ms": 9.86975,
+          "samples_ms": [
+            7.582375,
+            8.700792,
+            8.352459,
+            8.562458,
+            9.86975
+          ],
+          "gmp_screen_calls": 0
+        },
+        "metal_direct_prepared": {
+          "median_ms": 7.482583,
+          "min_ms": 5.488417,
+          "max_ms": 10.206875,
+          "samples_ms": [
+            5.630083,
+            5.488417,
+            8.998459,
+            10.206875,
+            7.482583
+          ],
+          "gmp_screen_calls": 0
+        }
+      },
+      "scope": "Filter only, no BigInt candidate construction or primality test. Complete factor arrays compared on every run. Full variants include plan preparation; prepared variants reuse one plan. Allocation, transfer, dispatch, synchronization and readback included. GPU initialization/compilation, equality checks and output excluded.",
+      "run_command": [
+        "/private/tmp/mpgs-exponent-benchmark",
+        "filter",
+        "1048576",
+        "17",
+        "5",
+        "65536"
+      ],
+      "host_load_average_before_case": [
+        8.62255859375,
+        8.79296875,
+        8.85693359375
+      ],
+      "host_load_average_after_case": [
+        8.62255859375,
+        8.79296875,
+        8.85693359375
+      ]
+    }
+  ],
+  "scale_cases": [
+    {
+      "mode": "filter",
+      "count": 65536,
+      "start_q": 17,
+      "last_q": 131087,
+      "prime_cap": 65521,
+      "prime_count": 6541,
+      "active_order_count": 479,
+      "tile_size": 256,
+      "repeats": 5,
+      "warmups_per_method": 2,
+      "plan_preparation_ms": 2.124042,
+      "backend_initialization_ms": 57.144583999999995,
+      "first_gpu_call_including_kernel_compile_ms": 2.118708,
+      "metal_device": "Apple M2 Max",
+      "all_outputs_equal": true,
+      "witnesses": 49399,
+      "unresolved": 16137,
+      "probable_mersenne_exponents": [],
+      "gmp_repetitions": null,
+      "methods": {
+        "cpu_direct_full": {
+          "median_ms": 2.242375,
+          "min_ms": 2.219708,
+          "max_ms": 2.718166,
+          "samples_ms": [
+            2.238916,
+            2.242375,
+            2.718166,
+            2.6228330000000004,
+            2.219708
+          ],
+          "gmp_screen_calls": 0
+        },
+        "cpu_direct_prepared": {
+          "median_ms": 0.101167,
+          "min_ms": 0.09624999999999999,
+          "max_ms": 0.14024999999999999,
+          "samples_ms": [
+            0.101167,
+            0.104417,
+            0.09624999999999999,
+            0.14024999999999999,
+            0.098917
+          ],
+          "gmp_screen_calls": 0
+        },
+        "metal_direct_full": {
+          "median_ms": 3.3365,
+          "min_ms": 2.845667,
+          "max_ms": 5.961208,
+          "samples_ms": [
+            3.3365,
+            3.393541,
+            2.845667,
+            2.89025,
+            5.961208
+          ],
+          "gmp_screen_calls": 0
+        },
+        "metal_direct_prepared": {
+          "median_ms": 0.7454999999999999,
+          "min_ms": 0.4365,
+          "max_ms": 1.715458,
+          "samples_ms": [
+            0.7454999999999999,
+            1.715458,
+            0.4365,
+            1.316209,
+            0.555375
+          ],
+          "gmp_screen_calls": 0
+        }
+      },
+      "scope": "Filter only, no BigInt candidate construction or primality test. Complete factor arrays compared on every run. Full variants include plan preparation; prepared variants reuse one plan. Allocation, transfer, dispatch, synchronization and readback included. GPU initialization/compilation, equality checks and output excluded.",
+      "run_command": [
+        "/private/tmp/mpgs-exponent-benchmark",
+        "filter",
+        "65536",
+        "17",
+        "5",
+        "256"
+      ],
+      "host_load_average_before_case": [
+        8.62255859375,
+        8.79296875,
+        8.85693359375
+      ],
+      "host_load_average_after_case": [
+        8.62255859375,
+        8.79296875,
+        8.85693359375
+      ]
+    },
+    {
+      "mode": "filter",
+      "count": 1048576,
+      "start_q": 136279841,
+      "last_q": 138376991,
+      "prime_cap": 65521,
+      "prime_count": 6541,
+      "active_order_count": 479,
+      "tile_size": 256,
+      "repeats": 5,
+      "warmups_per_method": 2,
+      "plan_preparation_ms": 2.164958,
+      "backend_initialization_ms": 54.242833,
+      "first_gpu_call_including_kernel_compile_ms": 5.516667,
+      "metal_device": "Apple M2 Max",
+      "all_outputs_equal": true,
+      "witnesses": 795776,
+      "unresolved": 252800,
+      "probable_mersenne_exponents": [],
+      "gmp_repetitions": null,
+      "methods": {
+        "cpu_direct_full": {
+          "median_ms": 4.563875,
+          "min_ms": 4.47325,
+          "max_ms": 4.782417,
+          "samples_ms": [
+            4.4978750000000005,
+            4.47325,
+            4.721084,
+            4.563875,
+            4.782417
+          ],
+          "gmp_screen_calls": 0
+        },
+        "cpu_direct_prepared": {
+          "median_ms": 2.3489169999999997,
+          "min_ms": 2.217167,
+          "max_ms": 2.7135000000000002,
+          "samples_ms": [
+            2.221542,
+            2.7135000000000002,
+            2.217167,
+            2.385042,
+            2.3489169999999997
+          ],
+          "gmp_screen_calls": 0
+        },
+        "metal_direct_full": {
+          "median_ms": 5.75625,
+          "min_ms": 5.686375,
+          "max_ms": 8.301625,
+          "samples_ms": [
+            8.301625,
+            5.700667,
+            5.75625,
+            5.686375,
+            7.955291999999999
+          ],
+          "gmp_screen_calls": 0
+        },
+        "metal_direct_prepared": {
+          "median_ms": 3.775458,
+          "min_ms": 3.5894999999999997,
+          "max_ms": 5.561209,
+          "samples_ms": [
+            3.845792,
+            3.775458,
+            3.5894999999999997,
+            5.561209,
+            3.643125
+          ],
+          "gmp_screen_calls": 0
+        }
+      },
+      "scope": "Filter only, no BigInt candidate construction or primality test. Complete factor arrays compared on every run. Full variants include plan preparation; prepared variants reuse one plan. Allocation, transfer, dispatch, synchronization and readback included. GPU initialization/compilation, equality checks and output excluded.",
+      "run_command": [
+        "/private/tmp/mpgs-exponent-benchmark",
+        "filter",
+        "1048576",
+        "136279841",
+        "5",
+        "256"
+      ],
+      "host_load_average_before_case": [
+        8.62255859375,
+        8.79296875,
+        8.85693359375
+      ],
+      "host_load_average_after_case": [
+        8.62255859375,
+        8.79296875,
+        8.85693359375
+      ]
+    },
+    {
+      "mode": "filter",
+      "count": 4194304,
+      "start_q": 17,
+      "last_q": 8388623,
+      "prime_cap": 65521,
+      "prime_count": 6541,
+      "active_order_count": 479,
+      "tile_size": 256,
+      "repeats": 5,
+      "warmups_per_method": 2,
+      "plan_preparation_ms": 2.171708,
+      "backend_initialization_ms": 50.056542,
+      "first_gpu_call_including_kernel_compile_ms": 15.104416,
+      "metal_device": "Apple M2 Max",
+      "all_outputs_equal": true,
+      "witnesses": 3179309,
+      "unresolved": 1014995,
+      "probable_mersenne_exponents": [],
+      "gmp_repetitions": null,
+      "methods": {
+        "cpu_direct_full": {
+          "median_ms": 13.893,
+          "min_ms": 12.148542,
+          "max_ms": 14.847208,
+          "samples_ms": [
+            13.2765,
+            14.65225,
+            12.148542,
+            14.847208,
+            13.893
+          ],
+          "gmp_screen_calls": 0
+        },
+        "cpu_direct_prepared": {
+          "median_ms": 11.169834,
+          "min_ms": 9.643125000000001,
+          "max_ms": 11.86925,
+          "samples_ms": [
+            11.86925,
+            11.169834,
+            9.968417,
+            11.321708,
+            9.643125000000001
+          ],
+          "gmp_screen_calls": 0
+        },
+        "metal_direct_full": {
+          "median_ms": 15.808583,
+          "min_ms": 14.663208000000001,
+          "max_ms": 18.330583,
+          "samples_ms": [
+            16.552917,
+            15.808583,
+            14.762834000000002,
+            18.330583,
+            14.663208000000001
+          ],
+          "gmp_screen_calls": 0
+        },
+        "metal_direct_prepared": {
+          "median_ms": 12.841375000000001,
+          "min_ms": 12.255334,
+          "max_ms": 14.693416000000001,
+          "samples_ms": [
+            14.693416000000001,
+            12.603042,
+            12.861292,
+            12.255334,
+            12.841375000000001
+          ],
+          "gmp_screen_calls": 0
+        }
+      },
+      "scope": "Filter only, no BigInt candidate construction or primality test. Complete factor arrays compared on every run. Full variants include plan preparation; prepared variants reuse one plan. Allocation, transfer, dispatch, synchronization and readback included. GPU initialization/compilation, equality checks and output excluded.",
+      "run_command": [
+        "/private/tmp/mpgs-exponent-benchmark",
+        "filter",
+        "4194304",
+        "17",
+        "5",
+        "256"
+      ],
+      "host_load_average_before_case": [
+        8.62255859375,
+        8.79296875,
+        8.85693359375
+      ],
+      "host_load_average_after_case": [
+        8.62255859375,
+        8.79296875,
+        8.85693359375
+      ]
+    },
+    {
+      "mode": "filter",
+      "count": 16777216,
+      "start_q": 17,
+      "last_q": 33554447,
+      "prime_cap": 65521,
+      "prime_count": 6541,
+      "active_order_count": 479,
+      "tile_size": 256,
+      "repeats": 5,
+      "warmups_per_method": 2,
+      "plan_preparation_ms": 2.1492080000000002,
+      "backend_initialization_ms": 50.445333000000005,
+      "first_gpu_call_including_kernel_compile_ms": 58.138542,
+      "metal_device": "Apple M2 Max",
+      "all_outputs_equal": true,
+      "witnesses": 12725941,
+      "unresolved": 4051275,
+      "probable_mersenne_exponents": [],
+      "gmp_repetitions": null,
+      "methods": {
+        "cpu_direct_full": {
+          "median_ms": 64.283958,
+          "min_ms": 62.905958,
+          "max_ms": 65.75254199999999,
+          "samples_ms": [
+            64.091375,
+            62.905958,
+            65.280167,
+            65.75254199999999,
+            64.283958
+          ],
+          "gmp_screen_calls": 0
+        },
+        "cpu_direct_prepared": {
+          "median_ms": 61.496666999999995,
+          "min_ms": 60.609458999999994,
+          "max_ms": 62.489084,
+          "samples_ms": [
+            62.489084,
+            61.162167000000004,
+            61.689333,
+            60.609458999999994,
+            61.496666999999995
+          ],
+          "gmp_screen_calls": 0
+        },
+        "metal_direct_full": {
+          "median_ms": 49.0745,
+          "min_ms": 48.167708,
+          "max_ms": 50.707916999999995,
+          "samples_ms": [
+            48.167708,
+            50.063875,
+            49.0745,
+            48.675749999999994,
+            50.707916999999995
+          ],
+          "gmp_screen_calls": 0
+        },
+        "metal_direct_prepared": {
+          "median_ms": 49.213874999999994,
+          "min_ms": 45.754625,
+          "max_ms": 50.21575,
+          "samples_ms": [
+            45.754625,
+            48.756375,
+            49.213874999999994,
+            49.800208999999995,
+            50.21575
+          ],
+          "gmp_screen_calls": 0
+        }
+      },
+      "scope": "Filter only, no BigInt candidate construction or primality test. Complete factor arrays compared on every run. Full variants include plan preparation; prepared variants reuse one plan. Allocation, transfer, dispatch, synchronization and readback included. GPU initialization/compilation, equality checks and output excluded.",
+      "run_command": [
+        "/private/tmp/mpgs-exponent-benchmark",
+        "filter",
+        "16777216",
+        "17",
+        "5",
+        "256"
+      ],
+      "host_load_average_before_case": [
+        8.62255859375,
+        8.79296875,
+        8.85693359375
+      ],
+      "host_load_average_after_case": [
+        8.62255859375,
+        8.79296875,
+        8.85693359375
+      ]
+    }
+  ],
+  "billion_sieves": [
+    {
+      "count": 1000000000,
+      "start_q": 17,
+      "last_q": 2000000015,
+      "prime_cap": 65521,
+      "prime_count": 6541,
+      "active_order_count": 479,
+      "window_limit": 16777216,
+      "windows_per_round": 60,
+      "tile_size": 256,
+      "metal_device": "Apple M2 Max",
+      "warmups": 2,
+      "repeats": 3,
+      "checked_candidates": 3000000000,
+      "all_factor_arrays_equal": true,
+      "proper_factor_witnesses": 758662628,
+      "unresolved": 241337372,
+      "one_plan_preparation_ms": 2.152667,
+      "cpu_prepared": {
+        "median_ms": 3326.383003,
+        "samples_ms": [
+          3416.7451250000004,
+          3276.3789979999997,
+          3326.383003
+        ]
+      },
+      "metal_prepared": {
+        "median_ms": 2829.7395000000006,
+        "samples_ms": [
+          2853.7503339999994,
+          2798.7854600000005,
+          2829.7395000000006
+        ]
+      },
+      "scope": "Complete streaming direct-exponent small-factor sieve; every entry compared outside timing. Reused plan; allocation, transfers, dispatch, synchronization, readback and result mapping included. Equality/counting, initialization and kernel compilation excluded. No BigInt candidate construction or final primality tests; no constant-cost full billion-exponent extrapolation.",
+      "run_command": [
+        "/private/tmp/mpgs-exponent-billion-probe",
+        "1000000000",
+        "17",
+        "3",
+        "256"
+      ],
+      "host_load_average_before_case": [
+        8.62255859375,
+        8.79296875,
+        8.85693359375
+      ],
+      "host_load_average_after_case": [
+        7.95703125,
+        8.642578125,
+        8.80126953125
+      ]
+    }
+  ],
+  "selected_large_window_tile": 256,
+  "selection_scope": "Lowest median prepared Metal filter at 1,048,576 exponents among five tested tiles; verify scaling separately.",
+  "host_load_average_after_run": [
+    7.95703125,
+    8.642578125,
+    8.80126953125
+  ],
+  "post_measurement_annotations": {
+    "annotated_at_utc": "2026-10-12T22:07:22.153724+00:00",
+    "scope": "Descriptive metadata only. No timed loop, compiled source, kernel, executed binary, sample or numerical result changed.",
+    "changes": [
+      "Renamed final-case all_outputs_equal to all_final_states_equal; it compares classification states, not complete Result records.",
+      "Added SHA256 of the referenced author-source record.",
+      "Updated the Python recorder to emit these metadata fields."
+    ],
+    "recorded_runner_sha256": "48659c862b04f46da5463e38a5cdb42441aee6bd26fa6235b3bae00a5381ecc6",
+    "current_runner_sha256": "9a4e27a34677539630fc245adfe83f17814844adac4c397884fd71b9e8e9a4bc",
+    "additional_standalone_check_source_sha256": {
+      "exponent_order_checks.cr": "9b93dcdbf60b43c19b9d88b91149471caafdb4faee9e25b07f5aafebf9c35a11",
+      "scripts/check_exponent_orders.py": "4df748cbd512683c612ad9a656fe298a5052ff03fdde620cd761e39f846be421"
+    }
+  }
+}

@@ -1,0 +1,1724 @@
+{
+  "date": "2026-10-12",
+  "hardware": "Apple M2 Max, 64 GiB unified memory",
+  "os": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+  "compiler": "Crystal 1.21.0 (2026-07-16)\n\nLLVM: 22.1.8\nDefault target: aarch64-apple-darwin25.6.0",
+  "build_command": "CRYSTAL_CACHE_DIR=/private/tmp/mpgs-final-final-benchmark-cache crystal build benchmark.cr --release -Dmpgs_metal --link-flags=\"/Users/sergey/Projects/Crystal/cogni-ml/build/bridge.o -lc++ -fuse-ld=/usr/bin/ld\" -o /private/tmp/mpgs-benchmark-final",
+  "build_provenance": "Caller supplied command; binary hash identifies the executed artifact. The runner cannot infer its build flags.",
+  "binary_sha256": "45ae94d4ad0c2c1472ec59809b7657b4c56c36ad8de9d92c73181b3ff3c37cfa",
+  "dependency_head": "7cccdd8bfb02ac388001ab7a61832087d8d1b450",
+  "dependency_worktree": "Existing unrelated modifications preserved; prototype made no edits",
+  "dependency_source_sha256": {
+    "build/bridge.o": "465ee1dd3bc0788b73dbf25e9ba66a4119ee6b0008afd0a8157986247c813773",
+    "src/ml/core/buffer.cr": "a28570a5b7163eef67aef7ad96af66d2168da68f104afbacc9714bbefb55334d",
+    "src/ml/core/shape.cr": "2de7b353c6464aaf8079333d9dde7575c40c72506965e671bd07975e8a03656f",
+    "src/ml/core/tensor.cr": "bc6cce4fd3101dd21f84efaf6a6601dae1b7e9f444bca32e3156fe2fe1b1369f",
+    "src/ml/cuda/driver.cr": "c9da5867318f569f9da2e59205d610dffa9a52db137b374e914955cc40596a9f",
+    "src/ml/cuda/gemma4_layer_runner.cr": "79171004620c5f786560feb08994d3cab545113684b7e59170819bba96d9dcc2",
+    "src/ml/cuda/gemma4_swa_context_ptx.cr": "39a6f14b0b7d55017e7761a5dae190d700b91db166482a71c57fe612dba39240",
+    "src/ml/cuda/qwen_full_attn_kv_runner.cr": "a3c5821c390b5ffc51114972ea6bb13631c4395ce5c3c1f521c57018044eb1af",
+    "src/ml/cuda/qwen_full_attn_layer_runner.cr": "c7969357c84a37b529bc6f5df5be5024d8eed700eb5abf388d6c04e7411dc2f6",
+    "src/ml/cuda/qwen_full_attn_projection_runner.cr": "9d270435d1730bc1be074694cf258933722a0d60b65c4a242a00893407bdeb23",
+    "src/ml/cuda/qwen_mixed_stack_runner.cr": "72a7e5d6468af009516d2cc261f06f329a8edf15aa2b28c0ee49b64c08030bfc",
+    "src/ml/cuda/qwen_output_head_runner.cr": "24a578dbe29cc667a06a6a8a76966514a82f6c0cc9289f1f4a9e6ac5f912178c",
+    "src/ml/cuda/qwen_recurrent_layer_runner.cr": "0dc7aaf93eecffe8b5d613387c44a0d28c579e5786f62cd67052d920c7ba5f15",
+    "src/ml/cuda/qwen_recurrent_stack_runner.cr": "602c7c3f56b30ffba86441c13c9c0990435457c37fc0a6c3988cfa951c787395",
+    "src/ml/cuda/qwen_state_artifact_restorer.cr": "e3996b164213689aaf87fd2337817b07a7b521535124f4499467d9b5d1c6b645",
+    "src/ml/metal/compute_graph.cr": "8d5d308fac91629a502de1ed085786047c5b6f0f530253ae265c7f95098cb970",
+    "src/ml/metal/device.cr": "ecc5d96332833a8a94d9a55914d515b5e34efe001f762d65aaa7c919b907c934",
+    "src/ml/metal/dispatch.cr": "40eeadaf1ccb56da52d8c3f5fa108ba1923048b641ed81e5f514010806a0ed3b",
+    "src/ml/metal/pipeline_selection_trace.cr": "b487a3c1e51a9cd62bf58e8801d850820a4942e541103d89cdbf282d4f2ced30",
+    "src/ml/metal/process_lease.cr": "3af0ee2d3435f46d5d0c35fc5b7c8b980645e310eeeb55f6c75634c5ffcbb048"
+  },
+  "source_sha256": {
+    "benchmark.cr": "bcc3830a7fddcd71b1f7a41d931efb302a7a1d0139be0e1add2dcf3e4384f0f4",
+    "core.cr": "a6a5f9cc408449fc02fa3586bd4ce186e15a91c186343943f97fd8faecc8ae84",
+    "cpu_demo.cr": "dd4dc6a8b3b088ae552f9eeb35147def463f68024ffe17773cbfaae92ac4dc29",
+    "cuda_backend.cr": "d54f9b18058b883e3bc7ba5ec59feb96822dc89b4881723436c3a038a21a9028",
+    "gpu_demo.cr": "fc88dec79fab6c19536113a5495c4083298eb5a9e1827bb51c460e547e29a175",
+    "gpu_window_checks.cr": "f1c90ddaf247f9faf4eb311e7c5687c5239a067eef26c5506fb5b709b0e8cc35",
+    "kernels/mpgs_sieve.metal": "0ed479017e06aaea85e1007cc3adfb715746a77690503d6bbafe835786de8fab",
+    "kernels/mpgs_sieve.ptx": "d77d1323eb1dbc026f8f5141411993ca677cc37c314dc0b8eeda7795f34a8875",
+    "kernels/mpgs_window.metal": "474d637a50099c4cea2341c709821e7c9ef333a930430d13c5456a15c95269cf",
+    "metal_backend.cr": "f193a7428a923187b9669d4b9c07988217e614e3ee2f7f3159de3e1a3b90fdf0",
+    "prepared_sieve.cr": "199ac392f745a374de9b1dd49f16a79e171fe76fad0ec1dfcc09637101de0750",
+    "schedule_demo.cr": "6a2810d1efd8dff2cae42b70aed7c6e6000e8657597b8e83b5bdb003a0d5ddc9",
+    "schedules.cr": "88314f53a71540b796139b9dc8e6f486c8750aaa0c003626a688e216c79a3b74",
+    "scripts/check_metal_compile_isolation.py": "e7cc7d5c85e1bb58b34c9b3ece5e2e765b496e1084d0a18eb09adb23e832deb4",
+    "scripts/run_benchmarks.py": "50d7e4f95568f75fe939d09f474bd271e56befbcc0970abe80d5b95671b173b0",
+    "spec/core_spec.cr": "0ce94ae183cd6b14e67274edaaa47fb853f2b62dc7b140d8cf166f2bd1fba6e9",
+    "spec/prepared_sieve_spec.cr": "0f0a1eada75a99c2426540b9dec15bfccd8d719cb509c033dcaa5ba53ff63df8",
+    "spec/schedules_spec.cr": "feb0d8c7019ff6603a667e9a7fc7c48b9acea5dbadd32514baa3a431bf6efcb0"
+  },
+  "limitations": [
+    "One host and one run per case: five rotating/reversed repetitions, two warmups per method. No temperature or background-load control.",
+    "Small-factor sieve only; no PRP/Lucas-Lehmer pipeline or GIMPS comparison.",
+    "Candidate input-array materialization and backend initialization excluded; candidate initialization recorded separately. Lazy window compilation is in untimed warmup.",
+    "Prepared paths amortize factor validation and inversion. Full paths include them.",
+    "Metal includes allocation, transfers, dispatch, synchronization, readback and rank mapping when dispatched. Even m with first-ranked 3 resolves on the host.",
+    "Checked Metal window timing additionally includes CPU verification of returned nonzero factors; it does not check coverage or first-factor precedence.",
+    "CUDA not measured or run."
+  ],
+  "cases": [
+    {
+      "exponent": 136279841,
+      "start_k": 1,
+      "count": 4096,
+      "prime_cap": 97,
+      "prime_count": 24,
+      "repeats": 5,
+      "warmups_per_method": 2,
+      "proper_factor_witnesses": 2623,
+      "all_outputs_equal": true,
+      "backend_initialization_ms": 35.726459000000006,
+      "plan_preparation_ms": [
+        0.00075,
+        0.000458,
+        0.0005,
+        0.000584,
+        0.000458
+      ],
+      "methods": {
+        "reference_cpu_full": {
+          "median_ms": 0.260041,
+          "min_ms": 0.25425,
+          "max_ms": 0.28350000000000003,
+          "samples_ms": [
+            0.28350000000000003,
+            0.260041,
+            0.272542,
+            0.25425,
+            0.257792
+          ]
+        },
+        "prepared_cpu_sparse": {
+          "median_ms": 0.063916,
+          "min_ms": 0.06179199999999999,
+          "max_ms": 0.06674999999999999,
+          "samples_ms": [
+            0.06674999999999999,
+            0.06625,
+            0.063916,
+            0.06179199999999999,
+            0.062
+          ]
+        },
+        "cpu_window_full": {
+          "median_ms": 0.007542,
+          "min_ms": 0.0041659999999999996,
+          "max_ms": 0.010042,
+          "samples_ms": [
+            0.010042,
+            0.008417,
+            0.006125,
+            0.0041659999999999996,
+            0.007542
+          ]
+        },
+        "cpu_window_prepared": {
+          "median_ms": 0.0054589999999999994,
+          "min_ms": 0.0045000000000000005,
+          "max_ms": 0.009542,
+          "samples_ms": [
+            0.006292,
+            0.009542,
+            0.0050420000000000005,
+            0.0054589999999999994,
+            0.0045000000000000005
+          ]
+        },
+        "metal_candidate_full": {
+          "median_ms": 0.27304100000000003,
+          "min_ms": 0.256125,
+          "max_ms": 0.277791,
+          "samples_ms": [
+            0.277791,
+            0.265083,
+            0.256125,
+            0.275708,
+            0.27304100000000003
+          ]
+        },
+        "metal_window_full": {
+          "median_ms": 0.227959,
+          "min_ms": 0.2115,
+          "max_ms": 0.238709,
+          "samples_ms": [
+            0.238709,
+            0.2145,
+            0.2115,
+            0.227959,
+            0.229084
+          ]
+        },
+        "metal_window_checked_prepared": {
+          "median_ms": 0.27962499999999996,
+          "min_ms": 0.261875,
+          "max_ms": 0.283209,
+          "samples_ms": [
+            0.283209,
+            0.27962499999999996,
+            0.261875,
+            0.28225,
+            0.27549999999999997
+          ]
+        },
+        "metal_window_prepared_tile_512": {
+          "median_ms": 0.216167,
+          "min_ms": 0.19725,
+          "max_ms": 0.228125,
+          "samples_ms": [
+            0.216167,
+            0.20620799999999997,
+            0.19725,
+            0.228125,
+            0.216584
+          ]
+        },
+        "metal_window_prepared_tile_1024": {
+          "median_ms": 0.23466599999999999,
+          "min_ms": 0.21175,
+          "max_ms": 0.23583400000000002,
+          "samples_ms": [
+            0.23525,
+            0.23466599999999999,
+            0.21175,
+            0.23583400000000002,
+            0.231959
+          ]
+        },
+        "metal_window_prepared_tile_4096": {
+          "median_ms": 0.300958,
+          "min_ms": 0.2845,
+          "max_ms": 0.304042,
+          "samples_ms": [
+            0.304042,
+            0.302583,
+            0.2845,
+            0.300958,
+            0.29883299999999996
+          ]
+        },
+        "metal_window_prepared_tile_16384": {
+          "median_ms": 0.303083,
+          "min_ms": 0.282625,
+          "max_ms": 0.306583,
+          "samples_ms": [
+            0.303083,
+            0.306583,
+            0.282625,
+            0.30475,
+            0.30254099999999995
+          ]
+        },
+        "metal_window_prepared_tile_65536": {
+          "median_ms": 0.307834,
+          "min_ms": 0.30075,
+          "max_ms": 0.372042,
+          "samples_ms": [
+            0.307834,
+            0.301084,
+            0.372042,
+            0.362792,
+            0.30075
+          ]
+        }
+      },
+      "scope": "Finite small-factor witnesses only; input k array construction and backend initialization excluded. Lazy window compilation occurs in untimed warmup. Full includes validation/preparation; prepared reuses plan. Dispatched GPU calls include allocation, transfer, synchronization and readback. Checked path additionally includes CPU witness verification. Even exponent with first-ranked 3 uses a host shortcut."
+    },
+    {
+      "exponent": 136279841,
+      "start_k": 1,
+      "count": 4096,
+      "prime_cap": 997,
+      "prime_count": 167,
+      "repeats": 5,
+      "warmups_per_method": 2,
+      "proper_factor_witnesses": 3126,
+      "all_outputs_equal": true,
+      "backend_initialization_ms": 33.439,
+      "plan_preparation_ms": [
+        0.0053750000000000004,
+        0.005167,
+        0.0054589999999999994,
+        0.004959,
+        0.004958
+      ],
+      "methods": {
+        "reference_cpu_full": {
+          "median_ms": 1.084917,
+          "min_ms": 1.072209,
+          "max_ms": 1.090916,
+          "samples_ms": [
+            1.090916,
+            1.076917,
+            1.084917,
+            1.0870840000000002,
+            1.072209
+          ]
+        },
+        "prepared_cpu_sparse": {
+          "median_ms": 0.19820800000000002,
+          "min_ms": 0.197209,
+          "max_ms": 0.19891599999999998,
+          "samples_ms": [
+            0.19820800000000002,
+            0.198125,
+            0.19837500000000002,
+            0.197209,
+            0.19891599999999998
+          ]
+        },
+        "cpu_window_full": {
+          "median_ms": 0.01575,
+          "min_ms": 0.013958,
+          "max_ms": 0.023458,
+          "samples_ms": [
+            0.023458,
+            0.017958,
+            0.01575,
+            0.013958,
+            0.015541
+          ]
+        },
+        "cpu_window_prepared": {
+          "median_ms": 0.011583000000000001,
+          "min_ms": 0.00575,
+          "max_ms": 0.015083,
+          "samples_ms": [
+            0.012208,
+            0.015083,
+            0.00575,
+            0.011583000000000001,
+            0.007833
+          ]
+        },
+        "metal_candidate_full": {
+          "median_ms": 0.559292,
+          "min_ms": 0.552125,
+          "max_ms": 0.84975,
+          "samples_ms": [
+            0.84975,
+            0.5526249999999999,
+            0.5689169999999999,
+            0.559292,
+            0.552125
+          ]
+        },
+        "metal_window_full": {
+          "median_ms": 0.23204200000000003,
+          "min_ms": 0.227541,
+          "max_ms": 0.310917,
+          "samples_ms": [
+            0.255083,
+            0.23204200000000003,
+            0.230625,
+            0.227541,
+            0.310917
+          ]
+        },
+        "metal_window_checked_prepared": {
+          "median_ms": 0.292625,
+          "min_ms": 0.273334,
+          "max_ms": 0.318292,
+          "samples_ms": [
+            0.30325,
+            0.273334,
+            0.289542,
+            0.318292,
+            0.292625
+          ]
+        },
+        "metal_window_prepared_tile_512": {
+          "median_ms": 0.220958,
+          "min_ms": 0.197958,
+          "max_ms": 0.31675,
+          "samples_ms": [
+            0.222125,
+            0.197958,
+            0.20866600000000002,
+            0.31675,
+            0.220958
+          ]
+        },
+        "metal_window_prepared_tile_1024": {
+          "median_ms": 0.226583,
+          "min_ms": 0.207208,
+          "max_ms": 0.255709,
+          "samples_ms": [
+            0.228125,
+            0.207208,
+            0.226583,
+            0.255709,
+            0.222041
+          ]
+        },
+        "metal_window_prepared_tile_4096": {
+          "median_ms": 0.297666,
+          "min_ms": 0.283667,
+          "max_ms": 0.304,
+          "samples_ms": [
+            0.304,
+            0.283667,
+            0.295792,
+            0.297666,
+            0.29825
+          ]
+        },
+        "metal_window_prepared_tile_16384": {
+          "median_ms": 0.300667,
+          "min_ms": 0.2895,
+          "max_ms": 0.304166,
+          "samples_ms": [
+            0.300667,
+            0.2895,
+            0.301875,
+            0.300542,
+            0.304166
+          ]
+        },
+        "metal_window_prepared_tile_65536": {
+          "median_ms": 0.299084,
+          "min_ms": 0.29708300000000004,
+          "max_ms": 0.585708,
+          "samples_ms": [
+            0.299084,
+            0.5681250000000001,
+            0.29708300000000004,
+            0.585708,
+            0.298792
+          ]
+        }
+      },
+      "scope": "Finite small-factor witnesses only; input k array construction and backend initialization excluded. Lazy window compilation occurs in untimed warmup. Full includes validation/preparation; prepared reuses plan. Dispatched GPU calls include allocation, transfer, synchronization and readback. Checked path additionally includes CPU witness verification. Even exponent with first-ranked 3 uses a host shortcut."
+    },
+    {
+      "exponent": 136279841,
+      "start_k": 1,
+      "count": 4096,
+      "prime_cap": 65521,
+      "prime_count": 6541,
+      "repeats": 5,
+      "warmups_per_method": 2,
+      "proper_factor_witnesses": 3498,
+      "all_outputs_equal": true,
+      "backend_initialization_ms": 35.857791999999996,
+      "plan_preparation_ms": [
+        0.7837919999999999,
+        0.7788750000000001,
+        0.783083,
+        0.778791,
+        0.779125
+      ],
+      "methods": {
+        "reference_cpu_full": {
+          "median_ms": 32.259792000000004,
+          "min_ms": 31.810375,
+          "max_ms": 32.736333,
+          "samples_ms": [
+            32.259792000000004,
+            32.307875,
+            32.736333,
+            31.938083,
+            31.810375
+          ]
+        },
+        "prepared_cpu_sparse": {
+          "median_ms": 3.4459579999999996,
+          "min_ms": 3.347792,
+          "max_ms": 3.452209,
+          "samples_ms": [
+            3.347792,
+            3.4459579999999996,
+            3.4472080000000003,
+            3.417292,
+            3.452209
+          ]
+        },
+        "cpu_window_full": {
+          "median_ms": 0.837958,
+          "min_ms": 0.815875,
+          "max_ms": 0.8508749999999999,
+          "samples_ms": [
+            0.815875,
+            0.837958,
+            0.832792,
+            0.840459,
+            0.8508749999999999
+          ]
+        },
+        "cpu_window_prepared": {
+          "median_ms": 0.049833,
+          "min_ms": 0.045959,
+          "max_ms": 0.060125,
+          "samples_ms": [
+            0.050792,
+            0.060125,
+            0.045959,
+            0.049,
+            0.049833
+          ]
+        },
+        "metal_candidate_full": {
+          "median_ms": 5.395834000000001,
+          "min_ms": 4.693416,
+          "max_ms": 7.859833,
+          "samples_ms": [
+            4.693416,
+            5.183625,
+            5.395834000000001,
+            7.8451249999999995,
+            7.859833
+          ]
+        },
+        "metal_window_full": {
+          "median_ms": 1.4197909999999998,
+          "min_ms": 1.3489170000000001,
+          "max_ms": 1.474458,
+          "samples_ms": [
+            1.474458,
+            1.467,
+            1.4197909999999998,
+            1.385834,
+            1.3489170000000001
+          ]
+        },
+        "metal_window_checked_prepared": {
+          "median_ms": 0.9810000000000001,
+          "min_ms": 0.545834,
+          "max_ms": 1.365459,
+          "samples_ms": [
+            0.9810000000000001,
+            1.365459,
+            0.9115409999999999,
+            0.545834,
+            1.085583
+          ]
+        },
+        "metal_window_prepared_tile_512": {
+          "median_ms": 0.612541,
+          "min_ms": 0.301166,
+          "max_ms": 0.7310409999999999,
+          "samples_ms": [
+            0.639458,
+            0.7310409999999999,
+            0.612541,
+            0.301166,
+            0.604625
+          ]
+        },
+        "metal_window_prepared_tile_1024": {
+          "median_ms": 0.674334,
+          "min_ms": 0.307459,
+          "max_ms": 0.68125,
+          "samples_ms": [
+            0.674334,
+            0.68125,
+            0.675625,
+            0.307459,
+            0.324083
+          ]
+        },
+        "metal_window_prepared_tile_4096": {
+          "median_ms": 0.421084,
+          "min_ms": 0.306833,
+          "max_ms": 0.714584,
+          "samples_ms": [
+            0.306833,
+            0.7006249999999999,
+            0.714584,
+            0.421084,
+            0.360167
+          ]
+        },
+        "metal_window_prepared_tile_16384": {
+          "median_ms": 0.39795800000000003,
+          "min_ms": 0.299334,
+          "max_ms": 0.707125,
+          "samples_ms": [
+            0.299334,
+            0.6839590000000001,
+            0.707125,
+            0.39795800000000003,
+            0.355167
+          ]
+        },
+        "metal_window_prepared_tile_65536": {
+          "median_ms": 0.819167,
+          "min_ms": 0.297917,
+          "max_ms": 1.1757499999999999,
+          "samples_ms": [
+            0.297917,
+            0.819167,
+            1.1757499999999999,
+            0.935292,
+            0.352959
+          ]
+        }
+      },
+      "scope": "Finite small-factor witnesses only; input k array construction and backend initialization excluded. Lazy window compilation occurs in untimed warmup. Full includes validation/preparation; prepared reuses plan. Dispatched GPU calls include allocation, transfer, synchronization and readback. Checked path additionally includes CPU witness verification. Even exponent with first-ranked 3 uses a host shortcut."
+    },
+    {
+      "exponent": 136279841,
+      "start_k": 1,
+      "count": 65536,
+      "prime_cap": 97,
+      "prime_count": 24,
+      "repeats": 5,
+      "warmups_per_method": 2,
+      "proper_factor_witnesses": 41884,
+      "all_outputs_equal": true,
+      "backend_initialization_ms": 35.285083,
+      "plan_preparation_ms": [
+        0.001,
+        0.00075,
+        0.000833,
+        0.001042,
+        0.000583
+      ],
+      "methods": {
+        "reference_cpu_full": {
+          "median_ms": 4.821958,
+          "min_ms": 4.596125000000001,
+          "max_ms": 5.159875,
+          "samples_ms": [
+            4.796375,
+            4.596125000000001,
+            4.936249999999999,
+            4.821958,
+            5.159875
+          ]
+        },
+        "prepared_cpu_sparse": {
+          "median_ms": 1.0250000000000001,
+          "min_ms": 1.004792,
+          "max_ms": 1.0677919999999999,
+          "samples_ms": [
+            1.0250000000000001,
+            1.0677919999999999,
+            1.023625,
+            1.004792,
+            1.0259170000000002
+          ]
+        },
+        "cpu_window_full": {
+          "median_ms": 0.120875,
+          "min_ms": 0.1075,
+          "max_ms": 0.481167,
+          "samples_ms": [
+            0.122292,
+            0.11458299999999999,
+            0.1075,
+            0.481167,
+            0.120875
+          ]
+        },
+        "cpu_window_prepared": {
+          "median_ms": 0.11904200000000001,
+          "min_ms": 0.10500000000000001,
+          "max_ms": 0.1255,
+          "samples_ms": [
+            0.11591699999999999,
+            0.12000000000000001,
+            0.10500000000000001,
+            0.1255,
+            0.11904200000000001
+          ]
+        },
+        "metal_candidate_full": {
+          "median_ms": 0.986125,
+          "min_ms": 0.599167,
+          "max_ms": 1.34325,
+          "samples_ms": [
+            1.277166,
+            0.986125,
+            1.34325,
+            0.611042,
+            0.599167
+          ]
+        },
+        "metal_window_full": {
+          "median_ms": 0.753291,
+          "min_ms": 0.404916,
+          "max_ms": 1.222292,
+          "samples_ms": [
+            0.538417,
+            0.753291,
+            0.847916,
+            1.222292,
+            0.404916
+          ]
+        },
+        "metal_window_checked_prepared": {
+          "median_ms": 1.0075830000000001,
+          "min_ms": 0.949584,
+          "max_ms": 1.396291,
+          "samples_ms": [
+            1.0075830000000001,
+            1.396291,
+            1.011125,
+            0.950291,
+            0.949584
+          ]
+        },
+        "metal_window_prepared_tile_512": {
+          "median_ms": 0.71775,
+          "min_ms": 0.412958,
+          "max_ms": 0.9087080000000001,
+          "samples_ms": [
+            0.71775,
+            0.467084,
+            0.7205,
+            0.412958,
+            0.9087080000000001
+          ]
+        },
+        "metal_window_prepared_tile_1024": {
+          "median_ms": 0.453542,
+          "min_ms": 0.401917,
+          "max_ms": 0.457792,
+          "samples_ms": [
+            0.456167,
+            0.457792,
+            0.453542,
+            0.401917,
+            0.413333
+          ]
+        },
+        "metal_window_prepared_tile_4096": {
+          "median_ms": 0.578916,
+          "min_ms": 0.48416699999999996,
+          "max_ms": 0.971833,
+          "samples_ms": [
+            0.971833,
+            0.5827910000000001,
+            0.578916,
+            0.509416,
+            0.48416699999999996
+          ]
+        },
+        "metal_window_prepared_tile_16384": {
+          "median_ms": 0.871916,
+          "min_ms": 0.587,
+          "max_ms": 0.9374589999999999,
+          "samples_ms": [
+            0.871916,
+            0.884292,
+            0.9374589999999999,
+            0.69525,
+            0.587
+          ]
+        },
+        "metal_window_prepared_tile_65536": {
+          "median_ms": 2.0523339999999997,
+          "min_ms": 1.125875,
+          "max_ms": 2.356292,
+          "samples_ms": [
+            2.023625,
+            2.355375,
+            2.0523339999999997,
+            2.356292,
+            1.125875
+          ]
+        }
+      },
+      "scope": "Finite small-factor witnesses only; input k array construction and backend initialization excluded. Lazy window compilation occurs in untimed warmup. Full includes validation/preparation; prepared reuses plan. Dispatched GPU calls include allocation, transfer, synchronization and readback. Checked path additionally includes CPU witness verification. Even exponent with first-ranked 3 uses a host shortcut."
+    },
+    {
+      "exponent": 136279841,
+      "start_k": 1,
+      "count": 65536,
+      "prime_cap": 997,
+      "prime_count": 167,
+      "repeats": 5,
+      "warmups_per_method": 2,
+      "proper_factor_witnesses": 49588,
+      "all_outputs_equal": true,
+      "backend_initialization_ms": 35.289125,
+      "plan_preparation_ms": [
+        0.006792,
+        0.006167000000000001,
+        0.008124999999999999,
+        0.006041,
+        0.008834
+      ],
+      "methods": {
+        "reference_cpu_full": {
+          "median_ms": 27.448542,
+          "min_ms": 27.082874999999998,
+          "max_ms": 29.247,
+          "samples_ms": [
+            27.082874999999998,
+            27.449667,
+            29.247,
+            27.227833999999998,
+            27.448542
+          ]
+        },
+        "prepared_cpu_sparse": {
+          "median_ms": 3.201,
+          "min_ms": 2.928333,
+          "max_ms": 3.2166669999999997,
+          "samples_ms": [
+            3.2166669999999997,
+            2.9428750000000004,
+            3.21475,
+            2.928333,
+            3.201
+          ]
+        },
+        "cpu_window_full": {
+          "median_ms": 0.209333,
+          "min_ms": 0.17508300000000002,
+          "max_ms": 0.610209,
+          "samples_ms": [
+            0.210833,
+            0.17508300000000002,
+            0.18220899999999998,
+            0.610209,
+            0.209333
+          ]
+        },
+        "cpu_window_prepared": {
+          "median_ms": 0.188584,
+          "min_ms": 0.173375,
+          "max_ms": 0.191542,
+          "samples_ms": [
+            0.188584,
+            0.173375,
+            0.173834,
+            0.191125,
+            0.191542
+          ]
+        },
+        "metal_candidate_full": {
+          "median_ms": 2.6244169999999998,
+          "min_ms": 2.438375,
+          "max_ms": 4.522375,
+          "samples_ms": [
+            2.438375,
+            2.443917,
+            2.6244169999999998,
+            4.522375,
+            3.784334
+          ]
+        },
+        "metal_window_full": {
+          "median_ms": 0.737166,
+          "min_ms": 0.445292,
+          "max_ms": 1.165125,
+          "samples_ms": [
+            0.8265,
+            0.737166,
+            1.165125,
+            0.718292,
+            0.445292
+          ]
+        },
+        "metal_window_checked_prepared": {
+          "median_ms": 1.278792,
+          "min_ms": 0.9933749999999999,
+          "max_ms": 1.814458,
+          "samples_ms": [
+            1.3741249999999998,
+            1.814458,
+            1.278792,
+            1.027792,
+            0.9933749999999999
+          ]
+        },
+        "metal_window_prepared_tile_512": {
+          "median_ms": 0.716,
+          "min_ms": 0.443959,
+          "max_ms": 0.82925,
+          "samples_ms": [
+            0.82925,
+            0.716,
+            0.780625,
+            0.443959,
+            0.704042
+          ]
+        },
+        "metal_window_prepared_tile_1024": {
+          "median_ms": 0.414542,
+          "min_ms": 0.403708,
+          "max_ms": 0.742417,
+          "samples_ms": [
+            0.414542,
+            0.742417,
+            0.403708,
+            0.426209,
+            0.41125
+          ]
+        },
+        "metal_window_prepared_tile_4096": {
+          "median_ms": 0.8092079999999999,
+          "min_ms": 0.517041,
+          "max_ms": 0.882833,
+          "samples_ms": [
+            0.882833,
+            0.8092079999999999,
+            0.8425830000000001,
+            0.560958,
+            0.517041
+          ]
+        },
+        "metal_window_prepared_tile_16384": {
+          "median_ms": 0.869417,
+          "min_ms": 0.616625,
+          "max_ms": 1.08175,
+          "samples_ms": [
+            0.616625,
+            1.08175,
+            0.961417,
+            0.869417,
+            0.8145
+          ]
+        },
+        "metal_window_prepared_tile_65536": {
+          "median_ms": 1.62475,
+          "min_ms": 1.2484169999999999,
+          "max_ms": 2.6245830000000003,
+          "samples_ms": [
+            1.2484169999999999,
+            1.613917,
+            1.62475,
+            2.6245830000000003,
+            2.453167
+          ]
+        }
+      },
+      "scope": "Finite small-factor witnesses only; input k array construction and backend initialization excluded. Lazy window compilation occurs in untimed warmup. Full includes validation/preparation; prepared reuses plan. Dispatched GPU calls include allocation, transfer, synchronization and readback. Checked path additionally includes CPU witness verification. Even exponent with first-ranked 3 uses a host shortcut."
+    },
+    {
+      "exponent": 136279841,
+      "start_k": 1,
+      "count": 65536,
+      "prime_cap": 65521,
+      "prime_count": 6541,
+      "repeats": 5,
+      "warmups_per_method": 2,
+      "proper_factor_witnesses": 55607,
+      "all_outputs_equal": true,
+      "backend_initialization_ms": 35.226834,
+      "plan_preparation_ms": [
+        0.78225,
+        0.784125,
+        0.8385410000000001,
+        1.137791,
+        0.750042
+      ],
+      "methods": {
+        "reference_cpu_full": {
+          "median_ms": 738.346583,
+          "min_ms": 736.554042,
+          "max_ms": 792.200167,
+          "samples_ms": [
+            738.346583,
+            737.529291,
+            736.554042,
+            791.696041,
+            792.200167
+          ]
+        },
+        "prepared_cpu_sparse": {
+          "median_ms": 56.796167000000004,
+          "min_ms": 56.535583,
+          "max_ms": 56.963125000000005,
+          "samples_ms": [
+            56.963125000000005,
+            56.535583,
+            56.806791000000004,
+            56.582542,
+            56.796167000000004
+          ]
+        },
+        "cpu_window_full": {
+          "median_ms": 1.086042,
+          "min_ms": 1.058083,
+          "max_ms": 1.481667,
+          "samples_ms": [
+            1.0740420000000002,
+            1.092666,
+            1.086042,
+            1.058083,
+            1.481667
+          ]
+        },
+        "cpu_window_prepared": {
+          "median_ms": 0.299625,
+          "min_ms": 0.263417,
+          "max_ms": 0.7717499999999999,
+          "samples_ms": [
+            0.308084,
+            0.299625,
+            0.7717499999999999,
+            0.263417,
+            0.289083
+          ]
+        },
+        "metal_candidate_full": {
+          "median_ms": 31.873334000000003,
+          "min_ms": 24.182917000000003,
+          "max_ms": 36.682874999999996,
+          "samples_ms": [
+            30.697125,
+            34.874708,
+            31.873334000000003,
+            36.682874999999996,
+            24.182917000000003
+          ]
+        },
+        "metal_window_full": {
+          "median_ms": 1.6307909999999999,
+          "min_ms": 1.485833,
+          "max_ms": 1.742792,
+          "samples_ms": [
+            1.742792,
+            1.485833,
+            1.695333,
+            1.6307909999999999,
+            1.533959
+          ]
+        },
+        "metal_window_checked_prepared": {
+          "median_ms": 1.5031249999999998,
+          "min_ms": 1.3498329999999998,
+          "max_ms": 1.529583,
+          "samples_ms": [
+            1.486167,
+            1.5061250000000002,
+            1.5031249999999998,
+            1.529583,
+            1.3498329999999998
+          ]
+        },
+        "metal_window_prepared_tile_512": {
+          "median_ms": 0.826083,
+          "min_ms": 0.529083,
+          "max_ms": 1.334042,
+          "samples_ms": [
+            0.822917,
+            0.529083,
+            0.826083,
+            1.334042,
+            0.893792
+          ]
+        },
+        "metal_window_prepared_tile_1024": {
+          "median_ms": 0.507792,
+          "min_ms": 0.40866600000000003,
+          "max_ms": 0.7104579999999999,
+          "samples_ms": [
+            0.40866600000000003,
+            0.5175,
+            0.43,
+            0.507792,
+            0.7104579999999999
+          ]
+        },
+        "metal_window_prepared_tile_4096": {
+          "median_ms": 0.612459,
+          "min_ms": 0.423084,
+          "max_ms": 0.8385410000000001,
+          "samples_ms": [
+            0.8385410000000001,
+            0.612459,
+            0.449333,
+            0.624958,
+            0.423084
+          ]
+        },
+        "metal_window_prepared_tile_16384": {
+          "median_ms": 0.962375,
+          "min_ms": 0.507958,
+          "max_ms": 1.6825830000000002,
+          "samples_ms": [
+            0.510459,
+            1.6825830000000002,
+            1.572583,
+            0.962375,
+            0.507958
+          ]
+        },
+        "metal_window_prepared_tile_65536": {
+          "median_ms": 0.945584,
+          "min_ms": 0.8612500000000001,
+          "max_ms": 2.9009579999999997,
+          "samples_ms": [
+            0.900875,
+            2.692,
+            0.945584,
+            2.9009579999999997,
+            0.8612500000000001
+          ]
+        }
+      },
+      "scope": "Finite small-factor witnesses only; input k array construction and backend initialization excluded. Lazy window compilation occurs in untimed warmup. Full includes validation/preparation; prepared reuses plan. Dispatched GPU calls include allocation, transfer, synchronization and readback. Checked path additionally includes CPU witness verification. Even exponent with first-ranked 3 uses a host shortcut."
+    },
+    {
+      "exponent": 136279841,
+      "start_k": 1,
+      "count": 262144,
+      "prime_cap": 97,
+      "prime_count": 24,
+      "repeats": 5,
+      "warmups_per_method": 2,
+      "proper_factor_witnesses": 167530,
+      "all_outputs_equal": true,
+      "backend_initialization_ms": 35.382,
+      "plan_preparation_ms": [
+        0.000875,
+        0.0006670000000000001,
+        0.001167,
+        0.001083,
+        0.0007080000000000001
+      ],
+      "methods": {
+        "reference_cpu_full": {
+          "median_ms": 18.782542,
+          "min_ms": 18.318958,
+          "max_ms": 19.875833,
+          "samples_ms": [
+            18.988334,
+            18.782542,
+            19.875833,
+            18.678250000000002,
+            18.318958
+          ]
+        },
+        "prepared_cpu_sparse": {
+          "median_ms": 4.0897499999999996,
+          "min_ms": 3.896584,
+          "max_ms": 4.313667000000001,
+          "samples_ms": [
+            4.0897499999999996,
+            3.896584,
+            4.313667000000001,
+            3.9277089999999997,
+            4.304375
+          ]
+        },
+        "cpu_window_full": {
+          "median_ms": 0.40904199999999996,
+          "min_ms": 0.39149999999999996,
+          "max_ms": 0.438125,
+          "samples_ms": [
+            0.438125,
+            0.404334,
+            0.39149999999999996,
+            0.40904199999999996,
+            0.419459
+          ]
+        },
+        "cpu_window_prepared": {
+          "median_ms": 0.76575,
+          "min_ms": 0.408875,
+          "max_ms": 0.8512500000000001,
+          "samples_ms": [
+            0.8512500000000001,
+            0.85,
+            0.76575,
+            0.44595799999999997,
+            0.408875
+          ]
+        },
+        "metal_candidate_full": {
+          "median_ms": 2.9607919999999996,
+          "min_ms": 2.491292,
+          "max_ms": 3.9644169999999996,
+          "samples_ms": [
+            2.491292,
+            2.932,
+            2.9607919999999996,
+            3.642583,
+            3.9644169999999996
+          ]
+        },
+        "metal_window_full": {
+          "median_ms": 1.4881659999999999,
+          "min_ms": 1.212958,
+          "max_ms": 1.553792,
+          "samples_ms": [
+            1.4881659999999999,
+            1.553792,
+            1.472459,
+            1.4895,
+            1.212958
+          ]
+        },
+        "metal_window_checked_prepared": {
+          "median_ms": 3.620542,
+          "min_ms": 3.5438330000000002,
+          "max_ms": 3.962625,
+          "samples_ms": [
+            3.566417,
+            3.646583,
+            3.620542,
+            3.962625,
+            3.5438330000000002
+          ]
+        },
+        "metal_window_prepared_tile_512": {
+          "median_ms": 1.418667,
+          "min_ms": 1.4092079999999998,
+          "max_ms": 1.931333,
+          "samples_ms": [
+            1.931333,
+            1.4893750000000001,
+            1.418667,
+            1.4092079999999998,
+            1.4175419999999999
+          ]
+        },
+        "metal_window_prepared_tile_1024": {
+          "median_ms": 1.786625,
+          "min_ms": 1.4083329999999998,
+          "max_ms": 1.868167,
+          "samples_ms": [
+            1.5665,
+            1.868167,
+            1.854125,
+            1.4083329999999998,
+            1.786625
+          ]
+        },
+        "metal_window_prepared_tile_4096": {
+          "median_ms": 1.545583,
+          "min_ms": 1.474625,
+          "max_ms": 1.675333,
+          "samples_ms": [
+            1.576792,
+            1.675333,
+            1.545583,
+            1.474625,
+            1.487209
+          ]
+        },
+        "metal_window_prepared_tile_16384": {
+          "median_ms": 1.973667,
+          "min_ms": 1.8021669999999999,
+          "max_ms": 2.0614589999999997,
+          "samples_ms": [
+            1.8021669999999999,
+            1.8764999999999998,
+            2.0614589999999997,
+            1.973667,
+            2.0225
+          ]
+        },
+        "metal_window_prepared_tile_65536": {
+          "median_ms": 3.1809999999999996,
+          "min_ms": 2.4582089999999996,
+          "max_ms": 3.796042,
+          "samples_ms": [
+            2.4582089999999996,
+            2.4906669999999997,
+            3.20625,
+            3.796042,
+            3.1809999999999996
+          ]
+        }
+      },
+      "scope": "Finite small-factor witnesses only; input k array construction and backend initialization excluded. Lazy window compilation occurs in untimed warmup. Full includes validation/preparation; prepared reuses plan. Dispatched GPU calls include allocation, transfer, synchronization and readback. Checked path additionally includes CPU witness verification. Even exponent with first-ranked 3 uses a host shortcut."
+    },
+    {
+      "exponent": 136279841,
+      "start_k": 1,
+      "count": 262144,
+      "prime_cap": 997,
+      "prime_count": 167,
+      "repeats": 5,
+      "warmups_per_method": 2,
+      "proper_factor_witnesses": 198383,
+      "all_outputs_equal": true,
+      "backend_initialization_ms": 35.521249999999995,
+      "plan_preparation_ms": [
+        0.006458,
+        0.007541,
+        0.011583999999999999,
+        0.006208,
+        0.007709000000000001
+      ],
+      "methods": {
+        "reference_cpu_full": {
+          "median_ms": 111.27395800000001,
+          "min_ms": 110.13358299999999,
+          "max_ms": 111.434041,
+          "samples_ms": [
+            110.13358299999999,
+            111.434041,
+            111.374292,
+            110.507667,
+            111.27395800000001
+          ]
+        },
+        "prepared_cpu_sparse": {
+          "median_ms": 12.614458,
+          "min_ms": 12.413375,
+          "max_ms": 13.2215,
+          "samples_ms": [
+            12.614458,
+            12.413375,
+            13.2215,
+            12.416583,
+            13.192625
+          ]
+        },
+        "cpu_window_full": {
+          "median_ms": 0.743042,
+          "min_ms": 0.725792,
+          "max_ms": 1.067833,
+          "samples_ms": [
+            0.770833,
+            1.067833,
+            0.725792,
+            0.734,
+            0.743042
+          ]
+        },
+        "cpu_window_prepared": {
+          "median_ms": 0.733083,
+          "min_ms": 0.72675,
+          "max_ms": 1.118417,
+          "samples_ms": [
+            1.118417,
+            0.743958,
+            0.72675,
+            0.733083,
+            0.727625
+          ]
+        },
+        "metal_candidate_full": {
+          "median_ms": 8.649583,
+          "min_ms": 8.063959,
+          "max_ms": 14.745583,
+          "samples_ms": [
+            11.852125,
+            14.745583,
+            8.439125,
+            8.063959,
+            8.649583
+          ]
+        },
+        "metal_window_full": {
+          "median_ms": 1.0855000000000001,
+          "min_ms": 1.0005000000000002,
+          "max_ms": 1.351125,
+          "samples_ms": [
+            1.060042,
+            1.338166,
+            1.0855000000000001,
+            1.351125,
+            1.0005000000000002
+          ]
+        },
+        "metal_window_checked_prepared": {
+          "median_ms": 3.5195830000000004,
+          "min_ms": 3.455209,
+          "max_ms": 3.9236660000000003,
+          "samples_ms": [
+            3.5195830000000004,
+            3.455209,
+            3.535292,
+            3.9236660000000003,
+            3.509167
+          ]
+        },
+        "metal_window_prepared_tile_512": {
+          "median_ms": 1.349292,
+          "min_ms": 1.3033750000000002,
+          "max_ms": 1.58375,
+          "samples_ms": [
+            1.389625,
+            1.58375,
+            1.349292,
+            1.3033750000000002,
+            1.317625
+          ]
+        },
+        "metal_window_prepared_tile_1024": {
+          "median_ms": 1.669875,
+          "min_ms": 1.2752919999999999,
+          "max_ms": 1.799083,
+          "samples_ms": [
+            1.743792,
+            1.2752919999999999,
+            1.669875,
+            1.311792,
+            1.799083
+          ]
+        },
+        "metal_window_prepared_tile_4096": {
+          "median_ms": 1.384125,
+          "min_ms": 1.374958,
+          "max_ms": 1.402375,
+          "samples_ms": [
+            1.3840000000000001,
+            1.402375,
+            1.3876249999999999,
+            1.374958,
+            1.384125
+          ]
+        },
+        "metal_window_prepared_tile_16384": {
+          "median_ms": 1.622917,
+          "min_ms": 1.599875,
+          "max_ms": 1.949166,
+          "samples_ms": [
+            1.599875,
+            1.949166,
+            1.622917,
+            1.666625,
+            1.6205
+          ]
+        },
+        "metal_window_prepared_tile_65536": {
+          "median_ms": 2.338667,
+          "min_ms": 2.101042,
+          "max_ms": 3.434584,
+          "samples_ms": [
+            2.189042,
+            3.3769590000000003,
+            2.101042,
+            3.434584,
+            2.338667
+          ]
+        }
+      },
+      "scope": "Finite small-factor witnesses only; input k array construction and backend initialization excluded. Lazy window compilation occurs in untimed warmup. Full includes validation/preparation; prepared reuses plan. Dispatched GPU calls include allocation, transfer, synchronization and readback. Checked path additionally includes CPU witness verification. Even exponent with first-ranked 3 uses a host shortcut."
+    },
+    {
+      "exponent": 136279841,
+      "start_k": 1,
+      "count": 262144,
+      "prime_cap": 65521,
+      "prime_count": 6541,
+      "repeats": 5,
+      "warmups_per_method": 2,
+      "proper_factor_witnesses": 222431,
+      "all_outputs_equal": true,
+      "backend_initialization_ms": 36.3285,
+      "plan_preparation_ms": [
+        0.785625,
+        0.790208,
+        0.791166,
+        0.7601249999999999,
+        0.769208
+      ],
+      "methods": {
+        "reference_cpu_full": {
+          "median_ms": 3071.676833,
+          "min_ms": 2999.3654579999998,
+          "max_ms": 3077.549708,
+          "samples_ms": [
+            3077.549708,
+            3071.942625,
+            3069.998542,
+            3071.676833,
+            2999.3654579999998
+          ]
+        },
+        "prepared_cpu_sparse": {
+          "median_ms": 227.329166,
+          "min_ms": 223.130041,
+          "max_ms": 228.401667,
+          "samples_ms": [
+            228.401667,
+            227.329166,
+            227.923667,
+            226.63675,
+            223.130041
+          ]
+        },
+        "cpu_window_full": {
+          "median_ms": 1.843958,
+          "min_ms": 1.791458,
+          "max_ms": 2.261917,
+          "samples_ms": [
+            1.82975,
+            2.2009999999999996,
+            1.843958,
+            2.261917,
+            1.791458
+          ]
+        },
+        "cpu_window_prepared": {
+          "median_ms": 1.4196250000000001,
+          "min_ms": 0.9971249999999999,
+          "max_ms": 1.5855839999999999,
+          "samples_ms": [
+            1.4196250000000001,
+            1.0486250000000001,
+            1.430291,
+            0.9971249999999999,
+            1.5855839999999999
+          ]
+        },
+        "metal_candidate_full": {
+          "median_ms": 112.450625,
+          "min_ms": 107.01724999999999,
+          "max_ms": 113.081625,
+          "samples_ms": [
+            113.081625,
+            112.575333,
+            111.59475,
+            112.450625,
+            107.01724999999999
+          ]
+        },
+        "metal_window_full": {
+          "median_ms": 2.4892090000000002,
+          "min_ms": 1.97,
+          "max_ms": 2.662167,
+          "samples_ms": [
+            2.650167,
+            2.035542,
+            2.662167,
+            1.97,
+            2.4892090000000002
+          ]
+        },
+        "metal_window_checked_prepared": {
+          "median_ms": 4.384417,
+          "min_ms": 3.721166,
+          "max_ms": 4.624458,
+          "samples_ms": [
+            4.384417,
+            4.624458,
+            3.8708750000000003,
+            4.510083,
+            3.721166
+          ]
+        },
+        "metal_window_prepared_tile_512": {
+          "median_ms": 1.726666,
+          "min_ms": 0.9706670000000001,
+          "max_ms": 1.870709,
+          "samples_ms": [
+            1.870709,
+            0.974709,
+            1.726666,
+            0.9706670000000001,
+            1.797
+          ]
+        },
+        "metal_window_prepared_tile_1024": {
+          "median_ms": 1.4420419999999998,
+          "min_ms": 0.877875,
+          "max_ms": 1.790208,
+          "samples_ms": [
+            1.4420419999999998,
+            1.657,
+            0.931333,
+            1.790208,
+            0.877875
+          ]
+        },
+        "metal_window_prepared_tile_4096": {
+          "median_ms": 1.68075,
+          "min_ms": 0.92325,
+          "max_ms": 1.7412079999999999,
+          "samples_ms": [
+            1.714542,
+            0.92325,
+            1.68075,
+            0.950458,
+            1.7412079999999999
+          ]
+        },
+        "metal_window_prepared_tile_16384": {
+          "median_ms": 1.54125,
+          "min_ms": 1.0147920000000001,
+          "max_ms": 2.057625,
+          "samples_ms": [
+            1.54125,
+            1.9762080000000002,
+            1.068292,
+            2.057625,
+            1.0147920000000001
+          ]
+        },
+        "metal_window_prepared_tile_65536": {
+          "median_ms": 2.280375,
+          "min_ms": 2.2047920000000003,
+          "max_ms": 3.526917,
+          "samples_ms": [
+            2.2047920000000003,
+            3.526917,
+            2.280375,
+            2.961208,
+            2.2279169999999997
+          ]
+        }
+      },
+      "scope": "Finite small-factor witnesses only; input k array construction and backend initialization excluded. Lazy window compilation occurs in untimed warmup. Full includes validation/preparation; prepared reuses plan. Dispatched GPU calls include allocation, transfer, synchronization and readback. Checked path additionally includes CPU witness verification. Even exponent with first-ranked 3 uses a host shortcut."
+    },
+    {
+      "exponent": 16,
+      "start_k": 1,
+      "count": 65536,
+      "prime_cap": 65521,
+      "prime_count": 6541,
+      "repeats": 5,
+      "warmups_per_method": 2,
+      "proper_factor_witnesses": 65536,
+      "all_outputs_equal": true,
+      "backend_initialization_ms": 34.541208,
+      "plan_preparation_ms": [
+        1.5217919999999998,
+        0.722708,
+        0.825292,
+        0.7957500000000001,
+        0.821958
+      ],
+      "methods": {
+        "reference_cpu_full": {
+          "median_ms": 289.238667,
+          "min_ms": 286.335917,
+          "max_ms": 337.836125,
+          "samples_ms": [
+            299.858166,
+            288.31,
+            337.836125,
+            286.335917,
+            289.238667
+          ]
+        },
+        "prepared_cpu_sparse": {
+          "median_ms": 0.12458400000000001,
+          "min_ms": 0.10658300000000001,
+          "max_ms": 0.623208,
+          "samples_ms": [
+            0.274834,
+            0.10658300000000001,
+            0.12458400000000001,
+            0.623208,
+            0.121458
+          ]
+        },
+        "cpu_window_full": {
+          "median_ms": 0.813333,
+          "min_ms": 0.735417,
+          "max_ms": 1.392375,
+          "samples_ms": [
+            1.392375,
+            0.735417,
+            0.786709,
+            0.813333,
+            0.8264579999999999
+          ]
+        },
+        "cpu_window_prepared": {
+          "median_ms": 0.006333,
+          "min_ms": 0.00625,
+          "max_ms": 0.45466700000000004,
+          "samples_ms": [
+            0.006667,
+            0.45466700000000004,
+            0.00625,
+            0.006333,
+            0.00625
+          ]
+        },
+        "metal_candidate_full": {
+          "median_ms": 1.924958,
+          "min_ms": 1.513833,
+          "max_ms": 2.134791,
+          "samples_ms": [
+            1.9879170000000002,
+            1.513833,
+            1.5972499999999998,
+            1.924958,
+            2.134791
+          ]
+        },
+        "metal_window_full": {
+          "median_ms": 0.828959,
+          "min_ms": 0.819834,
+          "max_ms": 2.8016669999999997,
+          "samples_ms": [
+            2.8016669999999997,
+            0.819834,
+            0.838375,
+            0.828959,
+            0.823416
+          ]
+        },
+        "metal_window_checked_prepared": {
+          "median_ms": 0.511708,
+          "min_ms": 0.49925,
+          "max_ms": 1.697291,
+          "samples_ms": [
+            1.697291,
+            0.49925,
+            0.5282079999999999,
+            0.511708,
+            0.5097079999999999
+          ]
+        },
+        "metal_window_prepared_tile_512": {
+          "median_ms": 0.027708,
+          "min_ms": 0.020375,
+          "max_ms": 0.586541,
+          "samples_ms": [
+            0.067125,
+            0.020375,
+            0.027708,
+            0.586541,
+            0.026458
+          ]
+        },
+        "metal_window_prepared_tile_1024": {
+          "median_ms": 0.028334,
+          "min_ms": 0.019917,
+          "max_ms": 0.067125,
+          "samples_ms": [
+            0.067125,
+            0.019917,
+            0.028334,
+            0.035042000000000004,
+            0.027375
+          ]
+        },
+        "metal_window_prepared_tile_4096": {
+          "median_ms": 0.032041,
+          "min_ms": 0.02525,
+          "max_ms": 0.5134169999999999,
+          "samples_ms": [
+            0.06674999999999999,
+            0.5134169999999999,
+            0.026083000000000002,
+            0.032041,
+            0.02525
+          ]
+        },
+        "metal_window_prepared_tile_16384": {
+          "median_ms": 0.031666,
+          "min_ms": 0.020083,
+          "max_ms": 0.46125,
+          "samples_ms": [
+            0.46125,
+            0.020083,
+            0.42824999999999996,
+            0.031666,
+            0.031124999999999996
+          ]
+        },
+        "metal_window_prepared_tile_65536": {
+          "median_ms": 0.030750000000000003,
+          "min_ms": 0.021542000000000002,
+          "max_ms": 0.06724999999999999,
+          "samples_ms": [
+            0.06724999999999999,
+            0.026166,
+            0.021542000000000002,
+            0.034292,
+            0.030750000000000003
+          ]
+        }
+      },
+      "scope": "Finite small-factor witnesses only; input k array construction and backend initialization excluded. Lazy window compilation occurs in untimed warmup. Full includes validation/preparation; prepared reuses plan. Dispatched GPU calls include allocation, transfer, synchronization and readback. Checked path additionally includes CPU witness verification. Even exponent with first-ranked 3 uses a host shortcut."
+    }
+  ]
+}

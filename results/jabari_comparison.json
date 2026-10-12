@@ -1,0 +1,1209 @@
+{
+  "recorded_at_utc": "2026-10-12T21:03:18.553824+00:00",
+  "hardware": "Apple M2 Max, 64 GiB unified memory, one host",
+  "os": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+  "compiler": "Crystal 1.21.0 (2026-07-16)\n\nLLVM: 22.1.8\nDefault target: aarch64-apple-darwin25.6.0",
+  "gmp_version": "6.3.0",
+  "host_load_average_before_run": [
+    7.47265625,
+    6.86083984375,
+    6.93017578125
+  ],
+  "build_command": "env CRYSTAL_CACHE_DIR=/private/tmp/mpgs-matched-cache crystal build jabari_benchmark.cr --release --mcpu=native --link-flags='/Users/sergey/Projects/Crystal/cogni-ml/build/bridge.o -lc++ -fuse-ld=/usr/bin/ld' -o /private/tmp/mpgs-jabari-benchmark",
+  "billion_build_command": "env CRYSTAL_CACHE_DIR=/private/tmp/mpgs-matched-cache crystal build billion_probe.cr --release --mcpu=native --link-flags='/Users/sergey/Projects/Crystal/cogni-ml/build/bridge.o -lc++ -fuse-ld=/usr/bin/ld' -o /private/tmp/mpgs-billion-probe",
+  "build_provenance": "Caller supplied actual build commands; SHA256 identifies the executed binaries.",
+  "binary_sha256": "18b1e1e041332fca041328bd130255b541fcad5d16715f215607efeb337e5415",
+  "billion_binary_sha256": "7524bbf7d842b5b34d3bb46d346395e333c07a9c18de49d0d2bea123d6556a46",
+  "dependency_head": "7cccdd8bfb02ac388001ab7a61832087d8d1b450",
+  "dependency_source_sha256": {
+    "build/bridge.o": "465ee1dd3bc0788b73dbf25e9ba66a4119ee6b0008afd0a8157986247c813773",
+    "src/ml/core/buffer.cr": "a28570a5b7163eef67aef7ad96af66d2168da68f104afbacc9714bbefb55334d",
+    "src/ml/core/shape.cr": "2de7b353c6464aaf8079333d9dde7575c40c72506965e671bd07975e8a03656f",
+    "src/ml/core/tensor.cr": "bc6cce4fd3101dd21f84efaf6a6601dae1b7e9f444bca32e3156fe2fe1b1369f",
+    "src/ml/metal/compute_graph.cr": "8d5d308fac91629a502de1ed085786047c5b6f0f530253ae265c7f95098cb970",
+    "src/ml/metal/device.cr": "ecc5d96332833a8a94d9a55914d515b5e34efe001f762d65aaa7c919b907c934",
+    "src/ml/metal/dispatch.cr": "40eeadaf1ccb56da52d8c3f5fa108ba1923048b641ed81e5f514010806a0ed3b",
+    "src/ml/metal/pipeline_selection_trace.cr": "b487a3c1e51a9cd62bf58e8801d850820a4942e541103d89cdbf282d4f2ced30",
+    "src/ml/metal/process_lease.cr": "3af0ee2d3435f46d5d0c35fc5b7c8b980645e310eeeb55f6c75634c5ffcbb048"
+  },
+  "source_sha256": {
+    "benchmark.cr": "bcc3830a7fddcd71b1f7a41d931efb302a7a1d0139be0e1add2dcf3e4384f0f4",
+    "billion_probe.cr": "f6a7e215fb67f19a7f51bf492782eda6fb4b7359e0d2777f79add36b757f2e9f",
+    "core.cr": "a6a5f9cc408449fc02fa3586bd4ce186e15a91c186343943f97fd8faecc8ae84",
+    "cpu_demo.cr": "dd4dc6a8b3b088ae552f9eeb35147def463f68024ffe17773cbfaae92ac4dc29",
+    "cuda_backend.cr": "d54f9b18058b883e3bc7ba5ec59feb96822dc89b4881723436c3a038a21a9028",
+    "gpu_demo.cr": "fc88dec79fab6c19536113a5495c4083298eb5a9e1827bb51c460e547e29a175",
+    "gpu_window_checks.cr": "f1c90ddaf247f9faf4eb311e7c5687c5239a067eef26c5506fb5b709b0e8cc35",
+    "jabari_adapters.cr": "38749a601ba15729788469fcb42b94806ac8a84260ba0adf3df1a04addeca1b7",
+    "jabari_benchmark.cr": "c8952edd94e552ec7333daf385d0fd940f873dc277abe3868ff63ae254a73da6",
+    "kernels/mpgs_sieve.metal": "0ed479017e06aaea85e1007cc3adfb715746a77690503d6bbafe835786de8fab",
+    "kernels/mpgs_sieve.ptx": "d77d1323eb1dbc026f8f5141411993ca677cc37c314dc0b8eeda7795f34a8875",
+    "kernels/mpgs_window.metal": "474d637a50099c4cea2341c709821e7c9ef333a930430d13c5456a15c95269cf",
+    "metal_backend.cr": "f193a7428a923187b9669d4b9c07988217e614e3ee2f7f3159de3e1a3b90fdf0",
+    "prepared_sieve.cr": "199ac392f745a374de9b1dd49f16a79e171fe76fad0ec1dfcc09637101de0750",
+    "scale_probe.cr": "a84f8415cb8977f732d2bb661c7725b0dc959768bc034397ab5258d3d4f0f6e1",
+    "schedule_demo.cr": "6a2810d1efd8dff2cae42b70aed7c6e6000e8657597b8e83b5bdb003a0d5ddc9",
+    "schedules.cr": "88314f53a71540b796139b9dc8e6f486c8750aaa0c003626a688e216c79a3b74",
+    "scripts/check_metal_compile_isolation.py": "e7cc7d5c85e1bb58b34c9b3ece5e2e765b496e1084d0a18eb09adb23e832deb4",
+    "scripts/run_benchmarks.py": "50d7e4f95568f75fe939d09f474bd271e56befbcc0970abe80d5b95671b173b0",
+    "scripts/run_jabari_comparison.py": "933811010cb14384dc78e79445085146760fefafab683b4ca820ae06e9b7acbe",
+    "spec/core_spec.cr": "0ce94ae183cd6b14e67274edaaa47fb853f2b62dc7b140d8cf166f2bd1fba6e9",
+    "spec/jabari_adapters_spec.cr": "39e40f83c752bb7f747609e632788eac626d59c0139f8b88cc05caa9d5edfb18",
+    "spec/prepared_sieve_spec.cr": "0f0a1eada75a99c2426540b9dec15bfccd8d719cb509c033dcaa5ba53ff63df8",
+    "spec/schedules_spec.cr": "feb0d8c7019ff6603a667e9a7fc7c48b9acea5dbadd32514baa3a431bf6efcb0"
+  },
+  "author_sources": {
+    "paper_filename": "Optimal_Mersenne_Primes_Search_Using_Mod.pdf",
+    "paper_sha256": "f2cd3eee3827f6e5a35e34ace4df77a6b9bcf43fa1e4ea8dc4a889f18ac6f8d2",
+    "paper_code_page": 6,
+    "forum_url": "https://forum.crystal-lang.org/t/optimal-mersenne-primes-search-using-modular-groups/9207",
+    "forum_snapshot_sha256": "acf85e2ac0bc5e8105aafbaf991126220e9bad9ede977ef399c3af23ce481c86",
+    "author_posts": [
+      {
+        "post_number": 1,
+        "updated_at": "2026-10-11T19:46:49.222Z",
+        "version": 1,
+        "cooked_sha256": "4e409a80c5a34b51c45eb0fc7be39bb740a7eb85cc509ac5e0dbe8151b8f969c"
+      },
+      {
+        "post_number": 3,
+        "updated_at": "2026-10-12T04:00:05.089Z",
+        "version": 1,
+        "cooked_sha256": "ab69e343d1983c3cf4c3fac92cccf17701322212ff924d5c888f08f91284fed5"
+      },
+      {
+        "post_number": 5,
+        "updated_at": "2026-10-12T18:28:35.407Z",
+        "version": 3,
+        "cooked_sha256": "32da4cc42fc34f064d354d80e44c8636d47f5c436101d6a925515c8f36cb36ea"
+      }
+    ],
+    "unavailable_dependency": "Exact 2026 Crystal primes-utils is not present in the inspected public sources; GMP(25) substituted consistently."
+  },
+  "limitations": [
+    "Normalized finite adapters, not untouched execution of the author's unavailable Crystal primality backend.",
+    "Final-state comparisons use one GMP probable-prime test; not primality certificates or a GIMPS comparison.",
+    "Dense progression seed fixed; the author's dynamic seed reset after a hit is excluded.",
+    "Current Mersenne-only candidate sizes grow: no constant-cost billion-exponent extrapolation is valid.",
+    "The UInt64 compatible-k recurrence limits each rebased run to 32 consecutive Mersenne exponents; the sieve API accepts larger arbitrary arrays. That overhead is timed.",
+    "One M2 Max; five rotating/reversed repetitions, two warmups, no temperature or background-load control.",
+    "Billion small-factor run uses a reused plan and tile 4096; equality/counting outside timing, no final primality tests."
+  ],
+  "cases": [
+    {
+      "mode": "progression",
+      "count": 65536,
+      "start": 1,
+      "progression_exponent": 17,
+      "prime_cap": 65521,
+      "prime_count": 6541,
+      "gmp_repetitions": 25,
+      "repeats": 5,
+      "warmups_per_method": 2,
+      "backend_initialization_ms": 44.114208000000005,
+      "metal_device": "Apple M2 Max",
+      "all_final_states_equal": true,
+      "probable_primes": 8216,
+      "probable_mersenne_exponents": [
+        19,
+        31
+      ],
+      "methods": {
+        "jabari_pdf_normalized_gmp": {
+          "median_ms": 27.464125,
+          "min_ms": 26.221459,
+          "max_ms": 29.402292,
+          "samples_ms": [
+            29.402292,
+            27.464125,
+            28.056375000000003,
+            26.661709,
+            26.221459
+          ],
+          "gmp_screen_calls": 65536
+        },
+        "ours_cpu_full_pipeline": {
+          "median_ms": 19.509666,
+          "min_ms": 19.039167,
+          "max_ms": 20.360500000000002,
+          "samples_ms": [
+            20.360500000000002,
+            20.024791,
+            19.039167,
+            19.509666,
+            19.05775
+          ],
+          "gmp_screen_calls": 9270
+        },
+        "ours_metal_full_pipeline_tile4096": {
+          "median_ms": 19.807374999999997,
+          "min_ms": 19.425834,
+          "max_ms": 20.210375,
+          "samples_ms": [
+            19.8465,
+            20.210375,
+            19.795125,
+            19.807374999999997,
+            19.425834
+          ],
+          "gmp_screen_calls": 9270
+        }
+      },
+      "scope": "Finite matched candidate sets; shared GMP probable-prime(25), not the author's unavailable Crystal primes-utils. Full filter preparation, candidate construction and survivor GMP tests included; console I/O, dynamic seed changes, GPU initialization/compilation and final equality checks excluded. Progression seed fixed. Mersenne paths preserve every odd exponent and include 32-candidate rebasing overhead; existing dense odd-k optimization cannot apply to this sparse sequence.",
+      "run_command": [
+        "/private/tmp/mpgs-jabari-benchmark",
+        "progression",
+        "65536",
+        "1",
+        "17",
+        "5",
+        "65521"
+      ],
+      "host_load_average_before_case": [
+        7.47265625,
+        6.86083984375,
+        6.93017578125
+      ],
+      "host_load_average_after_case": [
+        7.47265625,
+        6.86083984375,
+        6.93017578125
+      ]
+    },
+    {
+      "mode": "progression",
+      "count": 65536,
+      "start": 1,
+      "progression_exponent": 31,
+      "prime_cap": 65521,
+      "prime_count": 6541,
+      "gmp_repetitions": 25,
+      "repeats": 5,
+      "warmups_per_method": 2,
+      "backend_initialization_ms": 39.131834,
+      "metal_device": "Apple M2 Max",
+      "all_final_states_equal": true,
+      "probable_primes": 5912,
+      "probable_mersenne_exponents": [],
+      "methods": {
+        "jabari_pdf_normalized_gmp": {
+          "median_ms": 29.909041000000002,
+          "min_ms": 28.648125,
+          "max_ms": 30.469875000000002,
+          "samples_ms": [
+            29.468874999999997,
+            28.648125,
+            30.469875000000002,
+            29.909041000000002,
+            30.386166
+          ],
+          "gmp_screen_calls": 65536
+        },
+        "ours_cpu_full_pipeline": {
+          "median_ms": 20.274834,
+          "min_ms": 19.939,
+          "max_ms": 22.957208,
+          "samples_ms": [
+            20.255417,
+            19.939,
+            20.274834,
+            22.957208,
+            20.529666
+          ],
+          "gmp_screen_calls": 9949
+        },
+        "ours_metal_full_pipeline_tile4096": {
+          "median_ms": 20.409792,
+          "min_ms": 20.278292,
+          "max_ms": 20.9955,
+          "samples_ms": [
+            20.369833,
+            20.278292,
+            20.413959,
+            20.9955,
+            20.409792
+          ],
+          "gmp_screen_calls": 9949
+        }
+      },
+      "scope": "Finite matched candidate sets; shared GMP probable-prime(25), not the author's unavailable Crystal primes-utils. Full filter preparation, candidate construction and survivor GMP tests included; console I/O, dynamic seed changes, GPU initialization/compilation and final equality checks excluded. Progression seed fixed. Mersenne paths preserve every odd exponent and include 32-candidate rebasing overhead; existing dense odd-k optimization cannot apply to this sparse sequence.",
+      "run_command": [
+        "/private/tmp/mpgs-jabari-benchmark",
+        "progression",
+        "65536",
+        "1",
+        "31",
+        "5",
+        "65521"
+      ],
+      "host_load_average_before_case": [
+        7.47265625,
+        6.86083984375,
+        6.93017578125
+      ],
+      "host_load_average_after_case": [
+        7.47265625,
+        6.86083984375,
+        6.93017578125
+      ]
+    },
+    {
+      "mode": "progression",
+      "count": 262144,
+      "start": 1,
+      "progression_exponent": 31,
+      "prime_cap": 65521,
+      "prime_count": 6541,
+      "gmp_repetitions": 25,
+      "repeats": 5,
+      "warmups_per_method": 2,
+      "backend_initialization_ms": 38.419042,
+      "metal_device": "Apple M2 Max",
+      "all_final_states_equal": true,
+      "probable_primes": 22593,
+      "probable_mersenne_exponents": [],
+      "methods": {
+        "jabari_pdf_normalized_gmp": {
+          "median_ms": 114.11575,
+          "min_ms": 112.017208,
+          "max_ms": 117.205958,
+          "samples_ms": [
+            112.888458,
+            114.11575,
+            115.31700000000001,
+            117.205958,
+            112.017208
+          ],
+          "gmp_screen_calls": 262144
+        },
+        "ours_cpu_full_pipeline": {
+          "median_ms": 77.551083,
+          "min_ms": 76.408708,
+          "max_ms": 85.840583,
+          "samples_ms": [
+            76.408708,
+            76.90754199999999,
+            81.717209,
+            85.840583,
+            77.551083
+          ],
+          "gmp_screen_calls": 39833
+        },
+        "ours_metal_full_pipeline_tile4096": {
+          "median_ms": 79.221,
+          "min_ms": 77.59091699999999,
+          "max_ms": 82.336958,
+          "samples_ms": [
+            77.59091699999999,
+            81.4275,
+            77.952083,
+            82.336958,
+            79.221
+          ],
+          "gmp_screen_calls": 39833
+        }
+      },
+      "scope": "Finite matched candidate sets; shared GMP probable-prime(25), not the author's unavailable Crystal primes-utils. Full filter preparation, candidate construction and survivor GMP tests included; console I/O, dynamic seed changes, GPU initialization/compilation and final equality checks excluded. Progression seed fixed. Mersenne paths preserve every odd exponent and include 32-candidate rebasing overhead; existing dense odd-k optimization cannot apply to this sparse sequence.",
+      "run_command": [
+        "/private/tmp/mpgs-jabari-benchmark",
+        "progression",
+        "262144",
+        "1",
+        "31",
+        "5",
+        "65521"
+      ],
+      "host_load_average_before_case": [
+        7.47265625,
+        6.86083984375,
+        6.93017578125
+      ],
+      "host_load_average_after_case": [
+        7.5146484375,
+        6.87939453125,
+        6.93603515625
+      ]
+    },
+    {
+      "mode": "progression",
+      "count": 1048576,
+      "start": 1,
+      "progression_exponent": 31,
+      "prime_cap": 65521,
+      "prime_count": 6541,
+      "gmp_repetitions": 25,
+      "repeats": 5,
+      "warmups_per_method": 2,
+      "backend_initialization_ms": 39.575167,
+      "metal_device": "Apple M2 Max",
+      "all_final_states_equal": true,
+      "probable_primes": 87030,
+      "probable_mersenne_exponents": [],
+      "methods": {
+        "jabari_pdf_normalized_gmp": {
+          "median_ms": 478.432666,
+          "min_ms": 475.608209,
+          "max_ms": 484.673625,
+          "samples_ms": [
+            475.820583,
+            475.608209,
+            484.673625,
+            481.46166600000004,
+            478.432666
+          ],
+          "gmp_screen_calls": 1048576
+        },
+        "ours_cpu_full_pipeline": {
+          "median_ms": 332.799583,
+          "min_ms": 321.96025000000003,
+          "max_ms": 335.077042,
+          "samples_ms": [
+            321.96025000000003,
+            333.01541699999996,
+            332.799583,
+            335.077042,
+            328.930292
+          ],
+          "gmp_screen_calls": 159003
+        },
+        "ours_metal_full_pipeline_tile4096": {
+          "median_ms": 329.504834,
+          "min_ms": 324.277417,
+          "max_ms": 378.379625,
+          "samples_ms": [
+            328.89162500000003,
+            329.504834,
+            335.29841700000003,
+            378.379625,
+            324.277417
+          ],
+          "gmp_screen_calls": 159003
+        }
+      },
+      "scope": "Finite matched candidate sets; shared GMP probable-prime(25), not the author's unavailable Crystal primes-utils. Full filter preparation, candidate construction and survivor GMP tests included; console I/O, dynamic seed changes, GPU initialization/compilation and final equality checks excluded. Progression seed fixed. Mersenne paths preserve every odd exponent and include 32-candidate rebasing overhead; existing dense odd-k optimization cannot apply to this sparse sequence.",
+      "run_command": [
+        "/private/tmp/mpgs-jabari-benchmark",
+        "progression",
+        "1048576",
+        "1",
+        "31",
+        "5",
+        "65521"
+      ],
+      "host_load_average_before_case": [
+        7.5146484375,
+        6.87939453125,
+        6.93603515625
+      ],
+      "host_load_average_after_case": [
+        7.31298828125,
+        6.84814453125,
+        6.92431640625
+      ]
+    },
+    {
+      "mode": "progression",
+      "count": 262144,
+      "start": 199737857,
+      "progression_exponent": 31,
+      "prime_cap": 65521,
+      "prime_count": 6541,
+      "gmp_repetitions": 25,
+      "repeats": 5,
+      "warmups_per_method": 2,
+      "backend_initialization_ms": 94.804375,
+      "metal_device": "Apple M2 Max",
+      "all_final_states_equal": true,
+      "probable_primes": 18835,
+      "probable_mersenne_exponents": [],
+      "methods": {
+        "jabari_pdf_normalized_gmp": {
+          "median_ms": 129.97304200000002,
+          "min_ms": 127.153917,
+          "max_ms": 141.27100000000002,
+          "samples_ms": [
+            127.153917,
+            129.97304200000002,
+            130.380917,
+            141.27100000000002,
+            128.384083
+          ],
+          "gmp_screen_calls": 262144
+        },
+        "ours_cpu_full_pipeline": {
+          "median_ms": 91.64966700000001,
+          "min_ms": 87.818208,
+          "max_ms": 100.369708,
+          "samples_ms": [
+            87.96125,
+            87.818208,
+            92.981625,
+            100.369708,
+            91.64966700000001
+          ],
+          "gmp_screen_calls": 39784
+        },
+        "ours_metal_full_pipeline_tile4096": {
+          "median_ms": 88.06987500000001,
+          "min_ms": 86.822125,
+          "max_ms": 89.888666,
+          "samples_ms": [
+            88.542917,
+            88.06987500000001,
+            87.71525,
+            89.888666,
+            86.822125
+          ],
+          "gmp_screen_calls": 39784
+        }
+      },
+      "scope": "Finite matched candidate sets; shared GMP probable-prime(25), not the author's unavailable Crystal primes-utils. Full filter preparation, candidate construction and survivor GMP tests included; console I/O, dynamic seed changes, GPU initialization/compilation and final equality checks excluded. Progression seed fixed. Mersenne paths preserve every odd exponent and include 32-candidate rebasing overhead; existing dense odd-k optimization cannot apply to this sparse sequence.",
+      "run_command": [
+        "/private/tmp/mpgs-jabari-benchmark",
+        "progression",
+        "262144",
+        "199737857",
+        "31",
+        "5",
+        "65521"
+      ],
+      "host_load_average_before_case": [
+        7.31298828125,
+        6.84814453125,
+        6.92431640625
+      ],
+      "host_load_average_after_case": [
+        9.28955078125,
+        7.265625,
+        7.07080078125
+      ],
+      "billion_estimate_stratum": 0
+    },
+    {
+      "mode": "progression",
+      "count": 262144,
+      "start": 599737857,
+      "progression_exponent": 31,
+      "prime_cap": 65521,
+      "prime_count": 6541,
+      "gmp_repetitions": 25,
+      "repeats": 5,
+      "warmups_per_method": 2,
+      "backend_initialization_ms": 47.303292,
+      "metal_device": "Apple M2 Max",
+      "all_final_states_equal": true,
+      "probable_primes": 18474,
+      "probable_mersenne_exponents": [],
+      "methods": {
+        "jabari_pdf_normalized_gmp": {
+          "median_ms": 130.18175000000002,
+          "min_ms": 127.01641699999999,
+          "max_ms": 132.419417,
+          "samples_ms": [
+            127.01641699999999,
+            130.18175000000002,
+            132.419417,
+            128.682208,
+            130.4615
+          ],
+          "gmp_screen_calls": 262144
+        },
+        "ours_cpu_full_pipeline": {
+          "median_ms": 88.672083,
+          "min_ms": 88.64004200000001,
+          "max_ms": 89.572917,
+          "samples_ms": [
+            88.672083,
+            88.764625,
+            88.671042,
+            88.64004200000001,
+            89.572917
+          ],
+          "gmp_screen_calls": 39710
+        },
+        "ours_metal_full_pipeline_tile4096": {
+          "median_ms": 88.501209,
+          "min_ms": 87.087,
+          "max_ms": 89.533625,
+          "samples_ms": [
+            88.644583,
+            88.501209,
+            88.188333,
+            89.533625,
+            87.087
+          ],
+          "gmp_screen_calls": 39710
+        }
+      },
+      "scope": "Finite matched candidate sets; shared GMP probable-prime(25), not the author's unavailable Crystal primes-utils. Full filter preparation, candidate construction and survivor GMP tests included; console I/O, dynamic seed changes, GPU initialization/compilation and final equality checks excluded. Progression seed fixed. Mersenne paths preserve every odd exponent and include 32-candidate rebasing overhead; existing dense odd-k optimization cannot apply to this sparse sequence.",
+      "run_command": [
+        "/private/tmp/mpgs-jabari-benchmark",
+        "progression",
+        "262144",
+        "599737857",
+        "31",
+        "5",
+        "65521"
+      ],
+      "host_load_average_before_case": [
+        9.28955078125,
+        7.265625,
+        7.07080078125
+      ],
+      "host_load_average_after_case": [
+        9.28955078125,
+        7.265625,
+        7.07080078125
+      ],
+      "billion_estimate_stratum": 1
+    },
+    {
+      "mode": "progression",
+      "count": 262144,
+      "start": 999737857,
+      "progression_exponent": 31,
+      "prime_cap": 65521,
+      "prime_count": 6541,
+      "gmp_repetitions": 25,
+      "repeats": 5,
+      "warmups_per_method": 2,
+      "backend_initialization_ms": 46.707459,
+      "metal_device": "Apple M2 Max",
+      "all_final_states_equal": true,
+      "probable_primes": 18121,
+      "probable_mersenne_exponents": [],
+      "methods": {
+        "jabari_pdf_normalized_gmp": {
+          "median_ms": 133.75283299999998,
+          "min_ms": 129.470834,
+          "max_ms": 177.338833,
+          "samples_ms": [
+            129.470834,
+            153.851083,
+            177.338833,
+            133.75283299999998,
+            131.788708
+          ],
+          "gmp_screen_calls": 262144
+        },
+        "ours_cpu_full_pipeline": {
+          "median_ms": 95.631833,
+          "min_ms": 87.550667,
+          "max_ms": 122.88975,
+          "samples_ms": [
+            122.88975,
+            95.631833,
+            89.59308300000001,
+            87.550667,
+            97.33200000000001
+          ],
+          "gmp_screen_calls": 39686
+        },
+        "ours_metal_full_pipeline_tile4096": {
+          "median_ms": 88.928,
+          "min_ms": 87.747083,
+          "max_ms": 94.14387500000001,
+          "samples_ms": [
+            91.479459,
+            94.14387500000001,
+            88.928,
+            88.163166,
+            87.747083
+          ],
+          "gmp_screen_calls": 39686
+        }
+      },
+      "scope": "Finite matched candidate sets; shared GMP probable-prime(25), not the author's unavailable Crystal primes-utils. Full filter preparation, candidate construction and survivor GMP tests included; console I/O, dynamic seed changes, GPU initialization/compilation and final equality checks excluded. Progression seed fixed. Mersenne paths preserve every odd exponent and include 32-candidate rebasing overhead; existing dense odd-k optimization cannot apply to this sparse sequence.",
+      "run_command": [
+        "/private/tmp/mpgs-jabari-benchmark",
+        "progression",
+        "262144",
+        "999737857",
+        "31",
+        "5",
+        "65521"
+      ],
+      "host_load_average_before_case": [
+        9.28955078125,
+        7.265625,
+        7.07080078125
+      ],
+      "host_load_average_after_case": [
+        9.34619140625,
+        7.310546875,
+        7.087890625
+      ],
+      "billion_estimate_stratum": 2
+    },
+    {
+      "mode": "progression",
+      "count": 262144,
+      "start": 1399737857,
+      "progression_exponent": 31,
+      "prime_cap": 65521,
+      "prime_count": 6541,
+      "gmp_repetitions": 25,
+      "repeats": 5,
+      "warmups_per_method": 2,
+      "backend_initialization_ms": 43.411708,
+      "metal_device": "Apple M2 Max",
+      "all_final_states_equal": true,
+      "probable_primes": 18050,
+      "probable_mersenne_exponents": [],
+      "methods": {
+        "jabari_pdf_normalized_gmp": {
+          "median_ms": 130.32908400000002,
+          "min_ms": 128.126125,
+          "max_ms": 133.893958,
+          "samples_ms": [
+            128.767792,
+            133.893958,
+            132.02004200000002,
+            128.126125,
+            130.32908400000002
+          ],
+          "gmp_screen_calls": 262144
+        },
+        "ours_cpu_full_pipeline": {
+          "median_ms": 89.28850000000001,
+          "min_ms": 87.235292,
+          "max_ms": 93.129208,
+          "samples_ms": [
+            88.87595800000001,
+            93.129208,
+            89.28850000000001,
+            87.235292,
+            89.476958
+          ],
+          "gmp_screen_calls": 39840
+        },
+        "ours_metal_full_pipeline_tile4096": {
+          "median_ms": 89.785584,
+          "min_ms": 87.145958,
+          "max_ms": 99.50329099999999,
+          "samples_ms": [
+            88.898291,
+            99.50329099999999,
+            91.477417,
+            87.145958,
+            89.785584
+          ],
+          "gmp_screen_calls": 39840
+        }
+      },
+      "scope": "Finite matched candidate sets; shared GMP probable-prime(25), not the author's unavailable Crystal primes-utils. Full filter preparation, candidate construction and survivor GMP tests included; console I/O, dynamic seed changes, GPU initialization/compilation and final equality checks excluded. Progression seed fixed. Mersenne paths preserve every odd exponent and include 32-candidate rebasing overhead; existing dense odd-k optimization cannot apply to this sparse sequence.",
+      "run_command": [
+        "/private/tmp/mpgs-jabari-benchmark",
+        "progression",
+        "262144",
+        "1399737857",
+        "31",
+        "5",
+        "65521"
+      ],
+      "host_load_average_before_case": [
+        9.34619140625,
+        7.310546875,
+        7.087890625
+      ],
+      "host_load_average_after_case": [
+        9.34619140625,
+        7.310546875,
+        7.087890625
+      ],
+      "billion_estimate_stratum": 3
+    },
+    {
+      "mode": "progression",
+      "count": 262144,
+      "start": 1799737857,
+      "progression_exponent": 31,
+      "prime_cap": 65521,
+      "prime_count": 6541,
+      "gmp_repetitions": 25,
+      "repeats": 5,
+      "warmups_per_method": 2,
+      "backend_initialization_ms": 39.294542,
+      "metal_device": "Apple M2 Max",
+      "all_final_states_equal": true,
+      "probable_primes": 17779,
+      "probable_mersenne_exponents": [],
+      "methods": {
+        "jabari_pdf_normalized_gmp": {
+          "median_ms": 127.87912500000002,
+          "min_ms": 126.11887499999999,
+          "max_ms": 131.34004199999998,
+          "samples_ms": [
+            131.34004199999998,
+            128.894916,
+            126.11887499999999,
+            126.773583,
+            127.87912500000002
+          ],
+          "gmp_screen_calls": 262144
+        },
+        "ours_cpu_full_pipeline": {
+          "median_ms": 85.39812500000001,
+          "min_ms": 85.043916,
+          "max_ms": 88.288583,
+          "samples_ms": [
+            85.688833,
+            88.288583,
+            85.17166700000001,
+            85.39812500000001,
+            85.043916
+          ],
+          "gmp_screen_calls": 39697
+        },
+        "ours_metal_full_pipeline_tile4096": {
+          "median_ms": 86.319209,
+          "min_ms": 85.745,
+          "max_ms": 88.486958,
+          "samples_ms": [
+            85.988167,
+            87.519292,
+            86.319209,
+            85.745,
+            88.486958
+          ],
+          "gmp_screen_calls": 39697
+        }
+      },
+      "scope": "Finite matched candidate sets; shared GMP probable-prime(25), not the author's unavailable Crystal primes-utils. Full filter preparation, candidate construction and survivor GMP tests included; console I/O, dynamic seed changes, GPU initialization/compilation and final equality checks excluded. Progression seed fixed. Mersenne paths preserve every odd exponent and include 32-candidate rebasing overhead; existing dense odd-k optimization cannot apply to this sparse sequence.",
+      "run_command": [
+        "/private/tmp/mpgs-jabari-benchmark",
+        "progression",
+        "262144",
+        "1799737857",
+        "31",
+        "5",
+        "65521"
+      ],
+      "host_load_average_before_case": [
+        9.34619140625,
+        7.310546875,
+        7.087890625
+      ],
+      "host_load_average_after_case": [
+        9.078125,
+        7.28857421875,
+        7.0810546875
+      ],
+      "billion_estimate_stratum": 4
+    },
+    {
+      "mode": "mersenne",
+      "count": 32,
+      "start": 17,
+      "progression_exponent": null,
+      "prime_cap": 65521,
+      "prime_count": 6541,
+      "gmp_repetitions": 25,
+      "repeats": 5,
+      "warmups_per_method": 2,
+      "backend_initialization_ms": 47.199541999999994,
+      "metal_device": "Apple M2 Max",
+      "all_final_states_equal": true,
+      "probable_primes": 4,
+      "probable_mersenne_exponents": [
+        17,
+        19,
+        31,
+        61
+      ],
+      "methods": {
+        "jabari_post5_normalized_gmp": {
+          "median_ms": 0.037958,
+          "min_ms": 0.03625,
+          "max_ms": 0.038792,
+          "samples_ms": [
+            0.038792,
+            0.03725,
+            0.038584,
+            0.037958,
+            0.03625
+          ],
+          "gmp_screen_calls": 32
+        },
+        "ours_cpu_rebased_full_pipeline": {
+          "median_ms": 1.2811249999999998,
+          "min_ms": 0.896292,
+          "max_ms": 2.0365,
+          "samples_ms": [
+            1.187833,
+            0.896292,
+            1.2811249999999998,
+            1.5191670000000002,
+            2.0365
+          ],
+          "gmp_screen_calls": 7
+        },
+        "ours_metal_rebased_full_pipeline": {
+          "median_ms": 18.736083,
+          "min_ms": 18.456167,
+          "max_ms": 18.834792,
+          "samples_ms": [
+            18.834792,
+            18.693791,
+            18.456167,
+            18.782041999999997,
+            18.736083
+          ],
+          "gmp_screen_calls": 7
+        }
+      },
+      "scope": "Finite matched candidate sets; shared GMP probable-prime(25), not the author's unavailable Crystal primes-utils. Full filter preparation, candidate construction and survivor GMP tests included; console I/O, dynamic seed changes, GPU initialization/compilation and final equality checks excluded. Progression seed fixed. Mersenne paths preserve every odd exponent and include 32-candidate rebasing overhead; existing dense odd-k optimization cannot apply to this sparse sequence.",
+      "run_command": [
+        "/private/tmp/mpgs-jabari-benchmark",
+        "mersenne",
+        "32",
+        "17",
+        "31",
+        "5",
+        "65521"
+      ],
+      "host_load_average_before_case": [
+        9.078125,
+        7.28857421875,
+        7.0810546875
+      ],
+      "host_load_average_after_case": [
+        9.078125,
+        7.28857421875,
+        7.0810546875
+      ]
+    },
+    {
+      "mode": "mersenne",
+      "count": 512,
+      "start": 33,
+      "progression_exponent": null,
+      "prime_cap": 65521,
+      "prime_count": 6541,
+      "gmp_repetitions": 25,
+      "repeats": 5,
+      "warmups_per_method": 2,
+      "backend_initialization_ms": 42.328875000000004,
+      "metal_device": "Apple M2 Max",
+      "all_final_states_equal": true,
+      "probable_primes": 6,
+      "probable_mersenne_exponents": [
+        61,
+        89,
+        107,
+        127,
+        521,
+        607
+      ],
+      "methods": {
+        "jabari_post5_normalized_gmp": {
+          "median_ms": 40.824833999999996,
+          "min_ms": 40.038292000000006,
+          "max_ms": 45.650749999999995,
+          "samples_ms": [
+            40.426792000000006,
+            40.824833999999996,
+            41.126250000000006,
+            45.650749999999995,
+            40.038292000000006
+          ],
+          "gmp_screen_calls": 512
+        },
+        "ours_cpu_rebased_full_pipeline": {
+          "median_ms": 39.327374999999996,
+          "min_ms": 38.270292,
+          "max_ms": 65.00370799999999,
+          "samples_ms": [
+            38.270292,
+            39.513458,
+            39.327374999999996,
+            38.92466700000001,
+            65.00370799999999
+          ],
+          "gmp_screen_calls": 110
+        },
+        "ours_metal_rebased_full_pipeline": {
+          "median_ms": 345.5665,
+          "min_ms": 341.414625,
+          "max_ms": 348.308834,
+          "samples_ms": [
+            345.241292,
+            341.414625,
+            345.5665,
+            348.308834,
+            346.67987500000004
+          ],
+          "gmp_screen_calls": 110
+        }
+      },
+      "scope": "Finite matched candidate sets; shared GMP probable-prime(25), not the author's unavailable Crystal primes-utils. Full filter preparation, candidate construction and survivor GMP tests included; console I/O, dynamic seed changes, GPU initialization/compilation and final equality checks excluded. Progression seed fixed. Mersenne paths preserve every odd exponent and include 32-candidate rebasing overhead; existing dense odd-k optimization cannot apply to this sparse sequence.",
+      "run_command": [
+        "/private/tmp/mpgs-jabari-benchmark",
+        "mersenne",
+        "512",
+        "33",
+        "31",
+        "5",
+        "65521"
+      ],
+      "host_load_average_before_case": [
+        9.078125,
+        7.28857421875,
+        7.0810546875
+      ],
+      "host_load_average_after_case": [
+        8.59130859375,
+        7.21728515625,
+        7.05712890625
+      ]
+    },
+    {
+      "mode": "mersenne",
+      "count": 1024,
+      "start": 17,
+      "progression_exponent": null,
+      "prime_cap": 65521,
+      "prime_count": 6541,
+      "gmp_repetitions": 25,
+      "repeats": 5,
+      "warmups_per_method": 2,
+      "backend_initialization_ms": 40.86016600000001,
+      "metal_device": "Apple M2 Max",
+      "all_final_states_equal": true,
+      "probable_primes": 10,
+      "probable_mersenne_exponents": [
+        17,
+        19,
+        31,
+        61,
+        89,
+        107,
+        127,
+        521,
+        607,
+        1279
+      ],
+      "methods": {
+        "jabari_post5_normalized_gmp": {
+          "median_ms": 394.068458,
+          "min_ms": 385.738209,
+          "max_ms": 590.831416,
+          "samples_ms": [
+            389.76725,
+            590.831416,
+            400.136584,
+            385.738209,
+            394.068458
+          ],
+          "gmp_screen_calls": 1024
+        },
+        "ours_cpu_rebased_full_pipeline": {
+          "median_ms": 290.810625,
+          "min_ms": 287.548917,
+          "max_ms": 821.672292,
+          "samples_ms": [
+            288.528167,
+            821.672292,
+            292.07745800000004,
+            287.548917,
+            290.810625
+          ],
+          "gmp_screen_calls": 220
+        },
+        "ours_metal_rebased_full_pipeline": {
+          "median_ms": 903.1381670000001,
+          "min_ms": 894.798416,
+          "max_ms": 972.935833,
+          "samples_ms": [
+            903.1381670000001,
+            972.935833,
+            909.995833,
+            900.201,
+            894.798416
+          ],
+          "gmp_screen_calls": 220
+        }
+      },
+      "scope": "Finite matched candidate sets; shared GMP probable-prime(25), not the author's unavailable Crystal primes-utils. Full filter preparation, candidate construction and survivor GMP tests included; console I/O, dynamic seed changes, GPU initialization/compilation and final equality checks excluded. Progression seed fixed. Mersenne paths preserve every odd exponent and include 32-candidate rebasing overhead; existing dense odd-k optimization cannot apply to this sparse sequence.",
+      "run_command": [
+        "/private/tmp/mpgs-jabari-benchmark",
+        "mersenne",
+        "1024",
+        "17",
+        "31",
+        "5",
+        "65521"
+      ],
+      "host_load_average_before_case": [
+        8.59130859375,
+        7.21728515625,
+        7.05712890625
+      ],
+      "host_load_average_after_case": [
+        8.18603515625,
+        7.17626953125,
+        7.04443359375
+      ]
+    }
+  ],
+  "billion_sieves": [
+    {
+      "count": 1000000000,
+      "exponent": 31,
+      "start_k": 1,
+      "prime_cap": 65521,
+      "prime_count": 6541,
+      "window_limit": 16777216,
+      "windows_per_round": 60,
+      "tile_size": 4096,
+      "metal_device": "Apple M2 Max",
+      "repeats": 3,
+      "checked_candidates": 3000000000,
+      "all_factor_arrays_equal": true,
+      "proper_factor_witnesses": 848199471,
+      "unresolved": 151800529,
+      "one_plan_preparation_ms": 0.824,
+      "cpu_prepared": {
+        "median_ms": 8350.870712,
+        "samples_ms": [
+          8350.870712,
+          8348.562955000001,
+          8513.510950000004
+        ]
+      },
+      "metal_prepared": {
+        "median_ms": 3219.263124,
+        "samples_ms": [
+          3018.790461,
+          3275.1816209999993,
+          3219.263124
+        ]
+      },
+      "scope": "Direct streaming small-factor sieve: every billion-candidate round executed, factor arrays compared outside timing. Plan reused; allocation, transfers, dispatch, synchronization and readback included. Equality checks/counting, backend initialization and pipeline compilation excluded. Not final primality and not a run of Jabari's unpublished backend.",
+      "run_command": [
+        "/private/tmp/mpgs-billion-probe",
+        "1000000000",
+        "31",
+        "3"
+      ],
+      "host_load_average_before_case": [
+        8.18603515625,
+        7.17626953125,
+        7.04443359375
+      ],
+      "host_load_average_after_case": [
+        9.927734375,
+        7.73583984375,
+        7.25341796875
+      ]
+    },
+    {
+      "count": 1000000000,
+      "exponent": 136279841,
+      "start_k": 1,
+      "prime_cap": 65521,
+      "prime_count": 6541,
+      "window_limit": 16777216,
+      "windows_per_round": 60,
+      "tile_size": 4096,
+      "metal_device": "Apple M2 Max",
+      "repeats": 3,
+      "checked_candidates": 3000000000,
+      "all_factor_arrays_equal": true,
+      "proper_factor_witnesses": 848159448,
+      "unresolved": 151840552,
+      "one_plan_preparation_ms": 0.7985829999999999,
+      "cpu_prepared": {
+        "median_ms": 7726.090335000001,
+        "samples_ms": [
+          7676.198710999999,
+          7959.744416999999,
+          7726.090335000001
+        ]
+      },
+      "metal_prepared": {
+        "median_ms": 2877.2933749999997,
+        "samples_ms": [
+          2870.194708,
+          3002.2175499999994,
+          2877.2933749999997
+        ]
+      },
+      "scope": "Direct streaming small-factor sieve: every billion-candidate round executed, factor arrays compared outside timing. Plan reused; allocation, transfers, dispatch, synchronization and readback included. Equality checks/counting, backend initialization and pipeline compilation excluded. Not final primality and not a run of Jabari's unpublished backend.",
+      "run_command": [
+        "/private/tmp/mpgs-billion-probe",
+        "1000000000",
+        "136279841",
+        "3"
+      ],
+      "host_load_average_before_case": [
+        9.927734375,
+        7.73583984375,
+        7.25341796875
+      ],
+      "host_load_average_after_case": [
+        9.404296875,
+        7.80859375,
+        7.29541015625
+      ]
+    }
+  ],
+  "fixed_progression_billion_estimate": {
+    "count": 1000000000,
+    "exponent": 31,
+    "start_k": 1,
+    "last_k": 1999999999,
+    "sampled_candidates": 1310720,
+    "sampling": "Five equal index strata, one 262144-candidate window at each midpoint; equal-weight mean of per-window median costs.",
+    "provenance": "Extrapolated shared-GMP complete pipeline, not directly executed billion primality tests; not the author's dynamically resetting search.",
+    "methods": {
+      "jabari_pdf_normalized_gmp": {
+        "estimated_billion_seconds": 497.5248977661133,
+        "stratum_billion_seconds": [
+          495.80780792236334,
+          496.6039657592774,
+          510.2265663146972,
+          497.166000366211,
+          487.82014846801763
+        ]
+      },
+      "ours_cpu_full_pipeline": {
+        "estimated_billion_seconds": 343.8111938476563,
+        "stratum_billion_seconds": [
+          349.6157341003418,
+          338.25715255737305,
+          364.80649185180664,
+          340.6085968017578,
+          325.76799392700195
+        ]
+      },
+      "ours_metal_full_pipeline_tile4096": {
+        "estimated_billion_seconds": 336.91702041625973,
+        "stratum_billion_seconds": [
+          335.95991134643555,
+          337.60531997680664,
+          339.2333984375,
+          342.50482177734375,
+          329.2816505432129
+        ]
+      }
+    }
+  },
+  "post_measurement_annotations": {
+    "reason": "Adversary review clarified descriptive metadata; numerical samples, executed cases, compiled sources and binary identities are unchanged.",
+    "candidate_construction_accounting": "Baseline constructs every BigInt; filtered paths residue-sieve every candidate and construct BigInts only for unresolved survivors. The construction each method performs is timed.",
+    "runner_executed_source_sha256": "933811010cb14384dc78e79445085146760fefafab683b4ca820ae06e9b7acbe",
+    "runner_current_source_sha256": "5ab470f3a3d68150500df415309da5b81a41d69ac792e84a2ac2898e7d6697e2",
+    "runner_change": "One limitation string clarified: the 32-term limit belongs to the UInt64 compatible-k recurrence, not the arbitrary-array sieve API.",
+    "adversary_verdict": {
+      "finite_normalized_agreement": "ROBUST within tested inputs and shared GMP backend",
+      "direct_billion_sieve_agreement": "ROBUST within tested inputs",
+      "fixed_progression_billion_pipeline_estimate": "VULNERABLE; exploratory deterministic-sample extrapolation on a busy host",
+      "original_author_backend_or_direct_billion_primality_claim": "BROKEN; not executed"
+    },
+    "cpu_spec_check": {
+      "command": "env CRYSTAL_CACHE_DIR=/private/tmp/mpgs-matched-cache crystal spec spec/ --link-flags=-fuse-ld=/usr/bin/ld",
+      "observed": "36 examples, 0 failures, 0 errors, 0 pending"
+    }
+  }
+}

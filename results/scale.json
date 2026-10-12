@@ -1,0 +1,392 @@
+{
+  "date": "2026-10-12",
+  "hardware": "Apple M2 Max, 64 GiB unified memory",
+  "os": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+  "compiler": "Crystal 1.21.0 (2026-07-16)\n\nLLVM: 22.1.8\nDefault target: aarch64-apple-darwin25.6.0",
+  "dependency_head": "7cccdd8bfb02ac388001ab7a61832087d8d1b450",
+  "dependency_source_sha256": {
+    "build/bridge.o": "465ee1dd3bc0788b73dbf25e9ba66a4119ee6b0008afd0a8157986247c813773",
+    "src/ml/core/buffer.cr": "a28570a5b7163eef67aef7ad96af66d2168da68f104afbacc9714bbefb55334d",
+    "src/ml/core/shape.cr": "2de7b353c6464aaf8079333d9dde7575c40c72506965e671bd07975e8a03656f",
+    "src/ml/core/tensor.cr": "bc6cce4fd3101dd21f84efaf6a6601dae1b7e9f444bca32e3156fe2fe1b1369f",
+    "src/ml/cuda/driver.cr": "c9da5867318f569f9da2e59205d610dffa9a52db137b374e914955cc40596a9f",
+    "src/ml/cuda/gemma4_layer_runner.cr": "79171004620c5f786560feb08994d3cab545113684b7e59170819bba96d9dcc2",
+    "src/ml/cuda/gemma4_swa_context_ptx.cr": "39a6f14b0b7d55017e7761a5dae190d700b91db166482a71c57fe612dba39240",
+    "src/ml/cuda/qwen_full_attn_kv_runner.cr": "a3c5821c390b5ffc51114972ea6bb13631c4395ce5c3c1f521c57018044eb1af",
+    "src/ml/cuda/qwen_full_attn_layer_runner.cr": "c7969357c84a37b529bc6f5df5be5024d8eed700eb5abf388d6c04e7411dc2f6",
+    "src/ml/cuda/qwen_full_attn_projection_runner.cr": "9d270435d1730bc1be074694cf258933722a0d60b65c4a242a00893407bdeb23",
+    "src/ml/cuda/qwen_mixed_stack_runner.cr": "72a7e5d6468af009516d2cc261f06f329a8edf15aa2b28c0ee49b64c08030bfc",
+    "src/ml/cuda/qwen_output_head_runner.cr": "24a578dbe29cc667a06a6a8a76966514a82f6c0cc9289f1f4a9e6ac5f912178c",
+    "src/ml/cuda/qwen_recurrent_layer_runner.cr": "0dc7aaf93eecffe8b5d613387c44a0d28c579e5786f62cd67052d920c7ba5f15",
+    "src/ml/cuda/qwen_recurrent_stack_runner.cr": "602c7c3f56b30ffba86441c13c9c0990435457c37fc0a6c3988cfa951c787395",
+    "src/ml/cuda/qwen_state_artifact_restorer.cr": "e3996b164213689aaf87fd2337817b07a7b521535124f4499467d9b5d1c6b645",
+    "src/ml/metal/compute_graph.cr": "8d5d308fac91629a502de1ed085786047c5b6f0f530253ae265c7f95098cb970",
+    "src/ml/metal/device.cr": "ecc5d96332833a8a94d9a55914d515b5e34efe001f762d65aaa7c919b907c934",
+    "src/ml/metal/dispatch.cr": "40eeadaf1ccb56da52d8c3f5fa108ba1923048b641ed81e5f514010806a0ed3b",
+    "src/ml/metal/pipeline_selection_trace.cr": "b487a3c1e51a9cd62bf58e8801d850820a4942e541103d89cdbf282d4f2ced30",
+    "src/ml/metal/process_lease.cr": "3af0ee2d3435f46d5d0c35fc5b7c8b980645e310eeeb55f6c75634c5ffcbb048"
+  },
+  "build_command": "crystal build scale_probe.cr --release --link-flags=\"/Users/sergey/Projects/Crystal/cogni-ml/build/bridge.o -lc++ -fuse-ld=/usr/bin/ld\" -o /private/tmp/mpgs-scale-probe-final",
+  "run_commands": [
+    "/private/tmp/mpgs-scale-probe-final 1048576",
+    "/private/tmp/mpgs-scale-probe-final 4194304",
+    "/private/tmp/mpgs-scale-probe-final 16777216"
+  ],
+  "binary_sha256": "525f1b4e0d51c8ae8a27a9b4da99b528225af8140810f2cadc010b4697fb44e8",
+  "source_sha256": {
+    "benchmark.cr": "bcc3830a7fddcd71b1f7a41d931efb302a7a1d0139be0e1add2dcf3e4384f0f4",
+    "core.cr": "a6a5f9cc408449fc02fa3586bd4ce186e15a91c186343943f97fd8faecc8ae84",
+    "cpu_demo.cr": "dd4dc6a8b3b088ae552f9eeb35147def463f68024ffe17773cbfaae92ac4dc29",
+    "cuda_backend.cr": "d54f9b18058b883e3bc7ba5ec59feb96822dc89b4881723436c3a038a21a9028",
+    "gpu_demo.cr": "fc88dec79fab6c19536113a5495c4083298eb5a9e1827bb51c460e547e29a175",
+    "gpu_window_checks.cr": "f1c90ddaf247f9faf4eb311e7c5687c5239a067eef26c5506fb5b709b0e8cc35",
+    "kernels/mpgs_sieve.metal": "0ed479017e06aaea85e1007cc3adfb715746a77690503d6bbafe835786de8fab",
+    "kernels/mpgs_sieve.ptx": "d77d1323eb1dbc026f8f5141411993ca677cc37c314dc0b8eeda7795f34a8875",
+    "kernels/mpgs_window.metal": "474d637a50099c4cea2341c709821e7c9ef333a930430d13c5456a15c95269cf",
+    "metal_backend.cr": "f193a7428a923187b9669d4b9c07988217e614e3ee2f7f3159de3e1a3b90fdf0",
+    "prepared_sieve.cr": "199ac392f745a374de9b1dd49f16a79e171fe76fad0ec1dfcc09637101de0750",
+    "scale_probe.cr": "a84f8415cb8977f732d2bb661c7725b0dc959768bc034397ab5258d3d4f0f6e1",
+    "schedule_demo.cr": "6a2810d1efd8dff2cae42b70aed7c6e6000e8657597b8e83b5bdb003a0d5ddc9",
+    "schedules.cr": "88314f53a71540b796139b9dc8e6f486c8750aaa0c003626a688e216c79a3b74",
+    "scripts/check_metal_compile_isolation.py": "e7cc7d5c85e1bb58b34c9b3ece5e2e765b496e1084d0a18eb09adb23e832deb4",
+    "scripts/run_benchmarks.py": "50d7e4f95568f75fe939d09f474bd271e56befbcc0970abe80d5b95671b173b0",
+    "spec/core_spec.cr": "0ce94ae183cd6b14e67274edaaa47fb853f2b62dc7b140d8cf166f2bd1fba6e9",
+    "spec/prepared_sieve_spec.cr": "0f0a1eada75a99c2426540b9dec15bfccd8d719cb509c033dcaa5ba53ff63df8",
+    "spec/schedules_spec.cr": "feb0d8c7019ff6603a667e9a7fc7c48b9acea5dbadd32514baa3a431bf6efcb0"
+  },
+  "cases": [
+    {
+      "count": 1048576,
+      "exponent": 136279841,
+      "start_k": 1,
+      "prime_cap": 65521,
+      "prime_count": 6541,
+      "repeats": 5,
+      "warmups_per_method": 2,
+      "proper_factor_witnesses": 889397,
+      "all_outputs_equal": true,
+      "correctness_comparator": "Prepared CPU marker; comparator nonzero factors additionally checked with direct modular arithmetic. Not an independent coverage proof.",
+      "methods": {
+        "cpu_window_full": {
+          "median_ms": 4.746542000000001,
+          "min_ms": 4.571166,
+          "max_ms": 4.965708,
+          "samples_ms": [
+            4.954041999999999,
+            4.746542000000001,
+            4.571166,
+            4.965708,
+            4.589209
+          ]
+        },
+        "cpu_window_prepared": {
+          "median_ms": 3.8153750000000004,
+          "min_ms": 3.802375,
+          "max_ms": 4.2885,
+          "samples_ms": [
+            4.2885,
+            3.8153750000000004,
+            4.205042,
+            3.812875,
+            3.802375
+          ]
+        },
+        "metal_window_full": {
+          "median_ms": 4.403207999999999,
+          "min_ms": 4.083749999999999,
+          "max_ms": 4.803583,
+          "samples_ms": [
+            4.403207999999999,
+            4.803583,
+            4.2231250000000005,
+            4.083749999999999,
+            4.6155
+          ]
+        },
+        "metal_window_prepared_tile_512": {
+          "median_ms": 3.9230419999999997,
+          "min_ms": 3.667417,
+          "max_ms": 4.0985,
+          "samples_ms": [
+            4.0985,
+            4.0035,
+            3.9230419999999997,
+            3.667417,
+            3.88225
+          ]
+        },
+        "metal_window_prepared_tile_1024": {
+          "median_ms": 3.489584,
+          "min_ms": 3.293584,
+          "max_ms": 3.730083,
+          "samples_ms": [
+            3.617833,
+            3.489584,
+            3.293584,
+            3.355291,
+            3.730083
+          ]
+        },
+        "metal_window_prepared_tile_4096": {
+          "median_ms": 3.292125,
+          "min_ms": 3.0586670000000002,
+          "max_ms": 3.687125,
+          "samples_ms": [
+            3.292125,
+            3.687125,
+            3.0790409999999997,
+            3.4497500000000003,
+            3.0586670000000002
+          ]
+        },
+        "metal_window_prepared_tile_16384": {
+          "median_ms": 3.6015420000000002,
+          "min_ms": 3.233084,
+          "max_ms": 3.749833,
+          "samples_ms": [
+            3.6015420000000002,
+            3.749833,
+            3.725,
+            3.305875,
+            3.233084
+          ]
+        },
+        "metal_window_prepared_tile_65536": {
+          "median_ms": 4.692334000000001,
+          "min_ms": 4.185417,
+          "max_ms": 6.106333,
+          "samples_ms": [
+            4.692334000000001,
+            6.106333,
+            4.185417,
+            4.350625,
+            5.238625
+          ]
+        }
+      },
+      "scope": "Large finite-window scale probe; allocation, dispatch and readback included. Backend initialization and lazy pipeline compilation excluded. One host, uncontrolled background load."
+    },
+    {
+      "count": 4194304,
+      "exponent": 136279841,
+      "start_k": 1,
+      "prime_cap": 65521,
+      "prime_count": 6541,
+      "repeats": 5,
+      "warmups_per_method": 2,
+      "proper_factor_witnesses": 3557567,
+      "all_outputs_equal": true,
+      "correctness_comparator": "Prepared CPU marker; comparator nonzero factors additionally checked with direct modular arithmetic. Not an independent coverage proof.",
+      "methods": {
+        "cpu_window_full": {
+          "median_ms": 18.432917,
+          "min_ms": 18.27325,
+          "max_ms": 18.992583,
+          "samples_ms": [
+            18.432917,
+            18.336000000000002,
+            18.992583,
+            18.522916000000002,
+            18.27325
+          ]
+        },
+        "cpu_window_prepared": {
+          "median_ms": 17.689,
+          "min_ms": 17.477417,
+          "max_ms": 18.837917,
+          "samples_ms": [
+            17.667625,
+            18.837917,
+            17.917083,
+            17.689,
+            17.477417
+          ]
+        },
+        "metal_window_full": {
+          "median_ms": 13.744917000000001,
+          "min_ms": 13.294833,
+          "max_ms": 14.027417,
+          "samples_ms": [
+            13.744917000000001,
+            14.027417,
+            13.640292,
+            13.790000000000001,
+            13.294833
+          ]
+        },
+        "metal_window_prepared_tile_512": {
+          "median_ms": 13.122791,
+          "min_ms": 12.463667,
+          "max_ms": 15.123542,
+          "samples_ms": [
+            12.951875,
+            13.956790999999999,
+            15.123542,
+            13.122791,
+            12.463667
+          ]
+        },
+        "metal_window_prepared_tile_1024": {
+          "median_ms": 11.748208,
+          "min_ms": 11.534625,
+          "max_ms": 13.361540999999999,
+          "samples_ms": [
+            11.745709,
+            12.269874999999999,
+            13.361540999999999,
+            11.534625,
+            11.748208
+          ]
+        },
+        "metal_window_prepared_tile_4096": {
+          "median_ms": 10.976333,
+          "min_ms": 10.801207999999999,
+          "max_ms": 11.362917,
+          "samples_ms": [
+            10.801207999999999,
+            11.362917,
+            11.097083000000001,
+            10.976333,
+            10.900333
+          ]
+        },
+        "metal_window_prepared_tile_16384": {
+          "median_ms": 11.49675,
+          "min_ms": 11.119917,
+          "max_ms": 12.573417,
+          "samples_ms": [
+            11.119917,
+            12.573417,
+            11.865250000000001,
+            11.205958,
+            11.49675
+          ]
+        },
+        "metal_window_prepared_tile_65536": {
+          "median_ms": 12.931792,
+          "min_ms": 12.099416,
+          "max_ms": 14.044915999999999,
+          "samples_ms": [
+            12.099416,
+            13.897708,
+            12.481542,
+            14.044915999999999,
+            12.931792
+          ]
+        }
+      },
+      "scope": "Large finite-window scale probe; allocation, dispatch and readback included. Backend initialization and lazy pipeline compilation excluded. One host, uncontrolled background load."
+    },
+    {
+      "count": 16777216,
+      "exponent": 136279841,
+      "start_k": 1,
+      "prime_cap": 65521,
+      "prime_count": 6541,
+      "repeats": 5,
+      "warmups_per_method": 2,
+      "proper_factor_witnesses": 14230529,
+      "all_outputs_equal": true,
+      "correctness_comparator": "Prepared CPU marker; comparator nonzero factors additionally checked with direct modular arithmetic. Not an independent coverage proof.",
+      "methods": {
+        "cpu_window_full": {
+          "median_ms": 104.49908300000001,
+          "min_ms": 103.39116600000001,
+          "max_ms": 107.731167,
+          "samples_ms": [
+            104.49908300000001,
+            103.39116600000001,
+            107.731167,
+            104.295292,
+            104.941541
+          ]
+        },
+        "cpu_window_prepared": {
+          "median_ms": 105.43979200000001,
+          "min_ms": 103.538166,
+          "max_ms": 107.21837500000001,
+          "samples_ms": [
+            107.21837500000001,
+            103.538166,
+            105.43979200000001,
+            105.917292,
+            104.416125
+          ]
+        },
+        "metal_window_full": {
+          "median_ms": 47.935875,
+          "min_ms": 46.620917,
+          "max_ms": 52.549958000000004,
+          "samples_ms": [
+            49.836917,
+            52.549958000000004,
+            47.76525,
+            47.935875,
+            46.620917
+          ]
+        },
+        "metal_window_prepared_tile_512": {
+          "median_ms": 47.787333000000004,
+          "min_ms": 46.584583,
+          "max_ms": 49.605083,
+          "samples_ms": [
+            49.605083,
+            47.787333000000004,
+            47.15325,
+            46.584583,
+            48.022208
+          ]
+        },
+        "metal_window_prepared_tile_1024": {
+          "median_ms": 43.413708,
+          "min_ms": 41.584541,
+          "max_ms": 50.728292,
+          "samples_ms": [
+            43.724291,
+            43.244541999999996,
+            50.728292,
+            43.413708,
+            41.584541
+          ]
+        },
+        "metal_window_prepared_tile_4096": {
+          "median_ms": 40.350083000000005,
+          "min_ms": 39.092791,
+          "max_ms": 41.586666,
+          "samples_ms": [
+            41.586666,
+            39.838625,
+            40.49275,
+            40.350083000000005,
+            39.092791
+          ]
+        },
+        "metal_window_prepared_tile_16384": {
+          "median_ms": 41.923875,
+          "min_ms": 39.732083,
+          "max_ms": 44.527249999999995,
+          "samples_ms": [
+            41.923875,
+            42.638291,
+            41.395333,
+            44.527249999999995,
+            39.732083
+          ]
+        },
+        "metal_window_prepared_tile_65536": {
+          "median_ms": 43.051458000000004,
+          "min_ms": 39.843917,
+          "max_ms": 71.60670800000001,
+          "samples_ms": [
+            43.066291,
+            71.60670800000001,
+            41.768625,
+            43.051458000000004,
+            39.843917
+          ]
+        }
+      },
+      "scope": "Large finite-window scale probe; allocation, dispatch and readback included. Backend initialization and lazy pipeline compilation excluded. One host, uncontrolled background load."
+    }
+  ]
+}

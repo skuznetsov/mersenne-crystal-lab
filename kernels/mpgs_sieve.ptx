@@ -1,0 +1,78 @@
+.version 6.0
+.target sm_50
+.address_size 64
+
+.visible .entry mpgs_sieve(
+    .param .u64 ks_ptr,
+    .param .u64 primes_ptr,
+    .param .u64 powers_ptr,
+    .param .u64 factors_ptr,
+    .param .u32 count,
+    .param .u32 factor_count
+)
+{
+    .reg .pred %p<3>;
+    .reg .b32 %r<12>;
+    .reg .b64 %rd<20>;
+
+    ld.param.u64 %rd0, [ks_ptr];
+    ld.param.u64 %rd1, [primes_ptr];
+    ld.param.u64 %rd2, [powers_ptr];
+    ld.param.u64 %rd3, [factors_ptr];
+    ld.param.u32 %r0, [count];
+    ld.param.u32 %r1, [factor_count];
+
+    mov.u32 %r2, %tid.x;
+    mov.u32 %r3, %ctaid.x;
+    mov.u32 %r4, %ntid.x;
+    mad.lo.u32 %r5, %r3, %r4, %r2;
+    setp.ge.u32 %p0, %r5, %r0;
+    @%p0 bra DONE;
+
+    cvt.u64.u32 %rd4, %r5;
+    shl.b64 %rd5, %rd4, 2;
+    add.u64 %rd6, %rd3, %rd5;
+    shl.b64 %rd7, %rd4, 3;
+    add.u64 %rd8, %rd0, %rd7;
+    ld.global.u64 %rd9, [%rd8];
+
+    mov.u32 %r6, 0;
+    setp.eq.u32 %p1, %r1, 0;
+    @%p1 bra UNRESOLVED;
+
+PRIME_LOOP:
+    setp.ge.u32 %p1, %r6, %r1;
+    @%p1 bra UNRESOLVED;
+
+    cvt.u64.u32 %rd10, %r6;
+    shl.b64 %rd10, %rd10, 2;
+    add.u64 %rd11, %rd1, %rd10;
+    ld.global.u32 %r7, [%rd11];
+    add.u64 %rd11, %rd2, %rd10;
+    ld.global.u32 %r8, [%rd11];
+
+    // Reduce k first, then reduce 3*(k mod d)+1 before the product.
+    cvt.u64.u32 %rd12, %r7;
+    rem.u64 %rd13, %rd9, %rd12;
+    mul.lo.u64 %rd14, %rd13, 3;
+    add.u64 %rd14, %rd14, 1;
+    rem.u64 %rd15, %rd14, %rd12;
+
+    // A divisor d divides G_m(k) exactly when t*2^m is 1 modulo d.
+    cvt.u64.u32 %rd16, %r8;
+    mul.lo.u64 %rd17, %rd15, %rd16;
+    rem.u64 %rd18, %rd17, %rd12;
+    setp.eq.u64 %p2, %rd18, 1;
+    @%p2 st.global.u32 [%rd6], %r7;
+    @%p2 bra DONE;
+
+    add.u32 %r6, %r6, 1;
+    bra PRIME_LOOP;
+
+UNRESOLVED:
+    mov.u32 %r9, 0;
+    st.global.u32 [%rd6], %r9;
+
+DONE:
+    ret;
+}
