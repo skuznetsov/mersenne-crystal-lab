@@ -1,10 +1,12 @@
 # Mersenne screening experiments in Crystal
 
-A bounded collaboration experiment for `M_q=2^q-1` and `G_m(k)=2^m*(3*k+1)-1`, with direct CPU/Metal exponent sieving, a modular reference, a CUDA prototype, and matched GMP comparisons. This is small-factor screening. It does not certify primality or establish superiority over GIMPS. `reply.md` is a proposed response; nothing has been posted.
+A bounded collaboration experiment for `M_q=2^q-1` and `G_m(k)=2^m*(3*k+1)-1`, with direct CPU/Metal exponent sieving, a reusable multicore GMP screener, a modular reference, a CUDA prototype, and matched comparisons. This is small-factor screening. It does not certify primality or establish superiority over GIMPS. `reply.md` is a proposed response; nothing has been posted.
 
-The latest direct-exponent experiment removes the 32-candidate rebasing limit. On one Apple M2 Max, 1,024 identical Mersenne candidates took **267 ms with direct Metal + GMP**, versus **932 ms with our previous Metal adapter**, **262 ms with direct CPU + GMP**, and **391 ms with generator + shared GMP**. A billion-exponent filter was actually executed three times: **3.33 s CPU / 2.83 s Metal**, with every factor entry matching. Those billion timings exclude final primality tests. Background load was uncontrolled.
+The latest multicore experiment took **46.2 ms with 8 CPU workers** for 1,024 identical Mersenne candidates, versus **263.6 ms with our serial CPU**: **5.70x faster** on one Apple M2 Max. The normalized generator with the same 8-worker pool took 64.2 ms, separating a **1.39x filter gain** from added CPU resources. For 2,040 candidates, 12 workers took **572 ms**, versus **3,662 ms serial CPU**: **6.40x faster**, with a **1.54x gain** against the same-worker generator. Background load and temperature were uncontrolled; these are ratios of measured medians, not universal speedups.
 
-Start with [EXPONENT_COMPARISON.md](EXPONENT_COMPARISON.md) for inputs, complete/prepared costs, raw measurement links, correctness checks and limitations. [COMPARISON.md](COMPARISON.md) preserves the preceding PDF-progression and rebased-generator experiments. The author's exact Crystal `primes-utils` backend was unavailable; the finite comparisons substitute one common GMP tester.
+Start with [MULTICORE_COMPARISON.md](MULTICORE_COMPARISON.md) for worker scaling, matched CPU/Metal/GMP costs, correctness and limits. The author's exact Crystal `primes-utils` backend was unavailable; all finite comparisons substitute one common GMP tester. The 12-worker Metal hybrid did not improve the 12-worker CPU median in this run.
+
+The previous direct-exponent experiment removed the 32-candidate rebasing limit: 1,024 candidates took 267 ms with direct Metal + GMP, versus 932 ms with our previous Metal adapter. A billion-exponent filter was actually executed three times: **3.33 s CPU / 2.83 s Metal**, with every factor entry matching. Those billion timings exclude final primality tests. [EXPONENT_COMPARISON.md](EXPONENT_COMPARISON.md) records that experiment; [COMPARISON.md](COMPARISON.md) preserves the earlier PDF-progression and rebased-generator results.
 
 ## Direct exponent API
 
@@ -31,6 +33,40 @@ end
 Each call accepts at most 16,777,216 candidates. CPU starts at any positive odd UInt32 q; Metal requires q>=17. The final exponent must fit UInt32. Factors must be genuine odd primes <=65,535. Tiles are 1..65,536, with a checked grid limit. Empty windows and factor lists are supported. Plans copy their inputs and exposed arrays; calls/close are serialized per Metal instance. Shared GPU output is copied into an owned array after synchronous completion.
 
 This bounded table cannot filter Mersenne candidates whose exponent is prime and greater than 32,760. Prime-exponent selection and a specialized final Mersenne tester are necessary future baselines for search-level claims; the matched experiment preserves the visible author's all-odd-q schedule.
+
+## Multicore final screening
+
+`ParallelMersenne` uses a fixed pool of Crystal 1.21 isolated worker threads.
+It assigns descending chunks dynamically, so costly larger candidates start
+first. Each worker creates its own BigInts and GMP values; result indexes have
+one writer, and output stays in ascending exponent order. CPU or Metal factors
+can feed the same pool. The pool itself needs no GPU dependency.
+
+```crystal
+require "./exponent_sieve"
+require "./parallel_mersenne"
+
+# An illustrative factor list; the measured experiment uses 6,541 primes.
+plan = MersenneLab::ExponentSievePlan.new([7_u32, 23_u32, 31_u32])
+pool = MersenneLab::ParallelMersenne.new(workers: 8, chunk_size: 1)
+begin
+  factors = plan.sieve_odd_window(17_u32, 1024)
+  result = pool.screen_mersenne(17_u32, factors)
+  puts result.prime_screen_count
+ensure
+  pool.close
+end
+```
+
+Reuse the plan and pool across calls. `baseline_mersenne(start, count)` tests
+every candidate with the same GMP(25) tester, giving the normalized generator
+baseline at the same worker count. Both screening APIs require odd q in
+17..4095; the pool admits 1..64 workers and chunks of 1..4096 entries. Nonzero
+witnesses are trusted upstream proper factors, as in the serial adapter.
+Input witnesses are copied; callers must not mutate them during that copy.
+Calls and close are serialized; close joins workers and rejects later work.
+Worker errors are propagated after all completions drain, and the pool can be
+used for a later call. There is no automatic worker-count selection.
 
 ## Earlier progression algorithm and contract
 
@@ -62,6 +98,8 @@ General odd `k` values are mostly **general progression candidates**. For odd ba
 - `benchmark.cr`, `scripts/run_benchmarks.py`, `results/benchmark.json`: release benchmark and raw repeated measurements.
 - `scale_probe.cr`, `results/scale.json`: large-window probe through the admitted maximum, using the prepared CPU marker as comparator.
 - `jabari_adapters.cr`, `spec/jabari_adapters_spec.cr`, `jabari_benchmark.cr`: finite adaptations of the PDF and current forum generators, sharing one GMP tester with the filtered paths.
+- `parallel_mersenne.cr`, `spec/parallel_mersenne_spec.cr`: reusable multicore final screening, exact work/thread coverage and lifecycle/ownership guards.
+- `multicore_benchmark.cr`, `scripts/run_multicore_comparison.py`, `results/multicore_comparison.json`, `MULTICORE_DESIGN.md`, `MULTICORE_COMPARISON.md`: matched serial and multicore complete pipelines, shared worker-count baselines, source-bound builds and raw samples.
 - `billion_probe.cr`, `scripts/run_jabari_comparison.py`, `results/jabari_comparison.json`: full classification comparisons, stratified pipeline estimates, and directly executed billion-item sieves.
 - `COMPARISON.md`: measured comparison with the visible Jabari generators and its explicit normalization limits.
 - `exponent_benchmark.cr`, `exponent_billion_probe.cr`, `scripts/run_exponent_comparison.py`, `results/exponent_comparison.json`: direct-q complete pipelines, tile/scale probes and directly executed billion-exponent filtering.
@@ -124,6 +162,7 @@ crystal build exponent_benchmark.cr --release --mcpu=native --link-flags='/absol
 crystal build benchmark.cr --release -Dmpgs_metal --link-flags='/absolute/path/to/cogni-ml/build/bridge.o -lc++' -o /tmp/mpgs-metal-benchmark
 python3 scripts/run_benchmarks.py --binary /tmp/mpgs-metal-benchmark --hardware 'Your GPU and memory' --dependency-root /absolute/path/to/cogni-ml --build-command 'The exact release build command used above'
 python3 scripts/check_metal_compile_isolation.py --dependency-root /absolute/path/to/cogni-ml
+python3 scripts/run_multicore_comparison.py --binary /tmp/mpgs-multicore-benchmark --dependency-root /absolute/path/to/cogni-ml
 crystal build scale_probe.cr --release --link-flags='/absolute/path/to/cogni-ml/build/bridge.o -lc++' -o /tmp/mpgs-scale-probe
 /tmp/mpgs-scale-probe 16777216
 ```
@@ -153,7 +192,7 @@ Both plan checkers recompute direct modular divisibility without using prepared 
 
 Crystal 1.21.0, aarch64 macOS, Apple M2 Max with 64 GiB unified memory. The consumed cogni-ml HEAD was `7cccdd8bfb02ac388001ab7a61832087d8d1b450`; existing unrelated changes were preserved.
 
-- Full CPU suite: **45 examples, 0 failures/errors** after adding direct-exponent filtering. Independent BigInt expectations include equality guards, low exponents, factor order/pruning, high candidate values, finite classifications, and compatible-k rebasing.
+- Full CPU suite: **55 examples, 0 failures/errors** after adding multicore final screening. Independent BigInt expectations include equality guards, low exponents, factor order/pruning, high candidate values, finite classifications, and compatible-k rebasing. Multicore guards cover distinct worker threads and exact uneven-chunk coverage, input snapshots, errors/reuse, concurrent callers, and in-flight close.
 - Metal: **767 window comparisons matched**, including maximum `UInt64` endpoints, maximum `UInt32` exponent, partial tiles, divisor 3, factor 65,521, duplicate/reversed lists, alternating backend instances, invalid inputs, grid bounds, and use after close. An intentionally invalid window shader was rejected while the candidate API remained usable before and after that failure.
 - Direct-exponent Metal: **611 independent comparisons matched**, including maximum UInt32 endpoints, partial tiles, reordered/duplicate factors, invalid inputs and backend lifecycle. The order oracle independently computed all 6,541 minimal orders with 116,098,142 repeated doublings; the Crystal checker found zero mismatches and reproduced the 479 retained groups.
 - Direct-q comparison: four finite shared-GMP intervals, five tile probes and four additional scale probes matched. **Three full billion-exponent rounds matched every factor entry**, with 758,662,628 proper-factor witnesses and 241,337,372 unresolved entries per pass. Median prepared filtering: CPU 3.326 s, Metal 2.830 s. No candidate BigInts or final primality tests in the billion run. Full metadata/raw samples: `results/exponent_comparison.json`.

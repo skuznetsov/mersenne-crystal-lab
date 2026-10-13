@@ -1,0 +1,1404 @@
+{
+  "run_status": "complete",
+  "recorded_at_utc": "2026-10-13T00:51:26.269132+00:00",
+  "hardware": "Apple M2 Max",
+  "cpu_topology": "hw.ncpu: 12\nhw.physicalcpu: 12\nhw.logicalcpu: 12\nhw.perflevel0.physicalcpu: 8\nhw.perflevel1.physicalcpu: 4",
+  "os": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+  "compiler": "Crystal 1.21.0 (2026-07-16)\n\nLLVM: 22.1.8\nDefault target: aarch64-apple-darwin25.6.0",
+  "gmp_version": "6.3.0",
+  "binary_linked_libraries": "/private/tmp/mpgs-multicore-benchmark:\n\t/usr/lib/libc++.1.dylib (compatibility version 1.0.0, current version 2200.27.0)\n\t/System/Library/Frameworks/Metal.framework/Versions/A/Metal (compatibility version 1.0.0, current version 382.5.3)\n\t/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation (compatibility version 300.0.0, current version 5027.0.69)\n\t/opt/homebrew/opt/gmp/lib/libgmp.10.dylib (compatibility version 16.0.0, current version 16.0.0)\n\t/opt/homebrew/opt/bdw-gc/lib/libgc.1.dylib (compatibility version 1.0.0, current version 1.5.6)\n\t/usr/lib/libiconv.2.dylib (compatibility version 7.0.0, current version 7.0.0)\n\t/usr/lib/libSystem.B.dylib (compatibility version 1.0.0, current version 1359.0.0)\n\t/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation (compatibility version 150.0.0, current version 5027.0.69)\n\t/usr/lib/libobjc.A.dylib (compatibility version 1.0.0, current version 228.0.0)\n",
+  "linked_gmp_sha256": {
+    "/opt/homebrew/Cellar/gmp/6.3.0/lib/libgmp.10.dylib": "1bb9184824b82f40bd50279634290d6cbdf9c1a371c045c7b10815e7955cd696"
+  },
+  "base_commit": "d78c2499bec569b99d3acb74a83370232e2d0bc8",
+  "build_command": [
+    "crystal",
+    "build",
+    "multicore_benchmark.cr",
+    "--release",
+    "--mcpu=native",
+    "--link-flags=/Users/sergey/Projects/Crystal/cogni-ml/build/bridge.o -lc++ -fuse-ld=/usr/bin/ld",
+    "-o",
+    "/private/tmp/mpgs-multicore-benchmark"
+  ],
+  "build_cache_directory": "/private/tmp/mpgs-multicore-cache",
+  "build_elapsed_seconds": 5.445311834104359,
+  "build_executed_successfully_by_recorder": true,
+  "binary_sha256": "60ca175f685753a18207c5b1d57db78798af3948a1a13151ed7b107e2ef8d0b9",
+  "source_sha256": {
+    "benchmark.cr": "bcc3830a7fddcd71b1f7a41d931efb302a7a1d0139be0e1add2dcf3e4384f0f4",
+    "billion_probe.cr": "f6a7e215fb67f19a7f51bf492782eda6fb4b7359e0d2777f79add36b757f2e9f",
+    "core.cr": "a6a5f9cc408449fc02fa3586bd4ce186e15a91c186343943f97fd8faecc8ae84",
+    "cpu_demo.cr": "dd4dc6a8b3b088ae552f9eeb35147def463f68024ffe17773cbfaae92ac4dc29",
+    "cuda_backend.cr": "d54f9b18058b883e3bc7ba5ec59feb96822dc89b4881723436c3a038a21a9028",
+    "exponent_benchmark.cr": "9bfbf26e816ed12ef91764f17be8bfc575f0a0c0e9fe47083b01b3ecce61d023",
+    "exponent_billion_probe.cr": "41749455ad2b0d73ce4922a23dc0fcf69edc4faa46a036e65fb5e50605929633",
+    "exponent_order_checks.cr": "9b93dcdbf60b43c19b9d88b91149471caafdb4faee9e25b07f5aafebf9c35a11",
+    "exponent_sieve.cr": "888af63916c756357da078cd73d3d719d194d70d460389143574a7a110f04716",
+    "gpu_demo.cr": "fc88dec79fab6c19536113a5495c4083298eb5a9e1827bb51c460e547e29a175",
+    "gpu_exponent_checks.cr": "59f608d0baa009fb3154d1a997c61fc96f52fe7a20baf085e12dd812265d84e9",
+    "gpu_window_checks.cr": "f1c90ddaf247f9faf4eb311e7c5687c5239a067eef26c5506fb5b709b0e8cc35",
+    "jabari_adapters.cr": "38749a601ba15729788469fcb42b94806ac8a84260ba0adf3df1a04addeca1b7",
+    "jabari_benchmark.cr": "c8952edd94e552ec7333daf385d0fd940f873dc277abe3868ff63ae254a73da6",
+    "kernels/mpgs_sieve.metal": "0ed479017e06aaea85e1007cc3adfb715746a77690503d6bbafe835786de8fab",
+    "kernels/mpgs_sieve.ptx": "d77d1323eb1dbc026f8f5141411993ca677cc37c314dc0b8eeda7795f34a8875",
+    "kernels/mpgs_window.metal": "b6d9e7783f89e05754522ee3a4c109ddeef8a30878bb92cd4ecbbdfa9f1fbf99",
+    "metal_backend.cr": "bbad0fa6138f525719df30060c83b6d926bbb442ecd073fbb7fdcdc8d2b6f1f2",
+    "multicore_benchmark.cr": "8c3fc674712b3642f1896573d880584795b26667fbdecb3e00e05d90cdcaf9e9",
+    "parallel_mersenne.cr": "f4f65019a55fbcb856035f6c1c455604a8e11aa33dbda80e7995751b73c87b5c",
+    "prepared_sieve.cr": "199ac392f745a374de9b1dd49f16a79e171fe76fad0ec1dfcc09637101de0750",
+    "scale_probe.cr": "a84f8415cb8977f732d2bb661c7725b0dc959768bc034397ab5258d3d4f0f6e1",
+    "schedule_demo.cr": "6a2810d1efd8dff2cae42b70aed7c6e6000e8657597b8e83b5bdb003a0d5ddc9",
+    "schedules.cr": "88314f53a71540b796139b9dc8e6f486c8750aaa0c003626a688e216c79a3b74",
+    "scripts/check_exponent_orders.py": "4df748cbd512683c612ad9a656fe298a5052ff03fdde620cd761e39f846be421",
+    "scripts/check_metal_compile_isolation.py": "1db85082505687173be5a1b3ec9ae401c22892268054b07958e407fdc01739bc",
+    "scripts/run_benchmarks.py": "50d7e4f95568f75fe939d09f474bd271e56befbcc0970abe80d5b95671b173b0",
+    "scripts/run_exponent_comparison.py": "9a4e27a34677539630fc245adfe83f17814844adac4c397884fd71b9e8e9a4bc",
+    "scripts/run_jabari_comparison.py": "5ab470f3a3d68150500df415309da5b81a41d69ac792e84a2ac2898e7d6697e2",
+    "scripts/run_multicore_comparison.py": "1f1d8cc0fca1cb69c9d36cfa5e8e8cd762f7d2e8993c51f78e64c5002f6a93e9",
+    "spec/core_spec.cr": "0ce94ae183cd6b14e67274edaaa47fb853f2b62dc7b140d8cf166f2bd1fba6e9",
+    "spec/exponent_sieve_spec.cr": "25200c5c62267a8ae037df0f11fe6cca768003d8a5b76645ac24bdf9b4c75b5f",
+    "spec/jabari_adapters_spec.cr": "39e40f83c752bb7f747609e632788eac626d59c0139f8b88cc05caa9d5edfb18",
+    "spec/parallel_mersenne_spec.cr": "6c66ad4046f69daf3b326eb0f69f17b279a07cc1cd5682f00a654cbf23826ec2",
+    "spec/prepared_sieve_spec.cr": "0f0a1eada75a99c2426540b9dec15bfccd8d719cb509c033dcaa5ba53ff63df8",
+    "spec/schedules_spec.cr": "feb0d8c7019ff6603a667e9a7fc7c48b9acea5dbadd32514baa3a431bf6efcb0"
+  },
+  "dependency_head": "7cccdd8bfb02ac388001ab7a61832087d8d1b450",
+  "dependency_source_sha256": {
+    "build/bridge.o": "465ee1dd3bc0788b73dbf25e9ba66a4119ee6b0008afd0a8157986247c813773",
+    "src/ml/autograd/grad_fn.cr": "5a0019079db9be339af64f979f7597c03491094fad42798345eb1783b46a25ef",
+    "src/ml/autograd/variable.cr": "273a7922cf493f3d5ca967ab3e4763b506f10df5fdb55e41f100b5c3e41b0dd3",
+    "src/ml/bench_load_guard.cr": "5851da5649cd271f7de95eb6a415459ed075195cd09bcb16bf9451ee86d78f98",
+    "src/ml/core/buffer.cr": "a28570a5b7163eef67aef7ad96af66d2168da68f104afbacc9714bbefb55334d",
+    "src/ml/core/shape.cr": "2de7b353c6464aaf8079333d9dde7575c40c72506965e671bd07975e8a03656f",
+    "src/ml/core/tensor.cr": "bc6cce4fd3101dd21f84efaf6a6601dae1b7e9f444bca32e3156fe2fe1b1369f",
+    "src/ml/cuda/driver.cr": "c9da5867318f569f9da2e59205d610dffa9a52db137b374e914955cc40596a9f",
+    "src/ml/cuda/gemma4_layer_runner.cr": "79171004620c5f786560feb08994d3cab545113684b7e59170819bba96d9dcc2",
+    "src/ml/cuda/gemma4_swa_context_ptx.cr": "39a6f14b0b7d55017e7761a5dae190d700b91db166482a71c57fe612dba39240",
+    "src/ml/cuda/qwen_full_attn_kv_runner.cr": "a3c5821c390b5ffc51114972ea6bb13631c4395ce5c3c1f521c57018044eb1af",
+    "src/ml/cuda/qwen_full_attn_layer_runner.cr": "c7969357c84a37b529bc6f5df5be5024d8eed700eb5abf388d6c04e7411dc2f6",
+    "src/ml/cuda/qwen_full_attn_projection_runner.cr": "9d270435d1730bc1be074694cf258933722a0d60b65c4a242a00893407bdeb23",
+    "src/ml/cuda/qwen_mixed_stack_runner.cr": "72a7e5d6468af009516d2cc261f06f329a8edf15aa2b28c0ee49b64c08030bfc",
+    "src/ml/cuda/qwen_output_head_runner.cr": "24a578dbe29cc667a06a6a8a76966514a82f6c0cc9289f1f4a9e6ac5f912178c",
+    "src/ml/cuda/qwen_recurrent_layer_runner.cr": "0dc7aaf93eecffe8b5d613387c44a0d28c579e5786f62cd67052d920c7ba5f15",
+    "src/ml/cuda/qwen_recurrent_stack_runner.cr": "602c7c3f56b30ffba86441c13c9c0990435457c37fc0a6c3988cfa951c787395",
+    "src/ml/cuda/qwen_state_artifact_restorer.cr": "e3996b164213689aaf87fd2337817b07a7b521535124f4499467d9b5d1c6b645",
+    "src/ml/gguf/compute.cr": "97eb8aba7676335d557f5d485a4e5d9cccf3ecde6782caa65c3d663d61d1c972",
+    "src/ml/gguf/decoder.cr": "a13aa06779cbd0521e735d52c276305fda273b7d809ac80823fd7c0c5e083d8a",
+    "src/ml/gguf/dequant.cr": "f44bdae0c519e094f43ebefa1a2dd3342fbd2725c2e75a74e923826b8916dba0",
+    "src/ml/gguf/gemma4_chat.cr": "0460abaa2df518c4dd3b70318573281c7339cf0ecee7558bc0d106dab577454e",
+    "src/ml/gguf/gemma4_cpu.cr": "d17a57eeb8a3c4866282fe6f3500be9b995dd639a0eda4f5bedf4139a3952c17",
+    "src/ml/gguf/gemma4_meta.cr": "1036eaa9a05056652c8b6c243cfbd6c49631c39fe5182693e81301cf2aba0837",
+    "src/ml/gguf/gemma4_metal.cr": "51707d56134bd15b8fe8df43476b38d37710bf31fa9f07656a1e8626a90b7358",
+    "src/ml/gguf/gemma4_prompt_cache.cr": "000cb05cc57f74cbd42660d67130617239ccfecf543ca4725b661146a4e57868",
+    "src/ml/gguf/gemma4_serving_route.cr": "12c37b586c9543c5fad66f484e57b0bed3a4f5f9147cc92662250ececf451d4e",
+    "src/ml/gguf/gemma4_state_snapshot.cr": "37ad5cf33354b7b4861269b9fd19329df3a1d6053314625dc94fcc9d135f184d",
+    "src/ml/gguf/gemma4_tokenizer.cr": "4bed14b6d9fdcfd498be36ec62e71ffe80cca8993f2aa2f8a305413ec30d11a6",
+    "src/ml/gguf/gemma4_weights.cr": "0e7f9875ffa2445ab38e4cfa8e166c5cd5c8b9bba23453093a8b7e4a27f50df3",
+    "src/ml/gguf/hadamard_continuation_draft.cr": "e8037caf0e872a52468d91b9d311dcf5833a9312a7d8ed6f19c539ffeb9f5bf5",
+    "src/ml/gguf/metal_backend.cr": "48f1719bad839f2aca438127c0786c39226155770611a3d88831740be040bc23",
+    "src/ml/gguf/ngram_draft.cr": "b33de4c1b440b0154c0c3b2c87d8594260b42935305bf98464262c80f2633914",
+    "src/ml/gguf/nomic_bert.cr": "045d634772cfa77c07e0fa51dd9577001374e9fc2055348483780b444bf19dde",
+    "src/ml/gguf/nomic_metal_policy.cr": "4d340cc76a5ff3e254627af8a3774687adad0e83b3608a8ec4240766637e2525",
+    "src/ml/gguf/profile.cr": "c0d7061e057e5e55e7be254b78ae814c32504849eed2facaa6ec8d1855116ab5",
+    "src/ml/gguf/quant_matmul.cr": "ce28ea5c736d4248d737da2b59297edab8ef0c0ba5f7f79dfde61e607352c1e7",
+    "src/ml/gguf/qwen35_chat.cr": "51dd9f2cf1b8a5b389084e4f33b87fd884b134daf1110e547decb80cfbec1e49",
+    "src/ml/gguf/qwen35_constraints.cr": "416e1c786a38f6b6ad5803f8e38a2f6360cf12788cb970fd606e3d93f4ae5d23",
+    "src/ml/gguf/qwen35_cpu.cr": "c48d9c7d5a6273d2b6393b4bbfd6da72f9deb6d2fb5eea2a8b3ecd2c3bea481e",
+    "src/ml/gguf/qwen35_deltanet_block_scan.cr": "a9670f03034ea5436c5e1a8fb542a57cf5cf8df7486128967019796527971f4e",
+    "src/ml/gguf/qwen35_deltanet_scan_model.cr": "96c5f8558efff1c8c2e606a73e6474222722988ac0d38151d8ba0c3bdd7da84a",
+    "src/ml/gguf/qwen35_engine_contract.cr": "76c07c23232332be8468b1643cbd09544738d0939d08f40af804efcc4ae698d5",
+    "src/ml/gguf/qwen35_ffn_updown_adapter.cr": "20c66a72414b87fc6fc8c9adb66540c7b1617bc7fe0837bc54368233265eedd2",
+    "src/ml/gguf/qwen35_meta.cr": "7cdb23593a8615ddf638285e2529b11742e38f4fbb0e6e94b9da2902298caa35",
+    "src/ml/gguf/qwen35_metal.cr": "b6ca44411400fd81ae2fa1574c4c011fb68cd55ca6e636aca106440271a450a9",
+    "src/ml/gguf/qwen35_mtp.cr": "649edef1654854751339799e226cc7e4e331c2a9240d6acb961a0ea978622094",
+    "src/ml/gguf/qwen35_native_runtime.cr": "480b66b962b30c08470e171fbd002d2edcac5440775322ced11b997bbcd150fb",
+    "src/ml/gguf/qwen35_prompt_cache.cr": "ada4f9456d88830f4da078b2f37fca97a488e347d6cdb573c48726ce68ef839e",
+    "src/ml/gguf/qwen35_proposal_route.cr": "222ae6601ffe204fb23d5f2d84514bad2fc472db36aac8595de262bb2f7200e0",
+    "src/ml/gguf/qwen35_qbit_runtime_cache.cr": "07a8ce871f81b706a94ef16aca60277d4f5cf35f00ad318020b6ade35ee49cfa",
+    "src/ml/gguf/qwen35_resident_session.cr": "ee74e4556b5e2fbd70eea67a0a9109df0863038ea810f2db3f46b251815705a7",
+    "src/ml/gguf/qwen35_self_spec_draft_block.cr": "f027e2a99e57a5894f14b3df92c7d948ff89ba085ca3b27cda9c8cee75e40d5d",
+    "src/ml/gguf/qwen35_self_spec_plan.cr": "91ad3980e55afc5115df35065d8637203c8d89eda8c3c3226fe7f37531afb336",
+    "src/ml/gguf/qwen35_self_spec_updown_buffers.cr": "0559cd948e6ed32884eb5919e218327403b6c6d99cace5c7d03e98e2f8e293a1",
+    "src/ml/gguf/qwen35_serving_route.cr": "7641386927ed97ecb6d62e55ad6f98559a5fd80e73c3583d7f8825766c0a21bd",
+    "src/ml/gguf/qwen35_spec_acceptance.cr": "360620207733eeeae800b4933a04a6ce041676dce7ca1152556736d453faf520",
+    "src/ml/gguf/qwen35_state_snapshot.cr": "531f7dbbd6a38a25e32dd55799bd9d3072b7972801e0ba148279dcf6a3877d47",
+    "src/ml/gguf/qwen35_tokenizer.cr": "ad84387dd6c29584e2c692aa4488f11da1c9f6bc01c27133aa682d2026a5695c",
+    "src/ml/gguf/qwen35_weights.cr": "a51f87344dd149f94ca8c19fc3784096965fb1128285b8e9a186da4ec15e99e2",
+    "src/ml/gguf/qwen3vl_text_block.cr": "412daaf2fcde2bb13f35a91035909eb00995aa162147ea8bc15cd7fd4d97944a",
+    "src/ml/gguf/qwen3vl_text_reference.cr": "eefde8668a602dca3f196ce1c3ba50a09bf9618d3f4003bbdd877324129d1eee",
+    "src/ml/gguf/qwen3vl_text_weights.cr": "7e129b41e8ffcc3c65f053a83434c868f8293e35dcdb45603e842e693c7f6eb7",
+    "src/ml/gguf/qwen_first_command_probe.cr": "5e9a5bc63cce0683066d0cee220f520955f397870874693d73b0a3d7aee9bdf9",
+    "src/ml/gguf/qwen_image21_block.cr": "059f5273d93529451f1fcf4747e874b02260987187fbf8c067d7578a0872d570",
+    "src/ml/gguf/qwen_image21_conditioning_bundle.cr": "a02e10847862c21a451eb2890e6926099cd48c033a8ad94f935202e4d5a4f4eb",
+    "src/ml/gguf/qwen_image21_flow_match.cr": "8b08277e978fbf15eec830218cbb92947ba9b0d2c5b348f5f49788aeccb402f8",
+    "src/ml/gguf/qwen_image21_gguf.cr": "2ac67f338952c7229e9efbefb12ef9eec645495a2f32d61f9cf69f4312f9b703",
+    "src/ml/gguf/qwen_image21_metal.cr": "a6ce4b2ce621862e3c268a94f4a0a3f97db227651b733f6fcf6ff9b8773504b3",
+    "src/ml/gguf/qwen_image21_transformer.cr": "b859c5804cb7fcf2e6a030440dc16eaeb5d3c96ea684b6871b00178e177e825a",
+    "src/ml/gguf/qwen_image21_weights.cr": "12cf0945e1936bce261ede8ec9807eddbc2684406d57f0609bb309305f8e93a8",
+    "src/ml/gguf/qwen_prefill_command_trace.cr": "7637af0aed65b4f34e5e148c9e7100d49050bb4b7ed56a2b5f75ceda755fd6b9",
+    "src/ml/gguf/qwen_prefill_stage_split.cr": "ba0002d15cf3c8972b66dd1d8628418e77e64a65e7a3117d6c9151a4a0218768",
+    "src/ml/gguf/qwen_qbit_adaptive_kv.cr": "a1c8580503265675feda9069925e298efb3fddca4e1ba5111a55c610f670a0bc",
+    "src/ml/gguf/qwen_qbit_adaptive_metal_policy.cr": "0b6d96c06f3007e37c2ab8628d2aed50491fb21a3e21327a6dad55dfe2c84df8",
+    "src/ml/gguf/qwen_qbit_adaptive_resident_kv.cr": "f379ad93fa36d0e728f4d3c10f4bf6f0a9a90ee106a51fefe1be7aaed7c1d044",
+    "src/ml/gguf/qwen_qbit_async_writer.cr": "f1fba630dc30eb45ad1ace7faec53122b7e562f3ebc8751b6609195efff243ba",
+    "src/ml/gguf/qwen_qbit_cache_envelope.cr": "977a564ac78f6e411fc8fa5ed619348cd1c8b8aafacc95c0628dce3f76ae8a88",
+    "src/ml/gguf/qwen_qbit_clickhouse_cache.cr": "5005aeb44b05810b5de23d37fd86fd434b4bd65f170c4b37714944f6a235d4a6",
+    "src/ml/gguf/qwen_qbit_gaussian_codec.cr": "6397a42e05a44bf6c1a5b588aa02e197de617252ecb6bab0044f8146efd7eab5",
+    "src/ml/gguf/qwen_qbit_kv_quality.cr": "18c5ce3dc33e7367c00131cf95c7ac8fd30379d6560239db505708b82c13f158",
+    "src/ml/gguf/qwen_qbit_metal_restore.cr": "57fccd61ee4edccaa675d08ec70b866483a2095830ff43432a97976ca8e06309",
+    "src/ml/gguf/qwen_qbit_native_block.cr": "3302c2119af33d2f93912392f560fd38a34883b2f9d694c52599af3c3492c245",
+    "src/ml/gguf/qwen_qbit_native_writer.cr": "9cae22940868832d4f95bffa5a5fef6bc28b82df6e0a53aea16c8a02e8fe1664",
+    "src/ml/gguf/qwen_qbit_quality_metrics.cr": "246538b60be783bfcd226e05c4674921cedfa4abfe3ae03d5c1390d3281c4289",
+    "src/ml/gguf/qwen_qbit_resident_kv.cr": "5b8cee33561252931018e006883a985a1f72d5eab6a4e952d852c13664b5d25a",
+    "src/ml/gguf/qwen_qbit_session_checkpoint.cr": "541e828ec75c3ee8cc4ac4697982f458a86ba987272cffd59afd950ecbe5e3ed",
+    "src/ml/gguf/qwen_qbit_state_snapshot.cr": "1b339b4c549874d2a65dc87a4aa7b0625226bf5f043f2eebf20248b8f2ff89f9",
+    "src/ml/gguf/reader.cr": "9b07e8828e9f793fefc52fb75dc6606fc7d9650882472eb5c4ce9501c955471f",
+    "src/ml/gguf/safetensors.cr": "1d14f7e3fd14d41c372e4b16d7aaa1b2176984e88a409efce05ddaa96d9e9080",
+    "src/ml/gguf/token_option_corridor.cr": "b7e64a009ea3d4146b6e7b8cc9429e2b32e19623304e3bf1fe805862a225b794",
+    "src/ml/gguf/tokenizer.cr": "3d1b0b18e8aa405604d97af922df807a58a8d18f2e10e07ba8aab40941d610e8",
+    "src/ml/llm/llama.cr": "e387b556be08f6cd5174819678ba6f7e1211e11d8503ab6d48b56f26d5b95d67",
+    "src/ml/llm/llama_ffi.cr": "45388fb53533aa84c1326122a7f818ce3f2adb6fcc9350f1ede55b6d9ebc3f2c",
+    "src/ml/metal/compute_graph.cr": "8d5d308fac91629a502de1ed085786047c5b6f0f530253ae265c7f95098cb970",
+    "src/ml/metal/device.cr": "ecc5d96332833a8a94d9a55914d515b5e34efe001f762d65aaa7c919b907c934",
+    "src/ml/metal/dispatch.cr": "40eeadaf1ccb56da52d8c3f5fa108ba1923048b641ed81e5f514010806a0ed3b",
+    "src/ml/metal/pipeline_selection_trace.cr": "b487a3c1e51a9cd62bf58e8801d850820a4942e541103d89cdbf282d4f2ced30",
+    "src/ml/metal/process_lease.cr": "3af0ee2d3435f46d5d0c35fc5b7c8b980645e310eeeb55f6c75634c5ffcbb048",
+    "src/ml/nn/attention.cr": "c68e0cb50d3bad06b1138d5ddc413c5b202c423719adbf84b0988c3b817ca614",
+    "src/ml/nn/gpu_ops.cr": "b21d054aaf440e342ffad3ae907f81db287a072e5c5f09b380668f118ead0eac",
+    "src/ml/nn/layernorm.cr": "87958cd0f24e47a9c34d0b2c0dee21305cb1e92aa1ce7f244283e989168af413",
+    "src/ml/nn/linear.cr": "504c30e0c5d587d05e23728345877a2aea616eeddbd7979b5e66692031b40733",
+    "src/ml/nn/vit.cr": "ae1b13a092cd59e259bc3b5d4744dbabf032e341c7d0ac4499f917167c0864e0",
+    "src/ml/optim/adam.cr": "bbf1257357bc64a29a5accf55c2fd44e44e477c52e074b5242e85b38a01ae36c",
+    "src/ml/qwen_vs_llama_benchmark_contract.cr": "30a3f0c9e9533a1b6a5b8ca6eba60568b2949d74775db7654d9802cc86738415",
+    "src/ml.cr": "a82930bd9603610043aa6963a3db601b7bb44aa7af10e85a042ffa2bc225ae71"
+  },
+  "author_generator": {
+    "forum_url": "https://forum.crystal-lang.org/t/optimal-mersenne-primes-search-using-modular-groups/9207/5",
+    "source_record": "results/jabari_comparison.json author_sources",
+    "source_record_sha256": "f48b2a42ddaf4b51a9ef0459821803063d0cefeb1f1a6d69ada6bb231aa9bb43",
+    "normalization": "Preserve all odd q; replace unavailable original Crystal primes-utils with shared GMP(25), omit logs/output and record exact q."
+  },
+  "timing_contract": "Complete finite calls include plan/filtering, pool task preparation, candidate construction, synchronization and GMP work. Pool and Metal initialization, compilation and result comparisons are outside timing and separately recorded. Each method returns an owned ordered classification array.",
+  "limitations": [
+    "One host, uncontrolled temperature and background load; no confidence interval or universal optimum.",
+    "GMP probable-prime agreement is not independent primality certification or original-author-backend execution.",
+    "The same-resource post-5 parallel baseline separates thread-count gains from filter gains.",
+    "No full-search billion extrapolation, NVIDIA runtime claim or GIMPS comparison."
+  ],
+  "host_load_average_before_run": [
+    10.27099609375,
+    9.892578125,
+    9.16162109375
+  ],
+  "cases": [
+    {
+      "count": 32,
+      "start_q": 17,
+      "last_q": 79,
+      "worker_counts": [
+        1,
+        2,
+        4,
+        8,
+        12
+      ],
+      "chunk_size": 1,
+      "tile_size": 4096,
+      "repeats": 5,
+      "warmups_per_method": 2,
+      "prime_count": 6541,
+      "active_order_count": 479,
+      "unresolved": 7,
+      "probable_mersenne_exponents": [
+        17,
+        19,
+        31,
+        61
+      ],
+      "gmp_repetitions": 25,
+      "backend_initialization_ms": 99.89608299999999,
+      "first_gpu_call_including_kernel_compile_ms": 1.310958,
+      "pool_initialization_ms": {
+        "1": 0.052542,
+        "2": 0.051415999999999996,
+        "4": 0.09899999999999999,
+        "8": 0.20141599999999998,
+        "12": 0.26245799999999997
+      },
+      "all_final_states_and_work_counts_equal": true,
+      "methods": {
+        "post5_serial_shared_gmp": {
+          "median_ms": 0.039375,
+          "min_ms": 0.037209,
+          "max_ms": 0.0455,
+          "samples_ms": [
+            0.0455,
+            0.037209,
+            0.040874999999999995,
+            0.037291,
+            0.039375
+          ],
+          "warmup_samples_ms": [
+            0.049542,
+            0.03625
+          ],
+          "gmp_screen_calls": 32
+        },
+        "cpu_serial_full": {
+          "median_ms": 2.15075,
+          "min_ms": 2.138834,
+          "max_ms": 2.76325,
+          "samples_ms": [
+            2.1654999999999998,
+            2.14475,
+            2.15075,
+            2.76325,
+            2.138834
+          ],
+          "warmup_samples_ms": [
+            2.1935000000000002,
+            2.166708
+          ],
+          "gmp_screen_calls": 7
+        },
+        "metal_serial_full": {
+          "median_ms": 3.135083,
+          "min_ms": 2.695541,
+          "max_ms": 3.459875,
+          "samples_ms": [
+            3.039875,
+            3.135083,
+            2.695541,
+            3.244541,
+            3.459875
+          ],
+          "warmup_samples_ms": [
+            5.384667,
+            2.802417
+          ],
+          "gmp_screen_calls": 7
+        },
+        "cpu_parallel_1_full": {
+          "median_ms": 2.277917,
+          "min_ms": 2.177666,
+          "max_ms": 2.7840830000000003,
+          "samples_ms": [
+            2.177666,
+            2.1832499999999997,
+            2.7840830000000003,
+            2.663,
+            2.277917
+          ],
+          "warmup_samples_ms": [
+            2.2516670000000003,
+            2.458375
+          ],
+          "gmp_screen_calls": 7
+        },
+        "post5_parallel_1_shared_gmp": {
+          "median_ms": 0.051709000000000005,
+          "min_ms": 0.049625,
+          "max_ms": 0.09866599999999999,
+          "samples_ms": [
+            0.051583,
+            0.049625,
+            0.051709000000000005,
+            0.09866599999999999,
+            0.054458
+          ],
+          "warmup_samples_ms": [
+            0.054333000000000006,
+            0.059791
+          ],
+          "gmp_screen_calls": 32
+        },
+        "cpu_parallel_2_full": {
+          "median_ms": 2.609208,
+          "min_ms": 2.181375,
+          "max_ms": 2.845292,
+          "samples_ms": [
+            2.609208,
+            2.695209,
+            2.187333,
+            2.845292,
+            2.181375
+          ],
+          "warmup_samples_ms": [
+            2.913292,
+            2.2039590000000002
+          ],
+          "gmp_screen_calls": 7
+        },
+        "post5_parallel_2_shared_gmp": {
+          "median_ms": 0.035292,
+          "min_ms": 0.026791000000000002,
+          "max_ms": 0.040625,
+          "samples_ms": [
+            0.040625,
+            0.035292,
+            0.026791000000000002,
+            0.039875,
+            0.030583000000000003
+          ],
+          "warmup_samples_ms": [
+            0.06674999999999999,
+            0.047125
+          ],
+          "gmp_screen_calls": 32
+        },
+        "cpu_parallel_4_full": {
+          "median_ms": 2.179458,
+          "min_ms": 2.136875,
+          "max_ms": 2.186083,
+          "samples_ms": [
+            2.161958,
+            2.186083,
+            2.182833,
+            2.136875,
+            2.179458
+          ],
+          "warmup_samples_ms": [
+            4.05225,
+            2.268792
+          ],
+          "gmp_screen_calls": 7
+        },
+        "post5_parallel_4_shared_gmp": {
+          "median_ms": 0.074667,
+          "min_ms": 0.040166999999999994,
+          "max_ms": 0.128708,
+          "samples_ms": [
+            0.040166999999999994,
+            0.076084,
+            0.128708,
+            0.052833,
+            0.074667
+          ],
+          "warmup_samples_ms": [
+            0.089083,
+            0.095333
+          ],
+          "gmp_screen_calls": 32
+        },
+        "cpu_parallel_8_full": {
+          "median_ms": 2.2243749999999998,
+          "min_ms": 2.1298749999999997,
+          "max_ms": 2.7451250000000003,
+          "samples_ms": [
+            2.165625,
+            2.2243749999999998,
+            2.283541,
+            2.1298749999999997,
+            2.7451250000000003
+          ],
+          "warmup_samples_ms": [
+            2.310833,
+            3.192167
+          ],
+          "gmp_screen_calls": 7
+        },
+        "post5_parallel_8_shared_gmp": {
+          "median_ms": 0.10575,
+          "min_ms": 0.081958,
+          "max_ms": 0.17416600000000002,
+          "samples_ms": [
+            0.095541,
+            0.10575,
+            0.081958,
+            0.116083,
+            0.17416600000000002
+          ],
+          "warmup_samples_ms": [
+            0.105416,
+            0.108625
+          ],
+          "gmp_screen_calls": 32
+        },
+        "cpu_parallel_12_full": {
+          "median_ms": 2.2142500000000003,
+          "min_ms": 2.194833,
+          "max_ms": 2.778375,
+          "samples_ms": [
+            2.199292,
+            2.194833,
+            2.778375,
+            2.2142500000000003,
+            2.2257499999999997
+          ],
+          "warmup_samples_ms": [
+            2.251625,
+            2.13125
+          ],
+          "gmp_screen_calls": 7
+        },
+        "post5_parallel_12_shared_gmp": {
+          "median_ms": 0.074792,
+          "min_ms": 0.06758399999999999,
+          "max_ms": 0.11254199999999999,
+          "samples_ms": [
+            0.074625,
+            0.11254199999999999,
+            0.09787499999999999,
+            0.074792,
+            0.06758399999999999
+          ],
+          "warmup_samples_ms": [
+            0.097791,
+            0.07116600000000001
+          ],
+          "gmp_screen_calls": 32
+        },
+        "metal_parallel_12_full": {
+          "median_ms": 2.923959,
+          "min_ms": 2.715959,
+          "max_ms": 4.0915,
+          "samples_ms": [
+            2.792334,
+            4.0915,
+            2.715959,
+            3.750333,
+            2.923959
+          ],
+          "warmup_samples_ms": [
+            3.476125,
+            3.3223749999999996
+          ],
+          "gmp_screen_calls": 7
+        }
+      },
+      "scope": "Same odd q and GMP(25). Full CPU/Metal paths include factor-plan preparation, sieving, task preparation, allocation, candidate construction, scheduling, synchronization and GMP screening. Pool/backend initialization, kernel compilation, equality checks and output excluded and first-call costs separately recorded. Parallel post-5 paths use the same worker pools. No original primes-utils or billion full-test claim.",
+      "run_command": [
+        "/private/tmp/mpgs-multicore-benchmark",
+        "32",
+        "17",
+        "5",
+        "1,2,4,8,12",
+        "4096",
+        "1"
+      ],
+      "host_load_average_before_case": [
+        10.27099609375,
+        9.892578125,
+        9.16162109375
+      ],
+      "host_load_average_after_case": [
+        10.27099609375,
+        9.892578125,
+        9.16162109375
+      ]
+    },
+    {
+      "count": 512,
+      "start_q": 33,
+      "last_q": 1055,
+      "worker_counts": [
+        1,
+        2,
+        4,
+        8,
+        12
+      ],
+      "chunk_size": 1,
+      "tile_size": 4096,
+      "repeats": 5,
+      "warmups_per_method": 2,
+      "prime_count": 6541,
+      "active_order_count": 479,
+      "unresolved": 110,
+      "probable_mersenne_exponents": [
+        61,
+        89,
+        107,
+        127,
+        521,
+        607
+      ],
+      "gmp_repetitions": 25,
+      "backend_initialization_ms": 48.635625000000005,
+      "first_gpu_call_including_kernel_compile_ms": 0.9610829999999999,
+      "pool_initialization_ms": {
+        "1": 0.026834,
+        "2": 0.029915999999999998,
+        "4": 0.064083,
+        "8": 0.145833,
+        "12": 0.231375
+      },
+      "all_final_states_and_work_counts_equal": true,
+      "methods": {
+        "post5_serial_shared_gmp": {
+          "median_ms": 41.212584,
+          "min_ms": 39.130292,
+          "max_ms": 48.340165999999996,
+          "samples_ms": [
+            41.008541,
+            41.212584,
+            41.704917,
+            39.130292,
+            48.340165999999996
+          ],
+          "warmup_samples_ms": [
+            41.570207999999994,
+            39.278375
+          ],
+          "gmp_screen_calls": 512
+        },
+        "cpu_serial_full": {
+          "median_ms": 27.095333,
+          "min_ms": 26.438333,
+          "max_ms": 27.7625,
+          "samples_ms": [
+            27.096124999999997,
+            27.095333,
+            26.439500000000002,
+            26.438333,
+            27.7625
+          ],
+          "warmup_samples_ms": [
+            26.638624999999998,
+            28.049542
+          ],
+          "gmp_screen_calls": 110
+        },
+        "metal_serial_full": {
+          "median_ms": 28.012916999999998,
+          "min_ms": 26.571625,
+          "max_ms": 31.381,
+          "samples_ms": [
+            28.522292,
+            26.889333,
+            28.012916999999998,
+            26.571625,
+            31.381
+          ],
+          "warmup_samples_ms": [
+            28.210041,
+            27.905666999999998
+          ],
+          "gmp_screen_calls": 110
+        },
+        "cpu_parallel_1_full": {
+          "median_ms": 27.776292,
+          "min_ms": 26.338041,
+          "max_ms": 29.082625,
+          "samples_ms": [
+            27.994999999999997,
+            26.338041,
+            29.082625,
+            27.776292,
+            27.448459
+          ],
+          "warmup_samples_ms": [
+            27.312208000000002,
+            27.396875
+          ],
+          "gmp_screen_calls": 110
+        },
+        "post5_parallel_1_shared_gmp": {
+          "median_ms": 40.459792,
+          "min_ms": 39.712917,
+          "max_ms": 42.621375,
+          "samples_ms": [
+            42.621375,
+            39.712917,
+            39.736209,
+            40.459792,
+            40.706625
+          ],
+          "warmup_samples_ms": [
+            40.195750000000004,
+            40.101417
+          ],
+          "gmp_screen_calls": 512
+        },
+        "cpu_parallel_2_full": {
+          "median_ms": 15.46175,
+          "min_ms": 14.490124999999999,
+          "max_ms": 16.601709,
+          "samples_ms": [
+            15.46175,
+            15.520584000000001,
+            14.490124999999999,
+            16.601709,
+            14.636583
+          ],
+          "warmup_samples_ms": [
+            14.733334000000001,
+            14.619167000000001
+          ],
+          "gmp_screen_calls": 110
+        },
+        "post5_parallel_2_shared_gmp": {
+          "median_ms": 20.289334,
+          "min_ms": 20.216334,
+          "max_ms": 20.489250000000002,
+          "samples_ms": [
+            20.489250000000002,
+            20.401458,
+            20.217292,
+            20.216334,
+            20.289334
+          ],
+          "warmup_samples_ms": [
+            20.855416,
+            20.259875
+          ],
+          "gmp_screen_calls": 512
+        },
+        "cpu_parallel_4_full": {
+          "median_ms": 9.020541999999999,
+          "min_ms": 8.286792,
+          "max_ms": 9.732625,
+          "samples_ms": [
+            8.673416,
+            9.020541999999999,
+            8.286792,
+            9.732625,
+            9.107458000000001
+          ],
+          "warmup_samples_ms": [
+            9.442666000000001,
+            8.870875
+          ],
+          "gmp_screen_calls": 110
+        },
+        "post5_parallel_4_shared_gmp": {
+          "median_ms": 10.335666999999999,
+          "min_ms": 10.041625,
+          "max_ms": 11.048667,
+          "samples_ms": [
+            10.041625,
+            11.048667,
+            10.256667,
+            10.335666999999999,
+            10.38225
+          ],
+          "warmup_samples_ms": [
+            10.300084,
+            10.856334
+          ],
+          "gmp_screen_calls": 512
+        },
+        "cpu_parallel_8_full": {
+          "median_ms": 6.281,
+          "min_ms": 5.873125,
+          "max_ms": 6.771458,
+          "samples_ms": [
+            5.873125,
+            6.771458,
+            6.281,
+            6.267833,
+            6.56625
+          ],
+          "warmup_samples_ms": [
+            6.538666,
+            6.819292
+          ],
+          "gmp_screen_calls": 110
+        },
+        "post5_parallel_8_shared_gmp": {
+          "median_ms": 6.868917000000001,
+          "min_ms": 6.503667,
+          "max_ms": 8.335,
+          "samples_ms": [
+            6.503667,
+            7.046667,
+            8.335,
+            6.510958,
+            6.868917000000001
+          ],
+          "warmup_samples_ms": [
+            8.030584000000001,
+            7.6145830000000005
+          ],
+          "gmp_screen_calls": 512
+        },
+        "cpu_parallel_12_full": {
+          "median_ms": 6.211542,
+          "min_ms": 5.880332999999999,
+          "max_ms": 7.4165,
+          "samples_ms": [
+            5.880332999999999,
+            7.4165,
+            6.211542,
+            5.930791999999999,
+            6.5044580000000005
+          ],
+          "warmup_samples_ms": [
+            7.220333,
+            7.919209
+          ],
+          "gmp_screen_calls": 110
+        },
+        "post5_parallel_12_shared_gmp": {
+          "median_ms": 6.255208,
+          "min_ms": 5.426709,
+          "max_ms": 6.943917,
+          "samples_ms": [
+            5.7972090000000005,
+            6.943917,
+            5.426709,
+            6.260667,
+            6.255208
+          ],
+          "warmup_samples_ms": [
+            8.199125,
+            7.669917
+          ],
+          "gmp_screen_calls": 512
+        },
+        "metal_parallel_12_full": {
+          "median_ms": 6.898833,
+          "min_ms": 6.33375,
+          "max_ms": 7.894583,
+          "samples_ms": [
+            6.898833,
+            7.894583,
+            6.33375,
+            6.564,
+            7.799833
+          ],
+          "warmup_samples_ms": [
+            8.011041,
+            9.06425
+          ],
+          "gmp_screen_calls": 110
+        }
+      },
+      "scope": "Same odd q and GMP(25). Full CPU/Metal paths include factor-plan preparation, sieving, task preparation, allocation, candidate construction, scheduling, synchronization and GMP screening. Pool/backend initialization, kernel compilation, equality checks and output excluded and first-call costs separately recorded. Parallel post-5 paths use the same worker pools. No original primes-utils or billion full-test claim.",
+      "run_command": [
+        "/private/tmp/mpgs-multicore-benchmark",
+        "512",
+        "33",
+        "5",
+        "1,2,4,8,12",
+        "4096",
+        "1"
+      ],
+      "host_load_average_before_case": [
+        10.27099609375,
+        9.892578125,
+        9.16162109375
+      ],
+      "host_load_average_after_case": [
+        10.27099609375,
+        9.892578125,
+        9.16162109375
+      ]
+    },
+    {
+      "count": 1024,
+      "start_q": 17,
+      "last_q": 2063,
+      "worker_counts": [
+        1,
+        2,
+        4,
+        8,
+        12
+      ],
+      "chunk_size": 1,
+      "tile_size": 4096,
+      "repeats": 5,
+      "warmups_per_method": 2,
+      "prime_count": 6541,
+      "active_order_count": 479,
+      "unresolved": 220,
+      "probable_mersenne_exponents": [
+        17,
+        19,
+        31,
+        61,
+        89,
+        107,
+        127,
+        521,
+        607,
+        1279
+      ],
+      "gmp_repetitions": 25,
+      "backend_initialization_ms": 53.0135,
+      "first_gpu_call_including_kernel_compile_ms": 0.977709,
+      "pool_initialization_ms": {
+        "1": 0.029625,
+        "2": 0.035125,
+        "4": 0.066375,
+        "8": 0.132708,
+        "12": 0.200042
+      },
+      "all_final_states_and_work_counts_equal": true,
+      "methods": {
+        "post5_serial_shared_gmp": {
+          "median_ms": 392.273583,
+          "min_ms": 383.95725000000004,
+          "max_ms": 403.96908399999995,
+          "samples_ms": [
+            385.993333,
+            392.273583,
+            393.263042,
+            403.96908399999995,
+            383.95725000000004
+          ],
+          "warmup_samples_ms": [
+            392.764583,
+            401.58666700000003
+          ],
+          "gmp_screen_calls": 1024
+        },
+        "cpu_serial_full": {
+          "median_ms": 263.62562499999996,
+          "min_ms": 260.031833,
+          "max_ms": 267.156084,
+          "samples_ms": [
+            263.62562499999996,
+            267.156084,
+            264.025959,
+            260.031833,
+            260.174541
+          ],
+          "warmup_samples_ms": [
+            265.07908299999997,
+            264.407667
+          ],
+          "gmp_screen_calls": 220
+        },
+        "metal_serial_full": {
+          "median_ms": 265.42975,
+          "min_ms": 260.268917,
+          "max_ms": 266.63879099999997,
+          "samples_ms": [
+            266.18791600000003,
+            263.983666,
+            266.63879099999997,
+            265.42975,
+            260.268917
+          ],
+          "warmup_samples_ms": [
+            705.492833,
+            337.559
+          ],
+          "gmp_screen_calls": 220
+        },
+        "cpu_parallel_1_full": {
+          "median_ms": 261.206042,
+          "min_ms": 259.68362499999995,
+          "max_ms": 269.25091699999996,
+          "samples_ms": [
+            269.25091699999996,
+            261.206042,
+            259.68362499999995,
+            259.86058299999996,
+            262.24087499999996
+          ],
+          "warmup_samples_ms": [
+            269.74208300000004,
+            263.80649999999997
+          ],
+          "gmp_screen_calls": 220
+        },
+        "post5_parallel_1_shared_gmp": {
+          "median_ms": 390.185375,
+          "min_ms": 387.721875,
+          "max_ms": 449.678542,
+          "samples_ms": [
+            387.721875,
+            390.185375,
+            389.425834,
+            407.09875,
+            449.678542
+          ],
+          "warmup_samples_ms": [
+            392.375875,
+            393.442375
+          ],
+          "gmp_screen_calls": 1024
+        },
+        "cpu_parallel_2_full": {
+          "median_ms": 133.272667,
+          "min_ms": 131.1635,
+          "max_ms": 157.258875,
+          "samples_ms": [
+            131.1635,
+            132.21225,
+            134.314667,
+            157.258875,
+            133.272667
+          ],
+          "warmup_samples_ms": [
+            133.84025,
+            132.572458
+          ],
+          "gmp_screen_calls": 220
+        },
+        "post5_parallel_2_shared_gmp": {
+          "median_ms": 195.15754099999998,
+          "min_ms": 192.430625,
+          "max_ms": 225.32258299999998,
+          "samples_ms": [
+            195.15754099999998,
+            196.298125,
+            192.430625,
+            225.32258299999998,
+            194.063916
+          ],
+          "warmup_samples_ms": [
+            192.73975,
+            193.75129199999998
+          ],
+          "gmp_screen_calls": 1024
+        },
+        "cpu_parallel_4_full": {
+          "median_ms": 68.31037500000001,
+          "min_ms": 67.305,
+          "max_ms": 93.239042,
+          "samples_ms": [
+            80.733375,
+            68.31037500000001,
+            68.203917,
+            93.239042,
+            67.305
+          ],
+          "warmup_samples_ms": [
+            68.642416,
+            69.838917
+          ],
+          "gmp_screen_calls": 220
+        },
+        "post5_parallel_4_shared_gmp": {
+          "median_ms": 101.003709,
+          "min_ms": 97.362958,
+          "max_ms": 117.811125,
+          "samples_ms": [
+            105.599708,
+            100.45937500000001,
+            97.362958,
+            117.811125,
+            101.003709
+          ],
+          "warmup_samples_ms": [
+            102.246667,
+            105.922416
+          ],
+          "gmp_screen_calls": 1024
+        },
+        "cpu_parallel_8_full": {
+          "median_ms": 46.228333000000006,
+          "min_ms": 43.308,
+          "max_ms": 60.022542,
+          "samples_ms": [
+            46.917917,
+            43.774792,
+            43.308,
+            60.022542,
+            46.228333000000006
+          ],
+          "warmup_samples_ms": [
+            47.758084,
+            48.709500000000006
+          ],
+          "gmp_screen_calls": 220
+        },
+        "post5_parallel_8_shared_gmp": {
+          "median_ms": 64.171333,
+          "min_ms": 61.883542,
+          "max_ms": 94.617459,
+          "samples_ms": [
+            63.548833,
+            61.883542,
+            64.171333,
+            94.617459,
+            68.42099999999999
+          ],
+          "warmup_samples_ms": [
+            59.906791,
+            60.676334
+          ],
+          "gmp_screen_calls": 1024
+        },
+        "cpu_parallel_12_full": {
+          "median_ms": 47.419375,
+          "min_ms": 42.564583000000006,
+          "max_ms": 66.766666,
+          "samples_ms": [
+            43.46675,
+            55.461166999999996,
+            42.564583000000006,
+            66.766666,
+            47.419375
+          ],
+          "warmup_samples_ms": [
+            35.811707999999996,
+            34.110459000000006
+          ],
+          "gmp_screen_calls": 220
+        },
+        "post5_parallel_12_shared_gmp": {
+          "median_ms": 66.909459,
+          "min_ms": 59.4655,
+          "max_ms": 108.004167,
+          "samples_ms": [
+            61.730875,
+            59.4655,
+            71.012625,
+            108.004167,
+            66.909459
+          ],
+          "warmup_samples_ms": [
+            52.089708,
+            46.786375
+          ],
+          "gmp_screen_calls": 1024
+        },
+        "metal_parallel_12_full": {
+          "median_ms": 50.395541,
+          "min_ms": 46.017084,
+          "max_ms": 75.165417,
+          "samples_ms": [
+            50.395541,
+            46.906792,
+            46.017084,
+            75.165417,
+            53.362916000000006
+          ],
+          "warmup_samples_ms": [
+            34.763542,
+            36.640875
+          ],
+          "gmp_screen_calls": 220
+        }
+      },
+      "scope": "Same odd q and GMP(25). Full CPU/Metal paths include factor-plan preparation, sieving, task preparation, allocation, candidate construction, scheduling, synchronization and GMP screening. Pool/backend initialization, kernel compilation, equality checks and output excluded and first-call costs separately recorded. Parallel post-5 paths use the same worker pools. No original primes-utils or billion full-test claim.",
+      "run_command": [
+        "/private/tmp/mpgs-multicore-benchmark",
+        "1024",
+        "17",
+        "5",
+        "1,2,4,8,12",
+        "4096",
+        "1"
+      ],
+      "host_load_average_before_case": [
+        10.27099609375,
+        9.892578125,
+        9.16162109375
+      ],
+      "host_load_average_after_case": [
+        10.08154296875,
+        9.86767578125,
+        9.16943359375
+      ]
+    },
+    {
+      "count": 2040,
+      "start_q": 17,
+      "last_q": 4095,
+      "worker_counts": [
+        1,
+        2,
+        4,
+        8,
+        12
+      ],
+      "chunk_size": 1,
+      "tile_size": 4096,
+      "repeats": 5,
+      "warmups_per_method": 2,
+      "prime_count": 6541,
+      "active_order_count": 479,
+      "unresolved": 449,
+      "probable_mersenne_exponents": [
+        17,
+        19,
+        31,
+        61,
+        89,
+        107,
+        127,
+        521,
+        607,
+        1279,
+        2203,
+        2281,
+        3217
+      ],
+      "gmp_repetitions": 25,
+      "backend_initialization_ms": 49.786249999999995,
+      "first_gpu_call_including_kernel_compile_ms": 2.277583,
+      "pool_initialization_ms": {
+        "1": 0.095292,
+        "2": 0.126792,
+        "4": 0.110792,
+        "8": 0.182875,
+        "12": 0.30562500000000004
+      },
+      "all_final_states_and_work_counts_equal": true,
+      "methods": {
+        "post5_serial_shared_gmp": {
+          "median_ms": 4929.69125,
+          "min_ms": 4580.7336669999995,
+          "max_ms": 5181.232958,
+          "samples_ms": [
+            4929.69125,
+            5181.232958,
+            4802.559625,
+            4951.682584,
+            4580.7336669999995
+          ],
+          "warmup_samples_ms": [
+            4689.685709,
+            4882.049084
+          ],
+          "gmp_screen_calls": 2040
+        },
+        "cpu_serial_full": {
+          "median_ms": 3662.3724170000005,
+          "min_ms": 3430.2101660000003,
+          "max_ms": 4238.877625,
+          "samples_ms": [
+            4033.644541,
+            3541.4546250000003,
+            4238.877625,
+            3662.3724170000005,
+            3430.2101660000003
+          ],
+          "warmup_samples_ms": [
+            3488.282083,
+            3510.3197910000004
+          ],
+          "gmp_screen_calls": 449
+        },
+        "metal_serial_full": {
+          "median_ms": 3634.562667,
+          "min_ms": 3449.6893330000003,
+          "max_ms": 3864.54675,
+          "samples_ms": [
+            3864.54675,
+            3665.4584999999997,
+            3634.562667,
+            3592.4688749999996,
+            3449.6893330000003
+          ],
+          "warmup_samples_ms": [
+            3536.199209,
+            3542.59725
+          ],
+          "gmp_screen_calls": 449
+        },
+        "cpu_parallel_1_full": {
+          "median_ms": 3567.019667,
+          "min_ms": 3379.645,
+          "max_ms": 3896.7612090000002,
+          "samples_ms": [
+            3896.7612090000002,
+            3704.0205,
+            3567.019667,
+            3379.645,
+            3394.903875
+          ],
+          "warmup_samples_ms": [
+            3362.580458,
+            3356.6440000000002
+          ],
+          "gmp_screen_calls": 449
+        },
+        "post5_parallel_1_shared_gmp": {
+          "median_ms": 4702.309875,
+          "min_ms": 4569.958292,
+          "max_ms": 5009.689125000001,
+          "samples_ms": [
+            4969.201875,
+            4691.262292,
+            5009.689125000001,
+            4702.309875,
+            4569.958292
+          ],
+          "warmup_samples_ms": [
+            4988.650583,
+            4548.738958000001
+          ],
+          "gmp_screen_calls": 2040
+        },
+        "cpu_parallel_2_full": {
+          "median_ms": 1784.183417,
+          "min_ms": 1723.454458,
+          "max_ms": 1914.1705,
+          "samples_ms": [
+            1758.658084,
+            1835.978959,
+            1914.1705,
+            1784.183417,
+            1723.454458
+          ],
+          "warmup_samples_ms": [
+            1683.70575,
+            1684.0445000000002
+          ],
+          "gmp_screen_calls": 449
+        },
+        "post5_parallel_2_shared_gmp": {
+          "median_ms": 2436.9990000000003,
+          "min_ms": 2301.397375,
+          "max_ms": 2696.839875,
+          "samples_ms": [
+            2436.9990000000003,
+            2357.548042,
+            2696.839875,
+            2462.4392080000002,
+            2301.397375
+          ],
+          "warmup_samples_ms": [
+            2279.023042,
+            2268.397583
+          ],
+          "gmp_screen_calls": 2040
+        },
+        "cpu_parallel_4_full": {
+          "median_ms": 945.535875,
+          "min_ms": 904.2931669999999,
+          "max_ms": 1118.026958,
+          "samples_ms": [
+            930.580834,
+            945.535875,
+            1118.026958,
+            1076.6925,
+            904.2931669999999
+          ],
+          "warmup_samples_ms": [
+            866.697458,
+            1107.309041
+          ],
+          "gmp_screen_calls": 449
+        },
+        "post5_parallel_4_shared_gmp": {
+          "median_ms": 1291.548625,
+          "min_ms": 1154.6792500000001,
+          "max_ms": 1513.30125,
+          "samples_ms": [
+            1291.548625,
+            1247.5156670000001,
+            1513.30125,
+            1443.2537080000002,
+            1154.6792500000001
+          ],
+          "warmup_samples_ms": [
+            1343.8944999999999,
+            1243.617
+          ],
+          "gmp_screen_calls": 2040
+        },
+        "cpu_parallel_8_full": {
+          "median_ms": 619.219292,
+          "min_ms": 580.097625,
+          "max_ms": 854.318833,
+          "samples_ms": [
+            603.457958,
+            619.219292,
+            727.601459,
+            854.318833,
+            580.097625
+          ],
+          "warmup_samples_ms": [
+            620.829166,
+            606.307083
+          ],
+          "gmp_screen_calls": 449
+        },
+        "post5_parallel_8_shared_gmp": {
+          "median_ms": 862.465291,
+          "min_ms": 677.433125,
+          "max_ms": 1111.57525,
+          "samples_ms": [
+            862.465291,
+            788.469541,
+            1111.57525,
+            904.385667,
+            677.433125
+          ],
+          "warmup_samples_ms": [
+            923.273375,
+            838.756959
+          ],
+          "gmp_screen_calls": 2040
+        },
+        "cpu_parallel_12_full": {
+          "median_ms": 572.384625,
+          "min_ms": 497.088125,
+          "max_ms": 722.839917,
+          "samples_ms": [
+            525.0577499999999,
+            572.384625,
+            634.274667,
+            722.839917,
+            497.088125
+          ],
+          "warmup_samples_ms": [
+            540.15625,
+            624.090209
+          ],
+          "gmp_screen_calls": 449
+        },
+        "post5_parallel_12_shared_gmp": {
+          "median_ms": 879.637708,
+          "min_ms": 701.526208,
+          "max_ms": 928.712,
+          "samples_ms": [
+            895.6385409999999,
+            771.312958,
+            928.712,
+            879.637708,
+            701.526208
+          ],
+          "warmup_samples_ms": [
+            798.347875,
+            836.396875
+          ],
+          "gmp_screen_calls": 2040
+        },
+        "metal_parallel_12_full": {
+          "median_ms": 672.966083,
+          "min_ms": 482.841792,
+          "max_ms": 692.362834,
+          "samples_ms": [
+            575.731834,
+            680.877208,
+            692.362834,
+            672.966083,
+            482.841792
+          ],
+          "warmup_samples_ms": [
+            646.4822919999999,
+            584.874459
+          ],
+          "gmp_screen_calls": 449
+        }
+      },
+      "scope": "Same odd q and GMP(25). Full CPU/Metal paths include factor-plan preparation, sieving, task preparation, allocation, candidate construction, scheduling, synchronization and GMP screening. Pool/backend initialization, kernel compilation, equality checks and output excluded and first-call costs separately recorded. Parallel post-5 paths use the same worker pools. No original primes-utils or billion full-test claim.",
+      "run_command": [
+        "/private/tmp/mpgs-multicore-benchmark",
+        "2040",
+        "17",
+        "5",
+        "1,2,4,8,12",
+        "4096",
+        "1"
+      ],
+      "host_load_average_before_case": [
+        10.08154296875,
+        9.86767578125,
+        9.16943359375
+      ],
+      "host_load_average_after_case": [
+        11.6484375,
+        11.63916015625,
+        10.13427734375
+      ]
+    }
+  ],
+  "host_load_average_after_run": [
+    11.6484375,
+    11.63916015625,
+    10.13427734375
+  ],
+  "binary_and_sources_unchanged_during_run": true,
+  "completed_at_utc": "2026-10-13T00:55:28.594211+00:00"
+}
